@@ -31,6 +31,7 @@ a {
 
 /* NAVBAR */
 
+/* NAVBAR */
 .navbar {
   position: absolute;
   top: 0;
@@ -44,27 +45,56 @@ a {
   z-index: 10;
 }
 
-.logo,
-.footer-logo {
-  font-family: "Playfair Display", serif;
-  font-size: 20px;
-  letter-spacing: 2px;
-}
-
+/* LOGO LUXE D'AMOUR */
 .logo {
+  display: block;
   width: 110px;
   height: 40px;
+
   background-image: url("https://res.cloudinary.com/ui9dbniz/image/upload/v1789615267/ChatGPT_Image_17_Sep_2026__09.53.28-removebg-preview.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+
   font-size: 0;
+  letter-spacing: 0;
+  line-height: 0;
+  flex-shrink: 0;
 }
 
 .logo span {
   display: none;
 }
 
+nav {
+  display: flex;
+  gap: 38px;
+}
+
+nav a,
+.socials a {
+  font-size: 10px;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+nav a:hover,
+.socials a:hover {
+  color: var(--accent);
+}
+
+.nav-btn {
+  border: 1px solid var(--line);
+  padding: 13px 20px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background: var(--white);
+  color: var(--black);
+}
 nav a,
 .socials a {
   font-size: 10px;
