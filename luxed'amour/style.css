@@ -29,8 +29,24 @@ a {
   text-decoration: none;
 }
 
-/* NAVBAR */
 
+
+/* NAVBAR */
+/* NAVBAR */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  padding: 0 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+/* LOGO LUXE D'AMOUR */
 /* NAVBAR */
 .navbar {
   position: absolute;
@@ -71,6 +87,30 @@ nav {
   gap: 38px;
 }
 
+nav a,
+.socials a {
+  font-size: 10px;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+nav a:hover,
+.socials a:hover {
+  color: var(--accent);
+}
+
+.nav-btn {
+  border: 1px solid var(--line);
+  padding: 13px 20px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background: var(--white);
+  color: var(--black);
+}
 nav a,
 .socials a {
   font-size: 10px;
