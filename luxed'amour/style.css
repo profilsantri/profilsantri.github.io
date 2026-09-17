@@ -497,25 +497,7 @@ footer {
   font-size: 8px;
   letter-spacing: 1.5px;
 
-/* FOOTER LOGO LUXE D'AMOUR */
 
-.footer-logo {
-  width: 120px;
-  height: 45px;
-
-  background-image: url("https://res.cloudinary.com/ui9dbniz/image/upload/v1789615267/ChatGPT_Image_17_Sep_2026__09.53.28-removebg-preview.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left center;
-
-  /* menyembunyikan tulisan lama */
-  font-size: 0;
-  letter-spacing: 0;
-}
-
-.footer-logo span {
-  display: none;
-}
 
 .socials {
   display: flex;
