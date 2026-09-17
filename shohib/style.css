@@ -55,11 +55,12 @@ a {
     justify-content: space-between;
 }
 
-.logo {
-    font-family: "Space Grotesk", sans-serif;
-    font-size: 25px;
-    font-weight: 700;
-    letter-spacing: -1.5px;
+.logo img {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px #ffffff);
+
 }
 
 .logo span {
