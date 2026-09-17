@@ -484,6 +484,12 @@ h2 {
 }
 
 /* FOOTER */
+footer {
+  padding: 35px 7vw;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
 /* FOOTER LOGO LUXE D'AMOUR */
 
