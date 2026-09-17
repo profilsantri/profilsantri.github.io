@@ -55,11 +55,11 @@ a {
     justify-content: space-between;
 }
 
-.logo img {
-    width: 150px;
+ .logo img {
+    width: 140px;
     height: auto;
     object-fit: contain;
-    filter: drop-shadow(0 0 10px #ffffff);
+    display: block;
 
 }
 
