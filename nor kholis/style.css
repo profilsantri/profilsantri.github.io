@@ -30,7 +30,7 @@ a {
 }
 
 .logo-image img {
-    width: 150px; /* ukuran logo desktop */
+    width: 50px; /* ukuran logo desktop */
     height: auto;
     object-fit: contain;
 
@@ -42,16 +42,16 @@ a {
 }
 
 /* ukuran logo HP */
-@media(width: 100px){
+@media(width: 10px){
 
     .logo-image img {
-        width: 100px;
+        width: 10px;
     }
 
 }
 
 .navbar {
-    height: 85px;
+    height: 60px;
     padding: 0 7%;
     display: flex;
     align-items: center;
