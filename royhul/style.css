@@ -61,14 +61,19 @@ font-size: 21px;
 font-weight: 800;
 }
 
-.logo span {
-display: grid;
-place-items: center;
-width: 35px;
-height: 35px;
-border-radius: 10px;
-color: white;
-background: linear-gradient(135deg, #7169ff, #4b43db);
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.logo img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    display: block;
 }
 
 nav {
