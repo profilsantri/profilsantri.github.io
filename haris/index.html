@@ -1,1 +1,264 @@
-haris
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Brand Haris - cerita petani sawah Madura, padi, cabai, tembakau dan hasil pertanian Jawa Timur, Indonesia.">
+  <meta name="theme-color" content="#173f2a">
+  <title>Brand Haris | Petani Sawah Madura</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="#beranda"><span>H</span> BRAND HARIS</a>
+    <button class="menu-btn" aria-label="Buka menu">☰</button>
+    <nav id="nav">
+      <a href="#beranda">Beranda</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#komoditas">Komoditas</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="beranda" class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">MADURA • JAWA TIMUR • INDONESIA</p>
+        <h1>Jejak Petani Sawah,<br><span>Harapan dari Tanah Madura.</span></h1>
+        <p class="hero-text">
+          Mengenal kehidupan petani, sawah, padi, cabai, dan tembakau
+          sebagai bagian dari cerita pertanian di Madura, Jawa Timur.
+        </p>
+        <div class="hero-buttons">
+          <a class="btn primary" href="#komoditas">Jelajahi Komoditas</a>
+          <a class="btn secondary" href="#galeri">Lihat 1000 Gambar</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="sun"></div>
+        <div class="field field-1"></div>
+        <div class="field field-2"></div>
+        <div class="field field-3"></div>
+        <div class="farmer">👨‍🌾</div>
+        <div class="hero-label">Tanah • Kerja • Panen</div>
+      </div>
+    </section>
+
+    <section id="tentang" class="section about">
+      <div>
+        <p class="eyebrow">TENTANG BRAND HARIS</p>
+        <h2>Cerita sederhana dari sawah.</h2>
+      </div>
+      <div class="about-text">
+        <p>
+          Brand Haris hadir sebagai landing page bertema pertanian untuk
+          memperkenalkan suasana sawah dan komoditas pertanian Madura.
+          Website ini dibuat ringan, responsif, dan siap dipasang di GitHub Pages.
+        </p>
+        <div class="stats">
+          <div><strong>1000+</strong><span>Visual galeri</span></div>
+          <div><strong>3</strong><span>Komoditas utama</span></div>
+          <div><strong>1</strong><span>Cerita pertanian</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="komoditas" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">KOMODITAS</p>
+        <h2>Dari lahan menuju kehidupan.</h2>
+        <p>Beberapa komoditas yang menjadi tema utama website Brand Haris.</p>
+      </div>
+
+      <div class="commodity-grid">
+        <article class="commodity rice">
+          <div class="emoji">🌾</div>
+          <h3>Padi</h3>
+          <p>Gambaran sawah, tanaman padi, proses perawatan, hingga masa panen.</p>
+          <span>01 / PADI</span>
+        </article>
+        <article class="commodity chili">
+          <div class="emoji">🌶️</div>
+          <h3>Cabai</h3>
+          <p>Warna merah cabai dan aktivitas pertanian sebagai bagian dari hasil kebun.</p>
+          <span>02 / CABAI</span>
+        </article>
+        <article class="commodity tobacco">
+          <div class="emoji">🍂</div>
+          <h3>Tembakau</h3>
+          <p>Tanaman tembakau dan tradisi pertanian yang dikenal di sejumlah wilayah Madura.</p>
+          <span>03 / TEMBAKAU</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="quote-section">
+      <div class="quote-mark">“</div>
+      <blockquote>
+        Tanah mengajarkan kesabaran. Petani mengajarkan perjuangan.
+      </blockquote>
+      <p>— Brand Haris</p>
+    </section>
+
+    <section id="galeri" class="section gallery-section">
+      <div class="section-heading gallery-heading">
+        <div>
+          <p class="eyebrow">GALERI BESAR</p>
+          <h2>1000 gambar cerita pertanian.</h2>
+        </div>
+        <p>
+          Galeri dibuat otomatis dengan JavaScript agar halaman tetap ringan.
+          Gambar diambil dari layanan foto publik dan dapat diganti dengan foto
+          asli milik Anda kapan saja.
+        </p>
+      </div>
+
+      <div class="gallery-tools">
+        <button class="filter active" data-filter="all">Semua</button>
+        <button class="filter" data-filter="padi">Padi</button>
+        <button class="filter" data-filter="cabai">Cabai</button>
+        <button class="filter" data-filter="tembakau">Tembakau</button>
+        <button class="filter" data-filter="petani">Petani</button>
+      </div>
+
+      <div id="gallery" class="gallery" aria-live="polite"></div>
+      <button id="loadMore" class="load-more">Muat gambar berikutnya</button>
+      <p id="galleryCount" class="gallery-count"></p>
+    </section>
+
+    <section id="kontak" class="contact">
+      <div>
+        <p class="eyebrow">BRAND HARIS</p>
+        <h2>Mari kenalkan cerita pertanian Madura.</h2>
+        <p>
+          Ganti informasi di bawah dengan nomor WhatsApp, Instagram,
+          alamat usaha, atau kontak resmi Anda.
+        </p>
+      </div>
+      <div class="contact-card">
+        <p><strong>📍 Lokasi</strong><br>Madura, Jawa Timur, Indonesia</p>
+        <p><strong>🌱 Fokus</strong><br>Padi • Cabai • Tembakau</p>
+        <a class="btn primary" href="mailto:brandharis@example.com">Hubungi Brand Haris</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">H BRAND HARIS</div>
+    <p>© <span id="year"></span> Brand Haris. Dibuat untuk GitHub Pages.</p>
+  </footer>
+
+  <script>
+    const categories = {
+      padi: ["rice", "paddy", "rice-field"],
+      cabai: ["chili", "pepper", "red-chili"],
+      tembakau: ["tobacco", "tobacco-field", "farm-leaves"],
+      petani: ["farmer", "farmer-field", "agriculture"]
+    };
+
+    const labels = {
+      padi: "Padi",
+      cabai: "Cabai",
+      tembakau: "Tembakau",
+      petani: "Petani"
+    };
+
+    const totalImages = 1000;
+    const batchSize = 60;
+    let shown = 0;
+    let currentFilter = "all";
+
+    function makeImageUrl(category, id) {
+      const keywords = categories[category];
+      const keyword = keywords[id % keywords.length];
+      // Public image service. Replace this function with local /images/... files
+      // if you later want all photos to be stored inside the GitHub repository.
+      return `https://loremflickr.com/700/520/${keyword}?lock=${id + 1000}`;
+    }
+
+    function getCategory(i) {
+      const names = Object.keys(categories);
+      return names[i % names.length];
+    }
+
+    function createCard(i, category) {
+      const card = document.createElement("article");
+      card.className = "gallery-card";
+      card.dataset.category = category;
+      card.innerHTML = `
+        <img loading="lazy" src="${makeImageUrl(category, i)}"
+             alt="${labels[category]} - Brand Haris - gambar ${i + 1}"
+             onerror="this.src='https://picsum.photos/700/520?random=${i + 1000}'">
+        <div class="gallery-overlay">
+          <span>${String(i + 1).padStart(4, "0")}</span>
+          <strong>${labels[category]}</strong>
+        </div>`;
+      return card;
+    }
+
+    function renderMore() {
+      const gallery = document.getElementById("gallery");
+      const fragment = document.createDocumentFragment();
+      const end = Math.min(shown + batchSize, totalImages);
+
+      for (let i = shown; i < end; i++) {
+        const category = getCategory(i);
+        const card = createCard(i, category);
+        if (currentFilter === "all" || currentFilter === category) {
+          fragment.appendChild(card);
+        } else {
+          card.style.display = "none";
+          fragment.appendChild(card);
+        }
+      }
+
+      gallery.appendChild(fragment);
+      shown = end;
+      updateCount();
+
+      document.getElementById("loadMore").style.display =
+        shown >= totalImages ? "none" : "block";
+    }
+
+    function updateCount() {
+      const visible = [...document.querySelectorAll(".gallery-card")]
+        .filter(card => card.style.display !== "none").length;
+      document.getElementById("galleryCount").textContent =
+        `${visible} gambar ditampilkan • total koleksi ${totalImages} gambar`;
+    }
+
+    document.querySelectorAll(".filter").forEach(button => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".filter").forEach(b => b.classList.remove("active"));
+        button.classList.add("active");
+        currentFilter = button.dataset.filter;
+
+        document.querySelectorAll(".gallery-card").forEach(card => {
+          card.style.display =
+            currentFilter === "all" || card.dataset.category === currentFilter
+              ? ""
+              : "none";
+        });
+        updateCount();
+      });
+    });
+
+    document.getElementById("loadMore").addEventListener("click", renderMore);
+
+    document.querySelector(".menu-btn").addEventListener("click", () => {
+      document.getElementById("nav").classList.toggle("open");
+    });
+
+    document.querySelectorAll("#nav a").forEach(link => {
+      link.addEventListener("click", () => {
+        document.getElementById("nav").classList.remove("open");
+      });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+    renderMore();
+  </script>
+</body>
+</html>
+
