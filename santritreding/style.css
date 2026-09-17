@@ -1,1 +1,633 @@
-tred
+/* =========================================
+   SANTRI TRADING
+   Main Stylesheet
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #07110d;
+    color: #f3f7f4;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: auto;
+}
+
+
+/* =========================================
+   COLORS
+========================================= */
+
+:root {
+    --green: #28d17c;
+    --green-dark: #0c8f4d;
+    --green-light: #8fffc0;
+
+    --dark: #07110d;
+    --dark-2: #0b1712;
+    --dark-3: #102019;
+
+    --white: #f3f7f4;
+    --muted: #9baaa1;
+
+    --border: rgba(255, 255, 255, 0.09);
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 20;
+    padding: 24px 0;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.logo > span:last-child > span {
+    color: var(--green);
+}
+
+.logo-icon {
+    display: grid;
+    place-items: center;
+
+    width: 35px;
+    height: 35px;
+
+    border-radius: 10px;
+
+    background: var(--green);
+    color: #06120c;
+
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+nav a {
+    color: #b6c3bc;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--green);
+}
+
+.nav-button {
+    padding: 11px 19px;
+
+    border: 1px solid rgba(40, 209, 124, 0.5);
+    border-radius: 8px;
+
+    color: var(--green) !important;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 760px;
+    padding-top: 150px;
+    padding-bottom: 100px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 15% 30%,
+            rgba(40, 209, 124, 0.12),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 70%,
+            rgba(40, 209, 124, 0.08),
+            transparent 30%
+        ),
+        var(--dark);
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.badge {
+    display: inline-block;
+
+    margin-bottom: 25px;
+    padding: 8px 14px;
+
+    border: 1px solid rgba(40, 209, 124, 0.25);
+    border-radius: 50px;
+
+    background: rgba(40, 209, 124, 0.06);
+    color: var(--green);
+
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.hero h1 {
+    max-width: 650px;
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(48px, 6vw, 75px);
+    line-height: 1.02;
+    letter-spacing: -3px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--green);
+}
+
+.hero-text > p {
+    max-width: 570px;
+
+    margin-top: 28px;
+
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 13px;
+
+    margin-top: 35px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 22px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--green);
+    color: #06120c;
+}
+
+.btn-primary:hover {
+    background: #5be69b;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 1px solid var(--border);
+    color: #d7e1db;
+}
+
+.btn-secondary:hover {
+    border-color: var(--green);
+    color: var(--green);
+}
+
+.hero-info {
+    display: flex;
+    gap: 40px;
+
+    margin-top: 55px;
+}
+
+.hero-info div {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-info strong {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 22px;
+}
+
+.hero-info span {
+    margin-top: 2px;
+
+    color: #728078;
+    font-size: 11px;
+}
+
+
+/* =========================================
+   MARKET CARD
+========================================= */
+
+.hero-card {
+    position: relative;
+
+    padding: 25px;
+
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(40, 209, 124, 0.09),
+            rgba(255,255,255,0.025)
+        );
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,0.35);
+
+    overflow: hidden;
+}
+
+.hero-card::before {
+    content: '';
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    top: -100px;
+    right: -70px;
+
+    border-radius: 50%;
+
+    background: rgba(40, 209, 124, 0.12);
+    filter: blur(50px);
+}
+
+.market-top {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.small-text {
+    color: #728078;
+    font-size: 11px;
+}
+
+.market-top h3 {
+    margin-top: 3px;
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+}
+
+.live {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    color: var(--green);
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.live i {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+    background: var(--green);
+
+    box-shadow: 0 0 10px var(--green);
+}
+
+.chart {
+    position: relative;
+
+    height: 240px;
+
+    margin: 25px 0;
+
+    border-bottom: 1px solid var(--border);
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 50px 50px;
+}
+
+.chart-line {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background: transparent;
+}
+
+.chart-line::before {
+    content: '';
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        135deg,
+        transparent 5%,
+        transparent 12%,
+        var(--green) 12.5%,
+        transparent 13%,
+        transparent 25%,
+        var(--green) 25.5%,
+        transparent 26%,
+        transparent 38%,
+        var(--green) 38.5%,
+        transparent 39%,
+        transparent 48%,
+        var(--green) 48.5%,
+        transparent 49%,
+        transparent 62%,
+        var(--green) 62.5%,
+        transparent 63%,
+        transparent 74%,
+        var(--green) 74.5%,
+        transparent 75%,
+        transparent 86%,
+        var(--green) 86.5%,
+        transparent 87%
+    );
+
+    filter: drop-shadow(0 0 5px rgba(40,209,124,0.7));
+
+    transform: skewY(-5deg);
+}
+
+.chart-label {
+    position: absolute;
+
+    color: #5d6d65;
+    font-size: 10px;
+}
+
+.label-1 {
+    top: 20px;
+    left: 10px;
+}
+
+.label-2 {
+    bottom: 15px;
+    right: 10px;
+}
+
+.market-data {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 16px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.market-data:last-child {
+    border-bottom: 0;
+}
+
+.coin {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.coin-icon {
+    display: grid;
+    place-items: center;
+
+    width: 36px;
+    height: 36px;
+
+    border-radius: 10px;
+
+    font-weight: 700;
+}
+
+.bitcoin {
+    background: rgba(247, 147, 26, 0.15);
+    color: #f7931a;
+}
+
+.stock {
+    background: rgba(40, 209, 124, 0.12);
+    color: var(--green);
+}
+
+.coin strong,
+.price strong {
+    display: block;
+    font-size: 13px;
+}
+
+.coin span {
+    color: #67766e;
+    font-size: 10px;
+}
+
+.price {
+    text-align: right;
+}
+
+.price span {
+    display: block;
+    font-size: 10px;
+}
+
+.green {
+    color: var(--green);
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.about,
+.courses,
+.features {
+    padding: 120px 0;
+}
+
+.about {
+    background: var(--dark-2);
+}
+
+.section-heading {
+    max-width: 700px;
+}
+
+.section-heading.center {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-label {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: var(--green);
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.section-heading h2,
+.feature-text h2 {
+    font-family: 'Space Grotesk', sans-serif;
+
+    font-size: clamp(34px, 4vw, 50px);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+.section-heading h2 span,
+.feature-text h2 span {
+    color: var(--green);
+}
+
+.section-heading p {
+    margin-top: 20px;
+
+    color: var(--muted);
+    font-size: 15px;
+}
+
+
+/* =========================================
+   ABOUT CARDS
+========================================= */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+
+    margin-top: 60px;
+}
+
+.about-card {
+    padding: 30px;
+
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    background: rgba(255,255,255,0.025);
+
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(40, 209, 124, 0.35);
+}
+
+.card-icon {
+    display: grid;
+    place-items: center;
+
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 23px;
+
+    border-radius: 12px;
+
+    background: rgba(40,209,124,0.09);
+
+    font-size: 20px;
+}
+
+.about-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+}
+
+.about-card p {
+    margin-top: 10px;
+
+    color: #84938b;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   COURSES
+========================================= */
+
+.courses {
+    background: var(--dark
