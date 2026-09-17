@@ -42,7 +42,7 @@ a {
 }
 
 /* ukuran logo HP */
-@media(max-width:600px){
+@media(width: 100px){
 
     .logo-image img {
         width: 100px;
