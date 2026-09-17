@@ -547,4 +547,45 @@ footer p {
   h2 {
     font-size: 48px;
   }
+  /* ================================
+   LUXE D'AMOUR IMAGE LOGO
+   ================================ */
+
+.logo {
+    width: 120px;
+    height: 45px;
+    display: block;
+
+    background-image: url("https://res.cloudinary.com/ui9dbniz/image/upload/v1789615267/ChatGPT_Image_17_Sep_2026__09.53.28-removebg-preview.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /* sembunyikan tulisan lama */
+    font-size: 0;
+}
+
+.logo span {
+    display: none;
+}
+
+
+/* FOOTER LOGO */
+
+.footer-logo {
+    width: 120px;
+    height: 45px;
+    display: block;
+
+    background-image: url("https://res.cloudinary.com/ui9dbniz/image/upload/v1789615267/ChatGPT_Image_17_Sep_2026__09.53.28-removebg-preview.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+
+    font-size: 0;
+}
+
+.footer-logo span {
+    display: none;
+}
 }
