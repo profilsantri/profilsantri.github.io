@@ -46,6 +46,10 @@ a {
 }
 
 /* LOGO LUXE D'AMOUR */
+/* =========================
+   LOGO LUXE D'AMOUR
+========================= */
+
 .logo {
   display: block;
   width: 110px;
@@ -56,9 +60,11 @@ a {
   background-repeat: no-repeat;
   background-position: center;
 
+  /* Sembunyikan tulisan HTML lama */
   font-size: 0;
   letter-spacing: 0;
   line-height: 0;
+
   flex-shrink: 0;
 }
 
