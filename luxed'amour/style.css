@@ -534,4 +534,17 @@ footer p {
   h2 {
     font-size: 48px;
   }
+  .logo {
+    display: flex;
+    align-items: center;
+    width: 180px;
+    height: 65px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
 }
