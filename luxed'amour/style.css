@@ -530,19 +530,15 @@ footer p {
 /* =========================
    MOBILE
 ========================= */
-@media (max-width: 650px) {
-  .navbar .logo {
-    width: 80px !important;
-    height: 40px !important;
+@media (max-width: 600px) {
+
+  .navbar {
+    height: 70px;
   }
 
-  .navbar .logo img {
-    width: 80px !important;
-    height: 35px !important;
-    max-width: 80px !important;
-    max-height: 35px !important;
+  .logo {
+    font-size: 16px;
   }
-
 
   .nav-button {
     padding: 10px 13px;
