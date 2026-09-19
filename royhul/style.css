@@ -636,14 +636,14 @@ nav a:hover::after {
 
     object-fit: contain;
 
-    padding: 15px;
+    padding: 20px;
 
     background: white;
 
-    border-radius: 35px;
+    border-radius: 50%px;
 
     box-shadow:
-    0 20px 40px rgba(0,0,0,0.18);
+    0 30px 30px rgba(5,5,5,5.18);
 
 }
 
