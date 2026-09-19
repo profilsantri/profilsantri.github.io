@@ -20,33 +20,27 @@ a {
     color: inherit;
 }
 
-/* NAVBAR */
-.navbar {
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 22px 25px;
+/* LOGO NAVBAR MIEDZY */
+.logo {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
+    gap: 12px;
     font-size: 22px;
     font-weight: 800;
     letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    border-radius: 12px;
+    display: block;
 }
 
 .logo span {
-    display: inline-flex;
-    width: 38px;
-    height: 38px;
-    margin-right: 8px;
-    align-items: center;
-    justify-content: center;
-    background: #20e0a1;
-    color: #07111f;
-    border-radius: 10px;
+    color: #ffffff;
 }
 
 nav {
@@ -453,38 +447,24 @@ nav a:hover {
     margin-top: 3px;
 }
 
-/* ABOUT */
-.about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 80px;
-}
-
-.about-image {
-    min-height: 350px;
-    border-radius: 20px;
-    border: 1px solid #1b3045;
-    background:
-        radial-gradient(circle, rgba(32,224,161,.15), transparent 50%),
-        #0b1928;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
+/* LOGO BAGIAN ABOUT */
 .about-logo {
-    width: 150px;
-    height: 150px;
+    width: 220px;
+    height: 220px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 2px solid #20e0a1;
     border-radius: 35px;
-    font-size: 80px;
-    font-weight: 800;
-    color: #20e0a1;
-    box-shadow: 0 0 70px rgba(32,224,161,.15);
+    background: #0b1928;
+    overflow: hidden;
+    box-shadow: 0 0 50px rgba(32,224,161,0.15);
+}
+
+.about-logo img {
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
 }
 
 .about-content h2 {
