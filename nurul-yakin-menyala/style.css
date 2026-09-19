@@ -1,1 +1,631 @@
-nurul-yakin-menyala
+```css
+/* ==============================
+   RESET
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f8fc;
+    color: #14213d;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ==============================
+   CONTAINER
+============================== */
+
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+
+/* ==============================
+   HEADER
+============================== */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: #071d38;
+    border-bottom: 1px solid #1e4266;
+}
+
+.nav {
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: white;
+}
+
+.logo-icon {
+    font-size: 38px;
+}
+
+.logo strong {
+    display: block;
+    font-size: 18px;
+}
+
+.logo small {
+    display: block;
+    color: #38a9ff;
+    font-size: 12px;
+}
+
+
+/* MENU */
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    color: white;
+    font-size: 14px;
+
+    transition: .3s;
+}
+
+.menu a:hover {
+    color: #20a4ff;
+}
+
+
+/* ==============================
+   BUTTON
+============================== */
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 23px;
+
+    border-radius: 30px;
+
+    background: #0796ff;
+
+    color: white;
+
+    font-weight: bold;
+
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: #0076d7;
+}
+
+.btn-small {
+    padding: 10px 18px;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid white;
+}
+
+
+/* ==============================
+   HERO
+============================== */
+
+.hero {
+    position: relative;
+
+    min-height: 550px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            #03182e 10%,
+            rgba(3, 24, 46, .9) 45%,
+            rgba(3, 24, 46, .35)
+        ),
+        url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 20, 40, .2);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    color: white;
+
+    max-width: 720px;
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 7px 16px;
+
+    border-radius: 30px;
+
+    background: #078df5;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 70px);
+
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #139fff;
+}
+
+.hero p {
+    max-width: 650px;
+
+    font-size: 18px;
+
+    color: #e4eef8;
+
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* ==============================
+   SECTION TITLE
+============================== */
+
+.section-title {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 45px;
+}
+
+.section-title span,
+.label {
+    color: #078df5;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+
+    margin: 8px 0;
+}
+
+.section-title p {
+    color: #64748b;
+}
+
+
+/* ==============================
+   MATERI
+============================== */
+
+.materi {
+    padding: 90px 0;
+
+    background: #f8fbff;
+}
+
+.materi-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* CARD */
+
+.card {
+    background: white;
+
+    border: 1px solid #dce9f5;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 8px 30px rgba(0, 50, 100, .05);
+
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+
+    border-color: #4db3ff;
+
+    box-shadow:
+        0 15px 40px rgba(0, 120, 220, .13);
+}
+
+.card-icon {
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #e9f5ff;
+
+    color: #087fd5;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    margin-bottom: 18px;
+}
+
+.card h3 {
+    font-size: 19px;
+
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #64748b;
+
+    font-size: 14px;
+
+    min-height: 70px;
+
+    margin-bottom: 15px;
+}
+
+.card a {
+    color: #078df5;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+
+/* ==============================
+   ABOUT
+============================== */
+
+.about {
+    padding: 90px 0;
+
+    background: white;
+}
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.3fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.about h2 {
+    font-size: 40px;
+
+    margin: 10px 0 20px;
+}
+
+.about p {
+    color: #64748b;
+
+    margin-bottom: 15px;
+}
+
+.about-box {
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e5f4ff,
+            #f8fcff
+        );
+
+    border-radius: 20px;
+
+    border: 1px solid #cce8fb;
+}
+
+.about-box h3 {
+    font-size: 25px;
+
+    margin-bottom: 20px;
+}
+
+.about-box ul {
+    list-style: none;
+}
+
+.about-box li {
+    margin: 10px 0;
+
+    color: #234567;
+
+    font-weight: 500;
+}
+
+
+/* ==============================
+   FEATURES
+============================== */
+
+.features {
+    padding: 35px 0;
+
+    background: #072c50;
+
+    color: white;
+}
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.feature-grid > div {
+    padding: 10px 20px;
+
+    border-right: 1px solid #285174;
+}
+
+.feature-grid strong {
+    font-size: 30px;
+}
+
+.feature-grid h3 {
+    margin-top: 5px;
+}
+
+.feature-grid p {
+    color: #b9cee0;
+
+    font-size: 14px;
+}
+
+
+/* ==============================
+   CONTACT
+============================== */
+
+.contact {
+    padding: 90px 0;
+
+    background: #f8fbff;
+}
+
+.contact-box {
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    border: 1px solid #dce9f5;
+
+    text-align: center;
+}
+
+.contact-box p {
+    margin: 10px;
+}
+
+.contact-box a {
+    color: #078df5;
+
+    font-weight: bold;
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+    padding: 40px 0;
+
+    background: #041a31;
+
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.footer-content h3 {
+    font-size: 18px;
+}
+
+.footer-content p {
+    color: #9fb5c9;
+
+    font-size: 14px;
+}
+
+
+/* ==============================
+   RESPONSIVE TABLET
+============================== */
+
+@media (max-width: 900px) {
+
+    .menu {
+        display: none;
+    }
+
+    .materi-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* ==============================
+   RESPONSIVE HP
+============================== */
+
+@media (max-width: 600px) {
+
+    .nav {
+        min-height: 68px;
+    }
+
+    .logo strong {
+        font-size: 14px;
+    }
+
+    .logo small {
+        font-size: 10px;
+    }
+
+    .logo-icon {
+        font-size: 28px;
+    }
+
+    .nav .btn {
+        display: none;
+    }
+
+    .hero {
+        min-height: 620px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .materi {
+        padding: 65px 0;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .materi-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        padding: 65px 0;
+    }
+
+    .about h2 {
+        font-size: 31px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-grid > div {
+        border-right: none;
+        border-bottom: 1px solid #285174;
+
+        padding: 15px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+```
