@@ -22,7 +22,7 @@ a {
 
 /* NAVBAR */
 .navbar {
-    height: 50px;
+    height: 40px;
     padding: 0 7%;
     display: flex;
     align-items: center;
@@ -30,7 +30,7 @@ a {
 }
 
 .logo-image img {
-    width: 40px; /* ukuran logo desktop */
+    width: 30px; /* ukuran logo desktop */
     height: auto;
     object-fit: contain;
 
@@ -51,7 +51,7 @@ a {
 }
 
 .navbar {
-    height: 50px;
+    height: 40px;
     padding: 0 7%;
     display: flex;
     align-items: center;
@@ -93,7 +93,7 @@ a {
 }
 
 .hero-text {
-  max-width: 600px;
+  max-width: 500px;
   margin: 28px 0;
   color: #aab3c5;
   font-size: 17px;
