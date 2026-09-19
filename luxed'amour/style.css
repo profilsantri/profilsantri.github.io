@@ -1,6 +1,6 @@
-/* =========================
-   RESET
-========================= */
+/* =========================================================
+   LUXE D'AMOUR — PREMIUM STREETWEAR
+   ========================================================= */
 
 * {
   margin: 0;
@@ -14,9 +14,15 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
-  background: #f3f1ec;
-  color: #111;
+  background: #0a0a0a;
+  color: #fff;
+  line-height: 1.6;
   overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+  display: block;
 }
 
 a {
@@ -25,320 +31,544 @@ a {
 }
 
 
-/* =========================
+/* =========================================================
    NAVBAR
-========================= */
+   ========================================================= */
 
 .navbar {
-  height: 85px;
-  padding: 0 6%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  width: 100%;
+  height: 90px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #d5d2cb;
-  background: #f3f1ec;
-  position: relative;
-  z-index: 10;
+
+  padding: 0 5%;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.65),
+    transparent
+  );
+
+  backdrop-filter: blur(2px);
 }
+
+
+/* LOGO */
 
 .logo {
-  font-size: 20px;
-  font-weight: 900;
-  letter-spacing: -1px;
+  width: 105px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
 }
 
-.logo span,
-.footer-logo span {
-  color: #888;
+.logo img {
+  width: 105px;
+  height: 45px;
+
+  max-width: 105px;
+  max-height: 45px;
+
+  object-fit: contain;
+  object-position: left center;
+
+  transition: 0.4s ease;
 }
+
+.logo:hover img {
+  transform: scale(1.08);
+}
+
+
+/* NAVIGATION */
 
 nav {
   display: flex;
-  gap: 35px;
+  align-items: center;
+  gap: 38px;
 }
 
 nav a {
+  position: relative;
+
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 700;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  transition: 0.3s;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  transition: 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+
+  width: 0;
+  height: 1px;
+
+  background: #fff;
+
+  transition: 0.3s ease;
 }
 
 nav a:hover {
-  opacity: 0.45;
+  color: #fff;
 }
 
+nav a:hover::after {
+  width: 100%;
+}
+
+
+/* SHOP BUTTON */
+
 .nav-button {
-  padding: 12px 20px;
-  background: #111;
-  color: white;
+  padding: 12px 22px;
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+
   font-size: 10px;
   font-weight: 800;
-  transition: 0.3s;
+  letter-spacing: 1.5px;
+
+  transition: 0.3s ease;
 }
 
 .nav-button:hover {
-  background: #333;
-  transform: translateY(-2px);
+  background: #fff;
+  color: #000;
 }
 
 
-/* =========================
+/* =========================================================
    HERO
-========================= */
+   ========================================================= */
 
 .hero {
-  min-height: calc(100vh - 85px);
-  padding: 7% 6%;
+  position: relative;
+
+  min-height: 100vh;
+
   display: grid;
-  grid-template-columns: 1fr 0.9fr;
-  gap: 7%;
+  grid-template-columns: 1fr 1fr;
+
   align-items: center;
+
+  padding: 130px 7% 80px;
+
+  background:
+    radial-gradient(
+      circle at 70% 40%,
+      rgba(255,255,255,0.08),
+      transparent 35%
+    ),
+    #080808;
+
+  overflow: hidden;
+}
+
+
+/* BACKGROUND LIGHT */
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 600px;
+  height: 600px;
+
+  right: -250px;
+  top: 10%;
+
+  background: rgba(255,255,255,0.04);
+
+  border-radius: 50%;
+
+  filter: blur(80px);
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 650px;
 }
 
 .eyebrow {
+  margin-bottom: 20px;
+
   font-size: 10px;
   font-weight: 800;
-  letter-spacing: 3px;
-  margin-bottom: 25px;
+
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  color: #aaa;
 }
 
 .hero h1 {
-  font-size: clamp(65px, 9vw, 145px);
-  line-height: 0.82;
-  letter-spacing: -8px;
+  font-size: clamp(65px, 9vw, 125px);
+
+  line-height: 0.83;
+
   font-weight: 900;
+
+  letter-spacing: -7px;
+
+  text-transform: uppercase;
 }
 
 .hero h1 span {
   color: transparent;
-  -webkit-text-stroke: 2px #111;
+
+  -webkit-text-stroke: 1px #fff;
+
+  text-stroke: 1px #fff;
 }
 
 .hero-text {
-  max-width: 440px;
-  margin-top: 40px;
+  max-width: 470px;
+
+  margin-top: 35px;
+
+  color: #aaa;
+
   font-size: 14px;
   line-height: 1.8;
-  color: #555;
 }
+
+
+/* HERO BUTTONS */
 
 .hero-buttons {
   display: flex;
-  gap: 12px;
+  gap: 14px;
+
   margin-top: 35px;
 }
 
 .button {
-  display: inline-block;
-  padding: 16px 23px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px 24px;
+
   font-size: 10px;
   font-weight: 800;
-  letter-spacing: 0.5px;
-  transition: 0.3s;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  transition: 0.3s ease;
 }
 
-.button.primary {
-  background: #111;
-  color: white;
+.primary {
+  background: #fff;
+  color: #000;
 }
 
-.button.secondary {
-  border: 1px solid #111;
+.primary:hover {
+  background: #ccc;
+
+  transform: translateY(-3px);
 }
 
-.button:hover {
-  transform: translateY(-4px);
+.secondary {
+  border: 1px solid #444;
+
+  color: #fff;
+}
+
+.secondary:hover {
+  border-color: #fff;
+
+  transform: translateY(-3px);
 }
 
 
-/* =========================
+/* =========================================================
    HERO IMAGE
-========================= */
+   ========================================================= */
 
 .hero-image {
   position: relative;
+
+  height: 650px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-box {
-  height: 650px;
-  overflow: hidden;
   position: relative;
+
+  width: 80%;
+  height: 100%;
+
+  overflow: hidden;
 }
 
 .image-box::after {
   content: "";
+
   position: absolute;
   inset: 0;
+
   background: linear-gradient(
-    to bottom,
-    transparent 65%,
-    rgba(0, 0, 0, 0.3)
+    180deg,
+    transparent 55%,
+    rgba(0,0,0,0.45)
   );
 }
 
 .image-box img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
+
   filter: grayscale(100%);
-  transition: 0.7s;
+
+  transition: transform 1s ease;
 }
 
-.image-box:hover img {
+.hero-image:hover img {
   transform: scale(1.04);
-  filter: grayscale(0%);
 }
 
 .vertical-text {
   position: absolute;
-  right: -55px;
-  top: 50%;
-  transform: rotate(90deg);
-  font-size: 8px;
-  font-weight: 800;
+
+  right: 0;
+  bottom: 50px;
+
+  writing-mode: vertical-rl;
+
+  font-size: 9px;
+  font-weight: 700;
+
   letter-spacing: 3px;
+
+  color: #777;
 }
 
 
-/* =========================
+/* =========================================================
    MARQUEE
-========================= */
+   ========================================================= */
 
 .marquee {
   overflow: hidden;
-  background: #111;
-  color: white;
-  padding: 22px 0;
+
+  background: #fff;
+  color: #000;
+
+  padding: 17px 0;
+
   white-space: nowrap;
 }
 
 .marquee div {
+  width: max-content;
+
   font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  animation: marquee 20s linear infinite;
+  font-weight: 900;
+
+  letter-spacing: 3px;
+
+  animation: marquee 22s linear infinite;
 }
 
 @keyframes marquee {
+
   from {
     transform: translateX(0);
   }
 
   to {
-    transform: translateX(-30%);
+    transform: translateX(-50%);
   }
+
 }
 
 
-/* =========================
+/* =========================================================
    COLLECTION
-========================= */
+   ========================================================= */
 
 .collection {
-  padding: 130px 6%;
+  padding: 130px 7%;
+
+  background: #0a0a0a;
 }
 
 .section-heading {
   display: flex;
+
   justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
+
+  gap: 50px;
+
   margin-bottom: 60px;
 }
 
 .section-heading h2 {
-  font-size: clamp(55px, 8vw, 110px);
-  line-height: 0.8;
-  letter-spacing: -6px;
+  font-size: clamp(55px, 7vw, 90px);
+
+  line-height: 0.9;
+
+  font-weight: 900;
+
+  letter-spacing: -5px;
 }
 
 .section-heading h2 span {
-  color: #999;
+  color: #777;
 }
 
 .section-description {
-  width: 300px;
+  max-width: 380px;
+
+  color: #777;
+
   font-size: 13px;
-  line-height: 1.7;
-  color: #666;
+
+  line-height: 1.8;
 }
 
 
-/* =========================
-   PRODUCTS
-========================= */
+/* PRODUCTS */
 
 .products {
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
+
   gap: 22px;
 }
 
-.product-image {
-  height: 520px;
-  overflow: hidden;
+.product {
   position: relative;
-  background: #ddd;
+}
+
+.product-image {
+  position: relative;
+
+  height: 500px;
+
+  overflow: hidden;
+
+  background: #151515;
 }
 
 .product-image img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
+
   filter: grayscale(100%);
-  transition: 0.5s;
+
+  transition: 0.7s ease;
 }
 
 .product:hover .product-image img {
-  transform: scale(1.05);
+  transform: scale(1.07);
+
   filter: grayscale(0%);
 }
 
 .product-image span {
   position: absolute;
-  top: 15px;
-  left: 15px;
-  background: white;
-  padding: 8px 11px;
+
+  top: 20px;
+  left: 20px;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255,255,255,0.5);
+
   font-size: 10px;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .product-info {
   display: flex;
+
   justify-content: space-between;
+  align-items: flex-start;
+
   gap: 20px;
+
   padding: 20px 0;
-  border-bottom: 1px solid #ccc;
+
+  border-bottom: 1px solid #222;
 }
 
 .product-info h3 {
   font-size: 12px;
-  font-weight: 900;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
 }
 
 .product-info p {
-  margin-top: 6px;
-  font-size: 10px;
-  color: #777;
+  margin-top: 5px;
+
+  color: #666;
+
+  font-size: 11px;
 }
 
 .product-info strong {
-  font-size: 12px;
   white-space: nowrap;
+
+  font-size: 12px;
 }
 
 
-/* =========================
+/* =========================================================
    ABOUT
-========================= */
+   ========================================================= */
 
 .about {
-  min-height: 700px;
   display: grid;
+
   grid-template-columns: 1fr 1fr;
-  background: #111;
-  color: white;
+
+  min-height: 650px;
+
+  background: #eee;
+  color: #111;
 }
 
 .about-image {
@@ -348,159 +578,218 @@ nav a:hover {
 .about-image img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
+
   filter: grayscale(100%);
-  opacity: 0.8;
 }
 
 .about-content {
-  padding: 10%;
   display: flex;
+
   flex-direction: column;
   justify-content: center;
-}
 
-.about-content .eyebrow {
-  color: #999;
+  padding: 10% 12%;
 }
 
 .about-content h2 {
-  font-size: clamp(55px, 7vw, 100px);
-  line-height: 0.85;
-  letter-spacing: -6px;
-  margin-bottom: 40px;
+  font-size: clamp(50px, 6vw, 85px);
+
+  line-height: 0.9;
+
+  font-weight: 900;
+
+  letter-spacing: -4px;
 }
 
 .about-content h2 span {
   color: transparent;
-  -webkit-text-stroke: 1px white;
+
+  -webkit-text-stroke: 1px #111;
 }
 
-.about-content > p {
-  max-width: 470px;
+.about-content > p:not(.eyebrow) {
+  max-width: 500px;
+
+  margin-top: 30px;
+
+  color: #555;
+
   font-size: 14px;
-  line-height: 1.8;
-  color: #aaa;
+
+  line-height: 1.9;
 }
 
 .text-link {
   width: fit-content;
-  margin-top: 40px;
+
+  margin-top: 35px;
   padding-bottom: 7px;
-  border-bottom: 1px solid white;
+
+  border-bottom: 1px solid #111;
+
   font-size: 10px;
   font-weight: 800;
+
+  letter-spacing: 2px;
+
+  transition: 0.3s ease;
+}
+
+.text-link:hover {
+  letter-spacing: 3px;
 }
 
 
-/* =========================
+/* =========================================================
    CTA
-========================= */
+   ========================================================= */
 
 .cta {
-  padding: 150px 6%;
+  min-height: 650px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
   text-align: center;
+
+  padding: 100px 20px;
+
+  background:
+    radial-gradient(
+      circle,
+      #222 0%,
+      #080808 55%
+    );
 }
 
 .cta h2 {
-  font-size: clamp(65px, 12vw, 170px);
-  line-height: 0.8;
-  letter-spacing: -9px;
+  font-size: clamp(60px, 9vw, 120px);
+
+  line-height: 0.85;
+
   font-weight: 900;
-  margin-bottom: 60px;
+
+  letter-spacing: -6px;
 }
 
 .cta h2 span {
   color: transparent;
-  -webkit-text-stroke: 2px #111;
+
+  -webkit-text-stroke: 1px #fff;
+}
+
+.cta .button {
+  margin-top: 40px;
 }
 
 
-/* =========================
+/* =========================================================
    FOOTER
-========================= */
+   ========================================================= */
 
 footer {
-  padding: 35px 6%;
-  border-top: 1px solid #ccc;
-  display: flex;
+  display: grid;
+
+  grid-template-columns: 1.5fr 1fr 1fr;
+
   align-items: center;
-  justify-content: space-between;
+
   gap: 30px;
+
+  padding: 45px 7%;
+
+  border-top: 1px solid #222;
+
+  background: #050505;
 }
 
 .footer-logo {
-  font-size: 18px;
-  font-weight: 900;
+  width: 105px;
+
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 105px;
+
+  height: auto;
+
+  max-height: 45px;
+
+  object-fit: contain;
 }
 
 footer p {
-  font-size: 8px;
-  color: #777;
+  color: #555;
+
+  font-size: 9px;
+
   letter-spacing: 1px;
 }
 
 .social {
   display: flex;
-  gap: 20px;
+
+  justify-content: flex-end;
+
+  gap: 22px;
 }
 
 .social a {
-  font-size: 9px;
-  font-weight: 700;
+  color: #777;
+
+  font-size: 10px;
+
+  transition: 0.3s ease;
 }
 
 .social a:hover {
-  opacity: 0.5;
+  color: #fff;
 }
 
 
-/* =========================
+/* =========================================================
    TABLET
-========================= */
+   ========================================================= */
 
 @media (max-width: 900px) {
 
   .navbar {
-    padding: 0 5%;
+    padding: 0 4%;
   }
 
   nav {
+    gap: 20px;
+  }
+
+  .nav-button {
     display: none;
   }
 
   .hero {
     grid-template-columns: 1fr;
-    padding-top: 60px;
+
+    padding-top: 150px;
   }
 
-  .hero h1 {
-    font-size: 75px;
-    letter-spacing: -5px;
+  .hero-image {
+    height: 500px;
+
+    margin-top: 60px;
   }
 
   .image-box {
-    height: 550px;
-  }
-
-  .vertical-text {
-    display: none;
-  }
-
-  .section-heading {
-    display: block;
-  }
-
-  .section-description {
-    margin-top: 30px;
+    width: 100%;
   }
 
   .products {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .product-image {
-    height: 420px;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .about {
@@ -511,93 +800,196 @@ footer p {
     height: 500px;
   }
 
-  .about-content {
-    min-height: 600px;
+  footer {
+    grid-template-columns: 1fr 1fr;
   }
 
-  footer {
-    flex-direction: column;
-    text-align: center;
+  .social {
+    justify-content: flex-start;
   }
+
 }
 
 
-/* =========================
+/* =========================================================
    MOBILE
-========================= */
+   ========================================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 
   .navbar {
-    height: 70px;
+    height: 75px;
+
+    padding: 0 5%;
   }
+
+
+  /* LOGO MOBILE */
 
   .logo {
-    font-size: 16px;
+    width: 82px;
+    height: 42px;
   }
 
-  .nav-button {
-    padding: 10px 13px;
-    font-size: 9px;
+  .logo img {
+    width: 82px;
+    height: 36px;
+
+    max-width: 82px;
+    max-height: 36px;
   }
+
+
+  /* NAV MOBILE */
+
+  nav {
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 7px;
+
+    letter-spacing: 0.8px;
+  }
+
+
+  /* HERO */
 
   .hero {
+    padding: 120px 7% 70px;
+
     min-height: auto;
-    padding: 70px 5%;
   }
 
   .hero h1 {
-    font-size: 65px;
+    font-size: 57px;
+
+    letter-spacing: -4px;
+  }
+
+  .hero-text {
+    font-size: 12px;
+
+    margin-top: 25px;
   }
 
   .hero-buttons {
     flex-direction: column;
+
+    align-items: flex-start;
   }
 
-  .button {
-    text-align: center;
+  .hero-image {
+    height: 430px;
+
+    margin-top: 50px;
   }
 
-  .image-box {
-    height: 450px;
-  }
+
+  /* COLLECTION */
 
   .collection {
-    padding: 90px 5%;
+    padding: 90px 7%;
+  }
+
+  .section-heading {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 25px;
   }
 
   .section-heading h2 {
-    font-size: 65px;
+    font-size: 60px;
   }
 
   .products {
     grid-template-columns: 1fr;
+
+    gap: 45px;
   }
 
   .product-image {
-    height: 500px;
+    height: 480px;
+  }
+
+
+  /* ABOUT */
+
+  .about-image {
+    height: 400px;
   }
 
   .about-content {
-    padding: 70px 5%;
+    padding: 80px 8%;
   }
 
   .about-content h2 {
-    font-size: 65px;
+    font-size: 55px;
   }
 
+
+  /* CTA */
+
   .cta {
-    padding: 100px 5%;
+    min-height: 500px;
   }
 
   .cta h2 {
-    font-size: 70px;
-    letter-spacing: -5px;
+    font-size: 60px;
+
+    letter-spacing: -4px;
+  }
+
+
+  /* FOOTER */
+
+  footer {
+    grid-template-columns: 1fr;
+
+    padding: 50px 7%;
   }
 
   .social {
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL PHONE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .logo {
+    width: 72px;
+  }
+
+  .logo img {
+    width: 72px;
+  }
+
+  nav {
+    gap: 8px;
+  }
+
+  nav a {
+    font-size: 6px;
+  }
+
+  .hero h1 {
+    font-size: 49px;
+  }
+
+  .section-heading h2 {
+    font-size: 52px;
+  }
+
+  .product-image {
+    height: 420px;
   }
 
 }
