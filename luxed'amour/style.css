@@ -39,22 +39,17 @@ a {
   background: #f3f1ec;
   position: relative;
   z-index: 10;
-/* LOGO NAVBAR */
-.navbar .logo {
-  width: 100px !important;
-  height: 50px !important;
-  display: flex !important;
-  align-items: center !important;
-  overflow: hidden;
 }
 
-.navbar .logo img {
-  width: 100px !important;
-  height: 45px !important;
-  max-width: 100px !important;
-  max-height: 45px !important;
-  object-fit: contain !important;
-  display: block !important;
+.logo {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.logo span,
+.footer-logo span {
+  color: #888;
 }
 
 nav {
@@ -530,6 +525,7 @@ footer p {
 /* =========================
    MOBILE
 ========================= */
+
 @media (max-width: 600px) {
 
   .navbar {
