@@ -12,19 +12,16 @@ header {
     padding: 20px 40px;
 }
 
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
 .logo img {
     width: 150px;
     height: auto;
-    display: block;
 }
-
-/* ukuran logo HP */
-@media(width: 10px){
-
-    .logo-image img {
-        width: 10px;
-    }
-
 }
 
 .navbar {
