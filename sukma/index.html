@@ -212,11 +212,10 @@ function displayProducts(data) {
   data.forEach((phone) => {
     grid.innerHTML += `
       <div class="card">
-        <div class="phone-image">
-          <span>${phone.icon}</span>
-          <div class="heart">♡</div>
-        </div>
-
+       <div class="phone-image">
+  <img src="${phone.image}" alt="${phone.name}">
+  <div class="heart">♡</div>
+</div>
         <div class="card-content">
           <p class="brand">${phone.brand}</p>
           <h3>${phone.name}</h3>
