@@ -1,895 +1,701 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Teknik Komputer & Jaringan</title>
-
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-
-<body>
-
-<!-- ================= HEADER ================= -->
-
-<header class="top-header">
-
-    <div class="promo">
-        🚀 Belajar Teknik Komputer dan Jaringan dari dasar sampai mahir
-        <button>Pelajari lebih lanjut</button>
-    </div>
-
-    <div class="main-header">
-
-        <div class="brand">
-            <span>TKJ</span>
-            Teknik Komputer & Jaringan
-        </div>
-
-        <nav>
-            <a href="#materi">Materi</a>
-            <a href="#kelas">Kelas</a>
-            <a href="#tentang">Tentang</a>
-            <a href="#harga">Harga</a>
-        </nav>
-
-        <button class="login">Masuk</button>
-
-    </div>
-
-    <div class="category-menu">
-
-        <a href="#materi">💻 Komputer</a>
-        <a href="#jaringan">🌐 Jaringan</a>
-        <a href="#mikrotik">📡 MikroTik</a>
-        <a href="#linux">🐧 Linux</a>
-        <a href="#programming">💻 Programming</a>
-        <a href="#office">📊 Microsoft Office</a>
-        <a href="#design">🎨 Desain</a>
-
-    </div>
-
-</header>
-
-
-<!-- ================= SEARCH ================= -->
-
-<section class="search-area">
-
-    <div class="search-tabs">
-        <span class="active">✦ Semua materi</span>
-        <span>🔍 Pencarian standar</span>
-    </div>
-
-    <div class="search-box">
-
-        <select>
-            <option>Semua materi</option>
-            <option>Komputer</option>
-            <option>Jaringan</option>
-            <option>Linux</option>
-            <option>MikroTik</option>
-        </select>
-
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Cari materi Teknik Komputer dan Jaringan..."
-        >
-
-        <button onclick="searchMateri()">🔍</button>
-
-    </div>
-
-</section>
-
-
-<!-- ================= HERO ================= -->
-
-<section class="hero">
-
-    <div class="hero-text">
-
-        <span class="label">BELAJAR TKJ</span>
-
-        <h1>
-            Teknik Komputer
-            <br>
-            dan Jaringan
-        </h1>
-
-        <p>
-            Belajar komputer dan jaringan dari dasar sampai mahir.
-            Mulai dari memperbaiki BIOS, instalasi Windows,
-            pemasangan kabel LAN, MikroTik, Linux,
-            HTML, hingga Microsoft Office.
-        </p>
-
-        <div class="hero-buttons">
-            <a href="#materi" class="btn-primary">
-                Mulai Belajar
-            </a>
-
-            <a href="#tentang" class="btn-secondary">
-                Lihat Materi
-            </a>
-        </div>
-
-    </div>
-
-    <div class="hero-image">
-
-        <img
-            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80"
-            alt="Teknik Komputer dan Jaringan"
-        >
-
-    </div>
-
-</section>
-
-
-<!-- ================= JUDUL MATERI ================= -->
-
-<section class="content" id="materi">
-
-    <div class="section-title">
-
-        <div>
-            <h2>Materi Teknik Komputer & Jaringan</h2>
-
-            <p>
-                50 materi pembelajaran dari tingkat dasar sampai lanjutan.
-            </p>
-        </div>
-
-        <button class="filter">
-            ⚙ Filter
-        </button>
-
-    </div>
-
-
-    <!-- ================= GRID ================= -->
-
-    <div class="course-grid" id="courseGrid">
-
-
-        <!-- 1 -->
-
-        <article class="course-card">
-
-            <img src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8?auto=format&fit=crop&w=700&q=80">
-
-            <div class="course-body">
-
-                <span class="category">KOMPUTER</span>
-
-                <h3>01. Mengenal Komputer dari Dasar</h3>
-
-                <p>
-                    Mengenal hardware, software dan fungsi komputer.
-                </p>
-
-                <strong>Rp50.000</strong>
-
-                <button onclick="belajar('Mengenal Komputer dari Dasar')">
-                    Mulai Belajar
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- 2 -->
-
-        <article class="course-card">
-
-            <img src="https://images.unsplash.com/photo-1593642702749-b7d2a804fbcf?auto=format&fit=crop&w=700&q=80">
-
-            <div class="course-body">
-
-                <span class="category">BIOS</span>
-
-                <h3>02. Cara Mengatasi BIOS</h3>
-
-                <p>
-                    Belajar masuk BIOS, boot order dan pengaturan dasar.
-                </p>
-
-                <strong>Rp50.000</strong>
-
-                <button onclick="belajar('Cara Mengatasi BIOS')">
-                    Mulai Belajar
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- 3 -->
-
-        <article class="course-card">
-
-            <img src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&w=700&q=80">
-
-            <div class="course-body">
-
-                <span class="category">HARDWARE</span>
-
-                <h3>03. Merakit Komputer</h3>
-
-                <p>
-                    Mengenal motherboard, RAM, CPU, SSD dan power supply.
-                </p>
-
-                <strong>Rp50.000</strong>
-
-                <button onclick="belajar('Merakit Komputer')">
-                    Mulai Belajar
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- 4 -->
-
-        <article class="course-card">
-
-            <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=700&q=80">
-
-            <div class="course-body">
-
-                <span class="category">WINDOWS</span>
-
-                <h3>04. Instalasi Windows</h3>
-
-                <p>
-                    Tutorial instalasi Windows pada komputer kosong.
-                </p>
-
-                <strong>Rp50.000</strong>
-
-                <button onclick="belajar('Instalasi Windows')">
-                    Mulai Belajar
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- 5 -->
-
-        <article class="course-card">
-
-            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=700&q=80">
-
-            <div class="course-body">
-
-                <span class="category">JARINGAN</span>
-
-                <h3>05. Dasar-Dasar Jaringan</h3>
-
-                <p>
-                    Mengenal IP address, LAN, WAN, router dan switch.
-                </p>
-
-                <strong>Rp50.000</strong>
-
-                <button onclick="belajar('Dasar-Dasar Jaringan')">
-                    Mulai Belajar
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- 6 -->
-
-        <article class="course-card">
-
-            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=700&q=80">
-
-            <div class="course-body">
-
-                <span class="category">KABEL</span>
-
-                <h3>06. Kabel LAN Straight</h3>
-
-                <p>
-                    Belajar urutan warna kabel LAN tipe straight.
-                </p>
-
-                <strong>Rp50.000</strong>
-
-                <button onclick="belajar('Kabel LAN Straight')">
-                    Mulai Belajar
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- 7 -->
-
-        <article class="course-card">
-
-            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=700&q=80">
-
-            <div class="course-body">
-
-                <span class="category">KABEL</span>
-
-                <h3>07. Kabel LAN Crossover</h3>
-
-                <p>
-                    Belajar membuat dan menguji kabel crossover.
-                </p>
-
-                <strong>Rp50.000</strong>
-
-                <button onclick="belajar('Kabel LAN Crossover')">
-                    Mulai Belajar
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- 8 -->
-
-        <article class="course-card">
-
-            <img src="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=700&q=80">
-
-            <div class="course-body">
-
-                <span class="category">MIKROTIK</span>
-
-                <h3>08. Dasar MikroTik</h3>
-
-                <p>
-                    Mengenal RouterOS dan konfigurasi MikroTik.
-                </p>
-
-                <strong>Rp50.000</strong>
-
-                <button onclick="belajar('Dasar MikroTik')">
-                    Mulai Belajar
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- 9 -->
-
-        <article class="course-card">
-
-            <img src="https://images.unsplash.com/photo-1551808525-51a94da548ce?auto=format&fit=crop&w=700&q=80">
-
-            <div class="course-body">
-
-                <span class="category">MIKROTIK</span>
-
-                <h3>09. Setting IP MikroTik</h3>
-
-                <p>
-                    Cara memberikan IP address pada interface MikroTik.
-                </p>
-
-                <strong>Rp50.000</strong>
-
-                <button onclick="belajar('Setting IP MikroTik')">
-                    Mulai Belajar
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- 10 -->
-
-        <article class="course-card">
-
-            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=700&q=80">
-
-            <div class="course-body">
-
-                <span class="category">MIKROTIK</span>
-
-                <h3>10. Setting DHCP Server</h3>
-
-                <p>
-                    Membuat DHCP server agar client mendapatkan IP otomatis.
-                </p>
-
-                <strong>Rp50.000</strong>
-
-                <button onclick="belajar('Setting DHCP Server')">
-                    Mulai Belajar
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- 11 -->
-
-        <article class="course-card">
-
-            <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=700&q=80">
-
-            <div class="course-body">
-
-                <span class="category">LINUX</span>
-
-                <h3>11. Belajar Linux dari Awal</h3>
-
-                <p>
-                    Mengenal Linux, terminal, folder dan perintah dasar.
-                </p>
-
-                <strong>Rp50.000</strong>
-
-                <button onclick="belajar('Belajar Linux dari Awal')">
-                    Mulai Belajar
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- 12 -->
-
-        <article class="course-card">
-
-            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=700&q=80">
-
-            <div class="course-body">
-
-                <span class="category">PROGRAMMING</span>
-
-                <h3>12. Belajar HTML</h3>
-
-                <p>
-                    Membuat halaman website menggunakan HTML.
-                </p>
-
-                <strong>Rp50.000</strong>
-
-                <button onclick="belajar('Belajar HTML')">
-                    Mulai Belajar
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- 13 -->
-
-        <article class="course-card">
-
-            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=80">
-
-            <div class="course-body">
-
-                <span class="category">PROGRAMMING</span>
-
-                <h3>13. Belajar CSS</h3>
-
-                <p>
-                    Mengatur tampilan website agar lebih profesional.
-                </p>
-
-                <strong>Rp50.000</strong>
-
-                <button onclick="belajar('Belajar CSS')">
-                    Mulai Belajar
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- 14 -->
-
-        <article class="course-card">
-
-            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=700&q=80">
-
-            <div class="course-body">
-
-                <span class="category">WORDPRESS</span>
-
-                <h3>14. Belajar WordPress</h3>
-
-                <p>
-                    Membuat website WordPress dari awal.
-                </p>
-
-                <strong>Rp50.000</strong>
-
-                <button onclick="belajar('Belajar WordPress')">
-                    Mulai Belajar
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- 15 -->
-
-        <article class="course-card">
-
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80">
-
-            <div class="course-body">
-
-                <span class="category">XAMPP</span>
-
-                <h3>15. Belajar XAMPP</h3>
-
-                <p>
-                    Menjalankan Apache dan MySQL untuk website lokal.
-                </p>
-
-                <strong>Rp50.000</strong>
-
-                <button onclick="belajar('Belajar XAMPP')">
-                    Mulai Belajar
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- 16 -->
-
-        <article class="course-card">
-
-            <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=700&q=80">
-
-            <div class="course-body">
-
-                <span class="category">FIGMA</span>
-
-                <h3>16. Belajar Figma</h3>
-
-                <p>
-                    Membuat desain UI website menggunakan Figma.
-                </p>
-
-                <strong>Rp50.000</strong>
-
-                <button onclick="belajar('Belajar Figma')">
-                    Mulai Belajar
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- 17 -->
-
-        <article class="course-card">
-
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=80">
-
-            <div class="course-body">
-
-                <span class="category">EXCEL</span>
-
-                <h3>17. Microsoft Excel Dasar</h3>
-
-                <p>
-                    Belajar tabel, rumus dan pengolahan data.
-                </p>
-
-                <strong>Rp50.000</strong>
-
-                <button onclick="belajar('Microsoft Excel Dasar')">
-                    Mulai Belajar
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- 18 -->
-
-        <article class="course-card">
-
-            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=700&q=80">
-
-            <div class="course-body">
-
-                <span class="category">WORD</span>
-
-                <h3>18. Microsoft Word</h3>
-
-                <p>
-                    Membuat dokumen, surat dan laporan profesional.
-                </p>
-
-                <strong>Rp50.000</strong>
-
-                <button onclick="belajar('Microsoft Word')">
-                    Mulai Belajar
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- 19 -->
-
-        <article class="course-card">
-
-            <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=700&q=80">
-
-            <div class="course-body">
-
-                <span class="category">POWERPOINT</span>
-
-                <h3>19. Microsoft PowerPoint</h3>
-
-                <p>
-                    Membuat presentasi yang menarik dan rapi.
-                </p>
-
-                <strong>Rp50.000</strong>
-
-                <button onclick="belajar('Microsoft PowerPoint')">
-                    Mulai Belajar
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- 20 -->
-
-        <article class="course-card">
-
-            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=700&q=80">
-
-            <div class="course-body">
-
-                <span class="category">DATA</span>
-
-                <h3>20. Pengolahan Data</h3>
-
-                <p>
-                    Belajar mengatur dan mengolah data komputer.
-                </p>
-
-                <strong>Rp50.000</strong>
-
-                <button onclick="belajar('Pengolahan Data')">
-                    Mulai Belajar
-                </button>
-
-            </div>
-
-        </article>
-
-
-    </div>
-
-</section>
-
-
-<!-- ================= DAFTAR 50 MATERI ================= -->
-
-<section class="all-material" id="kelas">
-
-    <h2>50 Materi Belajar Lengkap</h2>
-
-    <div class="material-list">
-
-        <div>21. Troubleshooting Komputer</div>
-        <div>22. Instalasi Driver</div>
-        <div>23. Instalasi Aplikasi</div>
-        <div>24. Perawatan Komputer</div>
-        <div>25. Mengenal SSD dan HDD</div>
-
-        <div>26. IP Address</div>
-        <div>27. Subnetting</div>
-        <div>28. Gateway</div>
-        <div>29. DNS</div>
-        <div>30. DHCP</div>
-
-        <div>31. Router dan Switch</div>
-        <div>32. LAN</div>
-        <div>33. WAN</div>
-        <div>34. Topologi Jaringan</div>
-        <div>35. Crimping Kabel</div>
-
-        <div>36. Setting Router</div>
-        <div>37. Firewall MikroTik</div>
-        <div>38. NAT MikroTik</div>
-        <div>39. Hotspot MikroTik</div>
-        <div>40. Bandwidth Management</div>
-
-        <div>41. Linux Debian</div>
-        <div>42. Terminal Linux</div>
-        <div>43. User Linux</div>
-        <div>44. File Permission</div>
-        <div>45. Web Server Linux</div>
-
-        <div>46. HTML Website</div>
-        <div>47. CSS Website</div>
-        <div>48. Excel Lanjutan</div>
-        <div>49. Word Lanjutan</div>
-        <div>50. PowerPoint Lanjutan</div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= TENTANG ================= -->
-
-<section class="about" id="tentang">
-
-    <div>
-
-        <span class="label">TENTANG KELAS</span>
-
-        <h2>Belajar dari nol sampai bisa</h2>
-
-        <p>
-            Website ini dibuat sebagai tempat belajar Teknik Komputer
-            dan Jaringan secara bertahap. Materi dimulai dari pengenalan
-            komputer, instalasi sistem operasi, jaringan LAN/WAN,
-            MikroTik, Linux, programming dan aplikasi perkantoran.
-        </p>
-
-        <p>
-            Setiap materi dapat dikembangkan menjadi tutorial,
-            gambar, video, latihan dan tugas praktik.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- ================= HARGA ================= -->
-
-<section class="price-section" id="harga">
-
-    <span class="label">HARGA MATERI</span>
-
-    <h2>Harga Belajar</h2>
-
-    <div class="price-card">
-
-        <h3>Paket Belajar TKJ</h3>
-
-        <div class="price">
-            Rp50.000
-        </div>
-
-        <p>Materi dasar sampai lanjutan</p>
-
-        <ul>
-            <li>✓ 50 materi pembelajaran</li>
-            <li>✓ Materi komputer</li>
-            <li>✓ Materi jaringan</li>
-            <li>✓ Materi MikroTik</li>
-            <li>✓ Materi Linux</li>
-            <li>✓ Materi HTML & CSS</li>
-            <li>✓ Materi Excel, Word & PowerPoint</li>
-            <li>✓ Materi Figma</li>
-        </ul>
-
-        <button onclick="beli()">
-            Beli Materi
-        </button>
-
-    </div>
-
-</section>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-    <div class="footer-brand">
-        TKJ
-    </div>
-
-    <p>
-        © 2026 Teknik Komputer & Jaringan.
-        Website pembelajaran komputer dan jaringan.
-    </p>
-
-</footer>
-
-
-<!-- ================= JAVASCRIPT ================= -->
-
-<script>
-
-function belajar(nama) {
-
-    alert(
-        "Materi: " + nama +
-        "\\n\\nMateri pembelajaran akan dibuka di halaman berikutnya."
-    );
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background: #ffffff;
+    color: #111111;
 }
 
 
-function beli() {
+/* ================= HEADER ================= */
 
-    alert(
-        "Paket Belajar TKJ\\n\\n" +
-        "Harga: Rp50.000\\n\\n" +
-        "Silakan tambahkan metode pembayaran Anda."
-    );
+.top-header {
+    background: #111111;
+    color: white;
+}
 
+.promo {
+    background: #287da8;
+    min-height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    padding: 10px 20px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.promo button {
+    border: none;
+    background: white;
+    color: #111;
+    padding: 12px 22px;
+    border-radius: 25px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.main-header {
+    min-height: 105px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 5%;
+}
+
+.brand {
+    font-size: 21px;
+    font-weight: 800;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand span {
+    background: white;
+    color: #111;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 16px;
+}
+
+.main-header nav {
+    display: flex;
+    gap: 35px;
+}
+
+.main-header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login {
+    background: white;
+    border: none;
+    border-radius: 8px;
+
+    padding: 14px 25px;
+
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.category-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 30px;
+
+    border-top: 1px solid #292929;
+
+    padding: 18px;
+}
+
+.category-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
 }
 
 
-function searchMateri() {
+/* ================= SEARCH ================= */
 
-    let input =
-        document.getElementById("searchInput")
-        .value
-        .toLowerCase();
+.search-area {
+    padding: 15px 3%;
+    background: white;
+}
 
-    let cards =
-        document.querySelectorAll(".course-card");
+.search-tabs {
+    display: flex;
+    gap: 30px;
 
-    cards.forEach(function(card) {
+    border-bottom: 1px solid #ddd;
 
-        let text =
-            card.innerText.toLowerCase();
+    padding-bottom: 12px;
+}
 
-        if (text.includes(input)) {
+.search-tabs span {
+    padding: 8px 10px;
+}
 
-            card.style.display = "block";
+.search-tabs .active {
+    font-weight: 700;
+}
 
-        } else {
+.search-box {
+    margin-top: 16px;
 
-            card.style.display = "none";
+    height: 55px;
 
-        }
+    display: flex;
 
-    });
+    border: 1px solid #aaa;
+    border-radius: 9px;
+
+    overflow: hidden;
+}
+
+.search-box select {
+    width: 190px;
+    border: none;
+    border-right: 1px solid #ccc;
+
+    padding: 0 18px;
+
+    font-size: 14px;
+}
+
+.search-box input {
+    flex: 1;
+
+    border: none;
+    outline: none;
+
+    padding: 0 18px;
+
+    font-size: 15px;
+}
+
+.search-box button {
+    width: 70px;
+
+    border: none;
+
+    background: #111;
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    max-width: 1200px;
+
+    margin: 35px auto;
+
+    padding: 0 25px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+
+    align-items: center;
+}
+
+.label {
+    display: inline-block;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 5vw, 70px);
+
+    line-height: 1.02;
+
+    margin-bottom: 25px;
+}
+
+.hero p {
+    color: #555;
+
+    line-height: 1.8;
+
+    max-width: 600px;
+}
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.btn-primary,
+.btn-secondary {
+    text-decoration: none;
+
+    padding: 15px 25px;
+
+    border-radius: 7px;
+
+    font-weight: 700;
+}
+
+.btn-primary {
+    background: #111;
+    color: white;
+}
+
+.btn-secondary {
+    border: 1px solid #aaa;
+    color: #111;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 390px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+
+/* ================= CONTENT ================= */
+
+.content {
+    max-width: 1200px;
+
+    margin: 70px auto;
+
+    padding: 0 25px;
+}
+
+.section-title {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+}
+
+.section-title p {
+    color: #666;
+    margin-top: 8px;
+}
+
+.filter {
+    padding: 13px 22px;
+
+    background: white;
+
+    border: 1px solid #bbb;
+
+    border-radius: 7px;
+
+    font-weight: 600;
+}
+
+
+/* ================= CARDS ================= */
+
+.course-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.course-card {
+    border: 1px solid #ddd;
+
+    border-radius: 9px;
+
+    overflow: hidden;
+
+    background: white;
+
+    transition: 0.25s;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.12);
+}
+
+.course-card > img {
+    width: 100%;
+
+    height: 180px;
+
+    object-fit: cover;
+}
+
+.course-body {
+    padding: 18px;
+}
+
+.category {
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    color: #666;
+}
+
+.course-body h3 {
+    font-size: 17px;
+
+    line-height: 1.35;
+
+    margin: 9px 0;
+}
+
+.course-body p {
+    color: #666;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    min-height: 42px;
+}
+
+.course-body strong {
+    display: block;
+
+    font-size: 18px;
+
+    margin: 15px 0;
+}
+
+.course-body button {
+    width: 100%;
+
+    border: none;
+
+    background: #111;
+
+    color: white;
+
+    padding: 12px;
+
+    border-radius: 6px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* ================= 50 MATERI ================= */
+
+.all-material {
+    background: #f6f6f6;
+
+    padding: 70px 5%;
+}
+
+.all-material h2 {
+    text-align: center;
+
+    font-size: 32px;
+
+    margin-bottom: 35px;
+}
+
+.material-list {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+.material-list div {
+    background: white;
+
+    border: 1px solid #ddd;
+
+    padding: 17px;
+
+    border-radius: 7px;
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.material-list div:hover {
+    background: #111;
+
+    color: white;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    max-width: 1000px;
+
+    margin: 80px auto;
+
+    padding: 0 25px;
+}
+
+.about h2 {
+    font-size: 42px;
+
+    margin-bottom: 20px;
+}
+
+.about p {
+    color: #555;
+
+    line-height: 1.9;
+
+    margin-bottom: 15px;
+}
+
+
+/* ================= PRICE ================= */
+
+.price-section {
+    background: #111;
+
+    color: white;
+
+    padding: 80px 20px;
+
+    text-align: center;
+}
+
+.price-section h2 {
+    font-size: 40px;
+
+    margin-bottom: 30px;
+}
+
+.price-card {
+    background: white;
+
+    color: #111;
+
+    max-width: 430px;
+
+    margin: auto;
+
+    border-radius: 12px;
+
+    padding: 35px;
+
+    text-align: left;
+}
+
+.price-card h3 {
+    font-size: 25px;
+
+    text-align: center;
+}
+
+.price {
+    text-align: center;
+
+    font-size: 42px;
+
+    font-weight: 800;
+
+    margin: 20px 0;
+}
+
+.price-card p {
+    text-align: center;
+
+    color: #666;
+}
+
+.price-card ul {
+    list-style: none;
+
+    margin: 25px 0;
+}
+
+.price-card li {
+    padding: 9px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+.price-card button {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    background: #111;
+
+    color: white;
+
+    border-radius: 7px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #090909;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 45px 20px;
+}
+
+.footer-brand {
+    font-size: 32px;
+
+    font-weight: 800;
+
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #aaa;
+
+    font-size: 13px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+    .course-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .material-list {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
 
 }
 
-</script>
+@media (max-width: 750px) {
 
-</body>
-</html>
+    .main-header {
+        flex-direction: column;
+
+        gap: 20px;
+
+        padding: 25px;
+    }
+
+    .main-header nav {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .category-menu {
+        gap: 15px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .hero-image img {
+        height: 280px;
+    }
+
+    .course-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .search-box select {
+        width: 120px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .promo {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .material-list {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .search-box select {
+        display: none;
+    }
+
+    .search-box button {
+        width: 55px;
+    }
+
+}
