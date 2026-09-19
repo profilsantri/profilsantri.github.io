@@ -20,33 +20,27 @@ a {
     color: inherit;
 }
 
-/* NAVBAR */
-.navbar {
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 22px 25px;
+/* LOGO NAVBAR MIEDZY */
+.logo {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
+    gap: 12px;
     font-size: 22px;
     font-weight: 800;
     letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    border-radius: 12px;
+    display: block;
 }
 
 .logo span {
-    display: inline-flex;
-    width: 38px;
-    height: 38px;
-    margin-right: 8px;
-    align-items: center;
-    justify-content: center;
-    background: #20e0a1;
-    color: #07111f;
-    border-radius: 10px;
+    color: #ffffff;
 }
 
 nav {
@@ -453,213 +447,23 @@ nav a:hover {
     margin-top: 3px;
 }
 
-/* ABOUT */
-.about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 80px;
-}
-
-.about-image {
-    min-height: 350px;
-    border-radius: 20px;
-    border: 1px solid #1b3045;
-    background:
-        radial-gradient(circle, rgba(32,224,161,.15), transparent 50%),
-        #0b1928;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
+/* LOGO BAGIAN ABOUT */
 .about-logo {
-    width: 150px;
-    height: 150px;
+    width: 220px;
+    height: 220px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 2px solid #20e0a1;
     border-radius: 35px;
-    font-size: 80px;
-    font-weight: 800;
-    color: #20e0a1;
-    box-shadow: 0 0 70px rgba(32,224,161,.15);
+    background: #0b1928;
+    overflow: hidden;
+    box-shadow: 0 0 50px rgba(32,224,161,0.15);
 }
 
-.about-content h2 {
-    font-size: 40px;
-    line-height: 1.15;
-    margin: 15px 0;
-}
-
-.about-content > p {
-    color: #8291a5;
-}
-
-.about-points {
-    margin-top: 25px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    font-size: 13px;
-}
-
-/* CTA */
-.cta {
-    max-width: 1150px;
-    margin: 30px auto 100px;
-    padding: 55px;
-    border-radius: 20px;
-    background: linear-gradient(120deg, #102b32, #0c1c2b);
-    border: 1px solid #1d4650;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-}
-
-.cta h2 {
-    max-width: 650px;
-    font-size: 34px;
-    line-height: 1.15;
-    margin: 10px 0;
-}
-
-.cta p {
-    color: #8291a5;
-}
-
-.whatsapp {
-    background: #20e0a1;
-    color: #07111f;
-    white-space: nowrap;
-}
-
-/* FOOTER */
-footer {
-    border-top: 1px solid #16293c;
-    padding: 30px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #68798d;
-    font-size: 12px;
-}
-
-.footer-logo {
-    color: #fff;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
-
-footer div:last-child {
-    display: flex;
-    gap: 20px;
-}
-
-footer a:hover {
-    color: #20e0a1;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-    nav {
-        display: none;
-    }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 60px;
-    }
-
-    .hero-content > p {
-        margin: auto;
-    }
-
-    .hero-buttons,
-    .stats {
-        justify-content: center;
-    }
-
-    .network-card {
-        width: 100%;
-    }
-
-    .services,
-    .about,
-    .training {
-        grid-template-columns: 1fr;
-    }
-
-    .training {
-        gap: 50px;
-    }
-
-    .about-image {
-        min-height: 280px;
-    }
-
-    .cta {
-        margin: 30px 25px 70px;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    footer {
-        flex-direction: column;
-        gap: 15px;
-    }
-}
-
-@media (max-width: 550px) {
-    .nav-btn {
-        display: none;
-    }
-
-    .hero h1 {
-        font-size: 42px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-    .stats {
-        gap: 20px;
-    }
-
-    .stats strong {
-        font-size: 19px;
-    }
-
-    .network-card {
-        transform: scale(.85);
-        margin: -20px 0;
-    }
-
-    .section-title h2,
-    .about-content h2 {
-        font-size: 32px;
-    }
-
-    .training-content h2 {
-        font-size: 38px;
-    }
-
-    .about-points {
-        grid-template-columns: 1fr;
-    }
-
-    .cta {
-        padding: 35px 25px;
-    }
-
-    .cta h2 {
-        font-size: 28px;
-    }
-}
-```
+.about-logo img {
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
 
 
