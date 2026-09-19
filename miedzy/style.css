@@ -461,9 +461,8 @@ nav a:hover {
     box-shadow: 0 0 50px rgba(32,224,161,0.15);
 }
 
-.about-logo img {
-    width: 85%;
-    height: 85%;
-    object-fit: contain;
+.logo img {
+    width: 45px;
+    height: 45px;
 
 
