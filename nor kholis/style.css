@@ -1,43 +1,21 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  background: #070b14;
-  color: #fff;
-  line-height: 1.6;
+    background: #000;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+header {
+    padding: 20px 40px;
 }
 
-/* NAVBAR */
-.profil {
-    width: 180px;
+.logo img {
+    width: 150px;
     height: auto;
     display: block;
-    margin: 0 auto;
-}
-
-.logo-image img {
-    width: 30px; /* ukuran logo desktop */
-    height: auto;
-    object-fit: contain;
-
-    filter:
-    drop-shadow(0 0 8px #39ff14)
-    drop-shadow(0 0 20px rgba(57,255,20,.5));
-
-    transition: .4s ease;
 }
 
 /* ukuran logo HP */
