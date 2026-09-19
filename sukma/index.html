@@ -1,1 +1,263 @@
-alfin
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PHONEZONE - Toko HP Modern</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">PHONE<span>ZONE</span></div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#produk">Produk</a>
+    <a href="#brand">Brand</a>
+    <a href="#promo">Promo</a>
+  </nav>
+
+  <button class="cart">🛒 Keranjang <b id="cartCount">0</b></button>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p class="small">WELCOME TO PHONEZONE</p>
+    <h1>Smartphone Impian<br><span>Untuk Semua Kalangan</span></h1>
+    <p>
+      Temukan HP dari harga terjangkau sampai flagship premium
+      dengan desain modern dan spesifikasi terbaik.
+    </p>
+
+    <a href="#produk" class="btn">Belanja Sekarang →</a>
+  </div>
+
+  <div class="hero-phone">
+    📱
+  </div>
+</section>
+
+<section class="brands" id="brand">
+  <h2>Brand Pilihan</h2>
+
+  <div class="brand-list">
+    <div> Apple</div>
+    <div>Samsung</div>
+    <div>Xiaomi</div>
+    <div>OPPO</div>
+    <div>vivo</div>
+    <div>realme</div>
+    <div>Google</div>
+    <div>ASUS</div>
+  </div>
+</section>
+
+<section class="products" id="produk">
+  <div class="section-title">
+    <div>
+      <p>OUR COLLECTION</p>
+      <h2>Produk Terbaru</h2>
+    </div>
+
+    <select id="filter">
+      <option value="all">Semua Harga</option>
+      <option value="low">Di bawah 3 Juta</option>
+      <option value="mid">3 - 8 Juta</option>
+      <option value="high">Di atas 8 Juta</option>
+    </select>
+  </div>
+
+  <div class="product-grid" id="productGrid"></div>
+</section>
+
+<section class="promo" id="promo">
+  <div>
+    <p>🔥 PROMO SPESIAL</p>
+    <h2>Diskon hingga 30%</h2>
+    <p>Jangan lewatkan harga spesial smartphone pilihan minggu ini.</p>
+  </div>
+
+  <button class="btn">Lihat Promo</button>
+</section>
+
+<footer>
+  <div>
+    <h2>PHONE<span>ZONE</span></h2>
+    <p>Toko smartphone modern untuk semua kebutuhanmu.</p>
+  </div>
+
+  <div>
+    <h3>Kontak</h3>
+    <p>📍 Indonesia</p>
+    <p>📞 0812-3456-7890</p>
+    <p>✉️ phonezone@email.com</p>
+  </div>
+
+  <div>
+    <h3>Follow Us</h3>
+    <p>Instagram</p>
+    <p>TikTok</p>
+    <p>Facebook</p>
+  </div>
+</footer>
+
+<script>
+const products = [
+  {
+    name: "Redmi A5",
+    brand: "Xiaomi",
+    price: 1299000,
+    category: "low",
+    icon: "📱"
+  },
+  {
+    name: "realme Note 60",
+    brand: "realme",
+    price: 1599000,
+    category: "low",
+    icon: "📱"
+  },
+  {
+    name: "vivo Y19s",
+    brand: "vivo",
+    price: 1899000,
+    category: "low",
+    icon: "📱"
+  },
+  {
+    name: "OPPO A5",
+    brand: "OPPO",
+    price: 2499000,
+    category: "low",
+    icon: "📱"
+  },
+  {
+    name: "Samsung Galaxy A26",
+    brand: "Samsung",
+    price: 3999000,
+    category: "mid",
+    icon: "📱"
+  },
+  {
+    name: "Redmi Note 14 Pro",
+    brand: "Xiaomi",
+    price: 4499000,
+    category: "mid",
+    icon: "📱"
+  },
+  {
+    name: "vivo V50",
+    brand: "vivo",
+    price: 6999000,
+    category: "mid",
+    icon: "📱"
+  },
+  {
+    name: "OPPO Reno 13",
+    brand: "OPPO",
+    price: 7999000,
+    category: "mid",
+    icon: "📱"
+  },
+  {
+    name: "Google Pixel 9",
+    brand: "Google",
+    price: 11999000,
+    category: "high",
+    icon: "📱"
+  },
+  {
+    name: "Samsung Galaxy S25 Ultra",
+    brand: "Samsung",
+    price: 19999000,
+    category: "high",
+    icon: "📱"
+  },
+  {
+    name: "iPhone 16 Pro",
+    brand: "Apple",
+    price: 18999000,
+    category: "high",
+    icon: "📱"
+  },
+  {
+    name: "iPhone 16 Pro Max",
+    brand: "Apple",
+    price: 21999000,
+    category: "high",
+    icon: "📱"
+  }
+];
+
+const grid = document.getElementById("productGrid");
+const filter = document.getElementById("filter");
+const cartCount = document.getElementById("cartCount");
+
+let cart = 0;
+
+function rupiah(price) {
+  return new Intl.NumberFormat("id-ID", {
+    style: "currency",
+    currency: "IDR",
+    maximumFractionDigits: 0
+  }).format(price);
+}
+
+function displayProducts(data) {
+  grid.innerHTML = "";
+
+  data.forEach((phone) => {
+    grid.innerHTML += `
+      <div class="card">
+        <div class="phone-image">
+          <span>${phone.icon}</span>
+          <div class="heart">♡</div>
+        </div>
+
+        <div class="card-content">
+          <p class="brand">${phone.brand}</p>
+          <h3>${phone.name}</h3>
+
+          <div class="rating">
+            ⭐ 4.9 <span>• Stok tersedia</span>
+          </div>
+
+          <div class="price">${rupiah(phone.price)}</div>
+
+          <button
+            class="buy-btn"
+            onclick="addCart('${phone.name}')">
+            + Keranjang
+          </button>
+        </div>
+      </div>
+    `;
+  });
+}
+
+function addCart(name) {
+  cart++;
+  cartCount.textContent = cart;
+
+  alert(name + " berhasil ditambahkan ke keranjang!");
+}
+
+filter.addEventListener("change", () => {
+  const value = filter.value;
+
+  if (value === "all") {
+    displayProducts(products);
+  } else {
+    displayProducts(
+      products.filter(phone => phone.category === value)
+    );
+  }
+});
+
+displayProducts(products);
+</script>
+
+</body>
+</html>
