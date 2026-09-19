@@ -31,14 +31,22 @@ header {
 }
 
 .logo {
-  font-size: 25px;
-  font-weight: 800;
-  letter-spacing: -1px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
-.logo span,
-footer span {
-  color: #00e5ff;
+.logo img {
+  width: 150px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  transition: 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 12px rgba(0, 229, 255, 0.45));
 }
 
 nav {
