@@ -60,8 +60,8 @@ a {
 
 /* HERO */
 .hero {
-  min-height: 680px;
-  padding: 100px 7%;
+  min-height: 580px;
+  padding: 90px 7%;
   display: grid;
   grid-template-columns: 1.1fr .9fr;
   align-items: center;
@@ -80,7 +80,7 @@ a {
 }
 
 .hero h1 {
-  max-width: 720px;
+  max-width: 710px;
   font-size: clamp(45px, 6vw, 78px);
   line-height: 1.02;
   letter-spacing: -3px;
