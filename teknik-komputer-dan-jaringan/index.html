@@ -1,507 +1,895 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>TKJ | Teknik Komputer dan Jaringan</title>
+    <title>Teknik Komputer & Jaringan</title>
 
-  <meta name="description"
-    content="Belajar Teknik Komputer dan Jaringan dari dasar sampai mahir. BIOS, Windows, LAN, MikroTik, Linux, HTML, Word, Excel, PowerPoint, Figma, WordPress dan XAMPP.">
+    <link rel="stylesheet" href="style.css">
 
-  <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="logo">TKJ<span>.</span></div>
+<!-- ================= HEADER ================= -->
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#materi">Materi</a>
-      <a href="#program">Program</a>
-      <a href="#tentang">Tentang</a>
-      <a href="#kontak">Kontak</a>
-    </nav>
-  </header>
+<header class="top-header">
+
+    <div class="promo">
+        🚀 Belajar Teknik Komputer dan Jaringan dari dasar sampai mahir
+        <button>Pelajari lebih lanjut</button>
+    </div>
+
+    <div class="main-header">
+
+        <div class="brand">
+            <span>TKJ</span>
+            Teknik Komputer & Jaringan
+        </div>
+
+        <nav>
+            <a href="#materi">Materi</a>
+            <a href="#kelas">Kelas</a>
+            <a href="#tentang">Tentang</a>
+            <a href="#harga">Harga</a>
+        </nav>
+
+        <button class="login">Masuk</button>
+
+    </div>
+
+    <div class="category-menu">
+
+        <a href="#materi">💻 Komputer</a>
+        <a href="#jaringan">🌐 Jaringan</a>
+        <a href="#mikrotik">📡 MikroTik</a>
+        <a href="#linux">🐧 Linux</a>
+        <a href="#programming">💻 Programming</a>
+        <a href="#office">📊 Microsoft Office</a>
+        <a href="#design">🎨 Desain</a>
+
+    </div>
+
+</header>
 
 
-  <!-- HERO -->
-  <section id="home" class="hero">
+<!-- ================= SEARCH ================= -->
+
+<section class="search-area">
+
+    <div class="search-tabs">
+        <span class="active">✦ Semua materi</span>
+        <span>🔍 Pencarian standar</span>
+    </div>
+
+    <div class="search-box">
+
+        <select>
+            <option>Semua materi</option>
+            <option>Komputer</option>
+            <option>Jaringan</option>
+            <option>Linux</option>
+            <option>MikroTik</option>
+        </select>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Cari materi Teknik Komputer dan Jaringan..."
+        >
+
+        <button onclick="searchMateri()">🔍</button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
 
     <div class="hero-text">
 
-      <p class="small-title">TEKNIK KOMPUTER DAN JARINGAN</p>
+        <span class="label">BELAJAR TKJ</span>
 
-      <h1>
-        Belajar Teknologi
-        <span>Dari Dasar Sampai Bisa.</span>
-      </h1>
+        <h1>
+            Teknik Komputer
+            <br>
+            dan Jaringan
+        </h1>
 
-      <p class="description">
-        Tempat belajar komputer, jaringan, Linux, MikroTik,
-        pemrograman, desain dan aplikasi perkantoran
-        secara bertahap dan mudah dipahami.
-      </p>
+        <p>
+            Belajar komputer dan jaringan dari dasar sampai mahir.
+            Mulai dari memperbaiki BIOS, instalasi Windows,
+            pemasangan kabel LAN, MikroTik, Linux,
+            HTML, hingga Microsoft Office.
+        </p>
 
-      <div class="hero-buttons">
-        <a href="#materi" class="btn primary">Mulai Belajar</a>
-        <a href="#program" class="btn secondary">Lihat Materi</a>
-      </div>
+        <div class="hero-buttons">
+            <a href="#materi" class="btn-primary">
+                Mulai Belajar
+            </a>
 
-    </div>
-
-
-    <div class="hero-card">
-
-      <div class="computer-icon">💻</div>
-
-      <h2>TKJ Learning</h2>
-
-      <p>
-        Computer • Network • Linux • Programming
-      </p>
-
-      <div class="status">
-        <span></span>
-        Belajar Sekarang
-      </div>
+            <a href="#tentang" class="btn-secondary">
+                Lihat Materi
+            </a>
+        </div>
 
     </div>
 
-  </section>
+    <div class="hero-image">
 
+        <img
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80"
+            alt="Teknik Komputer dan Jaringan"
+        >
 
-
-  <!-- STATISTIK -->
-  <section class="stats">
-
-    <div>
-      <strong>10+</strong>
-      <p>Materi Utama</p>
     </div>
 
-    <div>
-      <strong>100%</strong>
-      <p>Untuk Pemula</p>
-    </div>
-
-    <div>
-      <strong>Basic → Pro</strong>
-      <p>Tahap Belajar</p>
-    </div>
-
-    <div>
-      <strong>GitHub</strong>
-      <p>Web Online</p>
-    </div>
-
-  </section>
+</section>
 
 
+<!-- ================= JUDUL MATERI ================= -->
 
-  <!-- MATERI -->
-  <section id="materi" class="section">
+<section class="content" id="materi">
 
     <div class="section-title">
 
-      <p>MATERI PEMBELAJARAN</p>
-
-      <h2>
-        Kuasai Dunia
-        <span>Komputer & Jaringan</span>
-      </h2>
-
-      <p>
-        Materi disusun dari dasar sehingga cocok
-        untuk siswa yang baru mulai belajar.
-      </p>
-
-    </div>
-
-
-    <div class="cards">
-
-
-      <!-- 01 -->
-      <article class="card">
-
-        <div class="number">01</div>
-
-        <div class="icon">🖥️</div>
-
-        <h3>BIOS & Komputer</h3>
-
-        <p>
-          Belajar BIOS, boot menu, pengaturan hardware,
-          troubleshooting dan cara mengatasi masalah komputer.
-        </p>
-
-        <a href="#">Pelajari →</a>
-
-      </article>
-
-
-      <!-- 02 -->
-      <article class="card">
-
-        <div class="number">02</div>
-
-        <div class="icon">⚙️</div>
-
-        <h3>Instalasi Komputer</h3>
-
-        <p>
-          Belajar merakit komputer, menyiapkan komputer kosong,
-          membuat media installer dan instalasi sistem operasi.
-        </p>
-
-        <a href="#">Pelajari →</a>
-
-      </article>
-
-
-      <!-- 03 -->
-      <article class="card">
-
-        <div class="number">03</div>
-
-        <div class="icon">🪟</div>
-
-        <h3>Instalasi Windows</h3>
-
-        <p>
-          Belajar instalasi Windows dari komputer kosong,
-          partisi disk, driver, update dan konfigurasi awal.
-        </p>
-
-        <a href="#">Pelajari →</a>
-
-      </article>
-
-
-      <!-- 04 -->
-      <article class="card">
-
-        <div class="number">04</div>
-
-        <div class="icon">💻</div>
-
-        <h3>Pemrograman</h3>
-
-        <p>
-          Belajar dasar pemrograman, logika, variabel,
-          operator, struktur program dan latihan coding.
-        </p>
-
-        <a href="#">Pelajari →</a>
-
-      </article>
-
-
-      <!-- 05 -->
-      <article class="card">
-
-        <div class="number">05</div>
-
-        <div class="icon">🌐</div>
-
-        <h3>WordPress & XAMPP</h3>
-
-        <p>
-          Belajar membuat website menggunakan WordPress,
-          XAMPP, localhost, database dan konfigurasi website.
-        </p>
-
-        <a href="#">Pelajari →</a>
-
-      </article>
-
-
-      <!-- 06 -->
-      <article class="card">
-
-        <div class="number">06</div>
-
-        <div class="icon">🎨</div>
-
-        <h3>Figma Web</h3>
-
-        <p>
-          Belajar desain website menggunakan Figma,
-          membuat layout, komponen, warna dan prototype.
-        </p>
-
-        <a href="#">Pelajari →</a>
-
-      </article>
-
-
-      <!-- 07 -->
-      <article class="card">
-
-        <div class="number">07</div>
-
-        <div class="icon">🔌</div>
-
-        <h3>Kabel LAN</h3>
-
-        <p>
-          Belajar kabel LAN, konektor RJ45,
-          susunan warna, straight-through dan crossover.
-        </p>
-
-        <a href="#">Pelajari →</a>
-
-      </article>
-
-
-      <!-- 08 -->
-      <article class="card">
-
-        <div class="number">08</div>
-
-        <div class="icon">📡</div>
-
-        <h3>Jaringan & MikroTik</h3>
-
-        <p>
-          Belajar IP address, DHCP, DNS, routing,
-          NAT, firewall dan konfigurasi MikroTik.
-        </p>
-
-        <a href="#">Pelajari →</a>
-
-      </article>
-
-
-      <!-- 09 -->
-      <article class="card">
-
-        <div class="number">09</div>
-
-        <div class="icon">🐧</div>
-
-        <h3>Linux</h3>
-
-        <p>
-          Belajar Linux dari awal sampai mahir,
-          terminal, command dasar, file system,
-          user dan konfigurasi jaringan.
-        </p>
-
-        <a href="#">Pelajari →</a>
-
-      </article>
-
-
-      <!-- 10 -->
-      <article class="card">
-
-        <div class="number">10</div>
-
-        <div class="icon">🌎</div>
-
-        <h3>HTML & Web</h3>
-
-        <p>
-          Belajar membuat website menggunakan HTML,
-          CSS dan dasar pengembangan website.
-        </p>
-
-        <a href="#">Pelajari →</a>
-
-      </article>
-
-
-    </div>
-
-  </section>
-
-
-
-  <!-- PROGRAM -->
-  <section id="program" class="program">
-
-    <div class="program-content">
-
-      <p class="small-title">PROGRAM BELAJAR</p>
-
-      <h2>
-        Belajar Bertahap
-        <span>Sampai Bisa</span>
-      </h2>
-
-      <p>
-        Mulai dari dasar komputer kemudian lanjut
-        ke jaringan, Linux, MikroTik, pemrograman
-        dan pembuatan website.
-      </p>
-
-
-      <div class="steps">
-
-        <div class="step">
-          <b>01</b>
-          <span>Dasar Komputer</span>
+        <div>
+            <h2>Materi Teknik Komputer & Jaringan</h2>
+
+            <p>
+                50 materi pembelajaran dari tingkat dasar sampai lanjutan.
+            </p>
         </div>
 
-        <div class="step">
-          <b>02</b>
-          <span>Jaringan LAN/WAN</span>
-        </div>
-
-        <div class="step">
-          <b>03</b>
-          <span>MikroTik</span>
-        </div>
-
-        <div class="step">
-          <b>04</b>
-          <span>Linux</span>
-        </div>
-
-        <div class="step">
-          <b>05</b>
-          <span>Programming & Web</span>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- OFFICE -->
-  <section class="section office">
-
-    <div class="section-title">
-
-      <p>APLIKASI PERKANTORAN</p>
-
-      <h2>
-        Skill Digital
-        <span>Untuk Sekolah & Kerja</span>
-      </h2>
+        <button class="filter">
+            ⚙ Filter
+        </button>
 
     </div>
 
 
-    <div class="office-grid">
+    <!-- ================= GRID ================= -->
 
-      <div class="office-card">
-        <div>📊</div>
-        <h3>Microsoft Excel</h3>
+    <div class="course-grid" id="courseGrid">
+
+
+        <!-- 1 -->
+
+        <article class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8?auto=format&fit=crop&w=700&q=80">
+
+            <div class="course-body">
+
+                <span class="category">KOMPUTER</span>
+
+                <h3>01. Mengenal Komputer dari Dasar</h3>
+
+                <p>
+                    Mengenal hardware, software dan fungsi komputer.
+                </p>
+
+                <strong>Rp50.000</strong>
+
+                <button onclick="belajar('Mengenal Komputer dari Dasar')">
+                    Mulai Belajar
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 2 -->
+
+        <article class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1593642702749-b7d2a804fbcf?auto=format&fit=crop&w=700&q=80">
+
+            <div class="course-body">
+
+                <span class="category">BIOS</span>
+
+                <h3>02. Cara Mengatasi BIOS</h3>
+
+                <p>
+                    Belajar masuk BIOS, boot order dan pengaturan dasar.
+                </p>
+
+                <strong>Rp50.000</strong>
+
+                <button onclick="belajar('Cara Mengatasi BIOS')">
+                    Mulai Belajar
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 3 -->
+
+        <article class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&w=700&q=80">
+
+            <div class="course-body">
+
+                <span class="category">HARDWARE</span>
+
+                <h3>03. Merakit Komputer</h3>
+
+                <p>
+                    Mengenal motherboard, RAM, CPU, SSD dan power supply.
+                </p>
+
+                <strong>Rp50.000</strong>
+
+                <button onclick="belajar('Merakit Komputer')">
+                    Mulai Belajar
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 4 -->
+
+        <article class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=700&q=80">
+
+            <div class="course-body">
+
+                <span class="category">WINDOWS</span>
+
+                <h3>04. Instalasi Windows</h3>
+
+                <p>
+                    Tutorial instalasi Windows pada komputer kosong.
+                </p>
+
+                <strong>Rp50.000</strong>
+
+                <button onclick="belajar('Instalasi Windows')">
+                    Mulai Belajar
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 5 -->
+
+        <article class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=700&q=80">
+
+            <div class="course-body">
+
+                <span class="category">JARINGAN</span>
+
+                <h3>05. Dasar-Dasar Jaringan</h3>
+
+                <p>
+                    Mengenal IP address, LAN, WAN, router dan switch.
+                </p>
+
+                <strong>Rp50.000</strong>
+
+                <button onclick="belajar('Dasar-Dasar Jaringan')">
+                    Mulai Belajar
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 6 -->
+
+        <article class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=700&q=80">
+
+            <div class="course-body">
+
+                <span class="category">KABEL</span>
+
+                <h3>06. Kabel LAN Straight</h3>
+
+                <p>
+                    Belajar urutan warna kabel LAN tipe straight.
+                </p>
+
+                <strong>Rp50.000</strong>
+
+                <button onclick="belajar('Kabel LAN Straight')">
+                    Mulai Belajar
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 7 -->
+
+        <article class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=700&q=80">
+
+            <div class="course-body">
+
+                <span class="category">KABEL</span>
+
+                <h3>07. Kabel LAN Crossover</h3>
+
+                <p>
+                    Belajar membuat dan menguji kabel crossover.
+                </p>
+
+                <strong>Rp50.000</strong>
+
+                <button onclick="belajar('Kabel LAN Crossover')">
+                    Mulai Belajar
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 8 -->
+
+        <article class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=700&q=80">
+
+            <div class="course-body">
+
+                <span class="category">MIKROTIK</span>
+
+                <h3>08. Dasar MikroTik</h3>
+
+                <p>
+                    Mengenal RouterOS dan konfigurasi MikroTik.
+                </p>
+
+                <strong>Rp50.000</strong>
+
+                <button onclick="belajar('Dasar MikroTik')">
+                    Mulai Belajar
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 9 -->
+
+        <article class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1551808525-51a94da548ce?auto=format&fit=crop&w=700&q=80">
+
+            <div class="course-body">
+
+                <span class="category">MIKROTIK</span>
+
+                <h3>09. Setting IP MikroTik</h3>
+
+                <p>
+                    Cara memberikan IP address pada interface MikroTik.
+                </p>
+
+                <strong>Rp50.000</strong>
+
+                <button onclick="belajar('Setting IP MikroTik')">
+                    Mulai Belajar
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 10 -->
+
+        <article class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=700&q=80">
+
+            <div class="course-body">
+
+                <span class="category">MIKROTIK</span>
+
+                <h3>10. Setting DHCP Server</h3>
+
+                <p>
+                    Membuat DHCP server agar client mendapatkan IP otomatis.
+                </p>
+
+                <strong>Rp50.000</strong>
+
+                <button onclick="belajar('Setting DHCP Server')">
+                    Mulai Belajar
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 11 -->
+
+        <article class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=700&q=80">
+
+            <div class="course-body">
+
+                <span class="category">LINUX</span>
+
+                <h3>11. Belajar Linux dari Awal</h3>
+
+                <p>
+                    Mengenal Linux, terminal, folder dan perintah dasar.
+                </p>
+
+                <strong>Rp50.000</strong>
+
+                <button onclick="belajar('Belajar Linux dari Awal')">
+                    Mulai Belajar
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 12 -->
+
+        <article class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=700&q=80">
+
+            <div class="course-body">
+
+                <span class="category">PROGRAMMING</span>
+
+                <h3>12. Belajar HTML</h3>
+
+                <p>
+                    Membuat halaman website menggunakan HTML.
+                </p>
+
+                <strong>Rp50.000</strong>
+
+                <button onclick="belajar('Belajar HTML')">
+                    Mulai Belajar
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 13 -->
+
+        <article class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=80">
+
+            <div class="course-body">
+
+                <span class="category">PROGRAMMING</span>
+
+                <h3>13. Belajar CSS</h3>
+
+                <p>
+                    Mengatur tampilan website agar lebih profesional.
+                </p>
+
+                <strong>Rp50.000</strong>
+
+                <button onclick="belajar('Belajar CSS')">
+                    Mulai Belajar
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 14 -->
+
+        <article class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=700&q=80">
+
+            <div class="course-body">
+
+                <span class="category">WORDPRESS</span>
+
+                <h3>14. Belajar WordPress</h3>
+
+                <p>
+                    Membuat website WordPress dari awal.
+                </p>
+
+                <strong>Rp50.000</strong>
+
+                <button onclick="belajar('Belajar WordPress')">
+                    Mulai Belajar
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 15 -->
+
+        <article class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80">
+
+            <div class="course-body">
+
+                <span class="category">XAMPP</span>
+
+                <h3>15. Belajar XAMPP</h3>
+
+                <p>
+                    Menjalankan Apache dan MySQL untuk website lokal.
+                </p>
+
+                <strong>Rp50.000</strong>
+
+                <button onclick="belajar('Belajar XAMPP')">
+                    Mulai Belajar
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 16 -->
+
+        <article class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=700&q=80">
+
+            <div class="course-body">
+
+                <span class="category">FIGMA</span>
+
+                <h3>16. Belajar Figma</h3>
+
+                <p>
+                    Membuat desain UI website menggunakan Figma.
+                </p>
+
+                <strong>Rp50.000</strong>
+
+                <button onclick="belajar('Belajar Figma')">
+                    Mulai Belajar
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 17 -->
+
+        <article class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=80">
+
+            <div class="course-body">
+
+                <span class="category">EXCEL</span>
+
+                <h3>17. Microsoft Excel Dasar</h3>
+
+                <p>
+                    Belajar tabel, rumus dan pengolahan data.
+                </p>
+
+                <strong>Rp50.000</strong>
+
+                <button onclick="belajar('Microsoft Excel Dasar')">
+                    Mulai Belajar
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 18 -->
+
+        <article class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=700&q=80">
+
+            <div class="course-body">
+
+                <span class="category">WORD</span>
+
+                <h3>18. Microsoft Word</h3>
+
+                <p>
+                    Membuat dokumen, surat dan laporan profesional.
+                </p>
+
+                <strong>Rp50.000</strong>
+
+                <button onclick="belajar('Microsoft Word')">
+                    Mulai Belajar
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 19 -->
+
+        <article class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=700&q=80">
+
+            <div class="course-body">
+
+                <span class="category">POWERPOINT</span>
+
+                <h3>19. Microsoft PowerPoint</h3>
+
+                <p>
+                    Membuat presentasi yang menarik dan rapi.
+                </p>
+
+                <strong>Rp50.000</strong>
+
+                <button onclick="belajar('Microsoft PowerPoint')">
+                    Mulai Belajar
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 20 -->
+
+        <article class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=700&q=80">
+
+            <div class="course-body">
+
+                <span class="category">DATA</span>
+
+                <h3>20. Pengolahan Data</h3>
+
+                <p>
+                    Belajar mengatur dan mengolah data komputer.
+                </p>
+
+                <strong>Rp50.000</strong>
+
+                <button onclick="belajar('Pengolahan Data')">
+                    Mulai Belajar
+                </button>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= DAFTAR 50 MATERI ================= -->
+
+<section class="all-material" id="kelas">
+
+    <h2>50 Materi Belajar Lengkap</h2>
+
+    <div class="material-list">
+
+        <div>21. Troubleshooting Komputer</div>
+        <div>22. Instalasi Driver</div>
+        <div>23. Instalasi Aplikasi</div>
+        <div>24. Perawatan Komputer</div>
+        <div>25. Mengenal SSD dan HDD</div>
+
+        <div>26. IP Address</div>
+        <div>27. Subnetting</div>
+        <div>28. Gateway</div>
+        <div>29. DNS</div>
+        <div>30. DHCP</div>
+
+        <div>31. Router dan Switch</div>
+        <div>32. LAN</div>
+        <div>33. WAN</div>
+        <div>34. Topologi Jaringan</div>
+        <div>35. Crimping Kabel</div>
+
+        <div>36. Setting Router</div>
+        <div>37. Firewall MikroTik</div>
+        <div>38. NAT MikroTik</div>
+        <div>39. Hotspot MikroTik</div>
+        <div>40. Bandwidth Management</div>
+
+        <div>41. Linux Debian</div>
+        <div>42. Terminal Linux</div>
+        <div>43. User Linux</div>
+        <div>44. File Permission</div>
+        <div>45. Web Server Linux</div>
+
+        <div>46. HTML Website</div>
+        <div>47. CSS Website</div>
+        <div>48. Excel Lanjutan</div>
+        <div>49. Word Lanjutan</div>
+        <div>50. PowerPoint Lanjutan</div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TENTANG ================= -->
+
+<section class="about" id="tentang">
+
+    <div>
+
+        <span class="label">TENTANG KELAS</span>
+
+        <h2>Belajar dari nol sampai bisa</h2>
+
         <p>
-          Belajar tabel, rumus, fungsi, data,
-          grafik dan pengolahan spreadsheet.
+            Website ini dibuat sebagai tempat belajar Teknik Komputer
+            dan Jaringan secara bertahap. Materi dimulai dari pengenalan
+            komputer, instalasi sistem operasi, jaringan LAN/WAN,
+            MikroTik, Linux, programming dan aplikasi perkantoran.
         </p>
-      </div>
 
-
-      <div class="office-card">
-        <div>📝</div>
-        <h3>Microsoft Word</h3>
         <p>
-          Belajar membuat dokumen, surat,
-          laporan, tabel dan format dokumen.
+            Setiap materi dapat dikembangkan menjadi tutorial,
+            gambar, video, latihan dan tugas praktik.
         </p>
-      </div>
-
-
-      <div class="office-card">
-        <div>📽️</div>
-        <h3>PowerPoint</h3>
-        <p>
-          Belajar membuat presentasi,
-          slide, desain dan animasi.
-        </p>
-      </div>
-
 
     </div>
 
-  </section>
+</section>
 
 
+<!-- ================= HARGA ================= -->
 
-  <!-- TENTANG -->
-  <section id="tentang" class="about">
+<section class="price-section" id="harga">
 
-    <div class="about-box">
+    <span class="label">HARGA MATERI</span>
 
-      <p class="small-title">TENTANG TKJ</p>
+    <h2>Harga Belajar</h2>
 
-      <h2>
-        Membangun Skill
-        <span>Teknologi Masa Depan</span>
-      </h2>
+    <div class="price-card">
 
-      <p>
-        Teknik Komputer dan Jaringan merupakan bidang
-        yang mempelajari komputer, jaringan,
-        sistem operasi, server, pemrograman dan teknologi web.
-      </p>
+        <h3>Paket Belajar TKJ</h3>
 
-      <p>
-        Website ini dibuat sebagai media pembelajaran
-        agar proses belajar dapat dilakukan secara
-        bertahap, mulai dari pemula sampai memahami
-        teknologi komputer dan jaringan.
-      </p>
+        <div class="price">
+            Rp50.000
+        </div>
+
+        <p>Materi dasar sampai lanjutan</p>
+
+        <ul>
+            <li>✓ 50 materi pembelajaran</li>
+            <li>✓ Materi komputer</li>
+            <li>✓ Materi jaringan</li>
+            <li>✓ Materi MikroTik</li>
+            <li>✓ Materi Linux</li>
+            <li>✓ Materi HTML & CSS</li>
+            <li>✓ Materi Excel, Word & PowerPoint</li>
+            <li>✓ Materi Figma</li>
+        </ul>
+
+        <button onclick="beli()">
+            Beli Materi
+        </button>
 
     </div>
 
-  </section>
+</section>
 
 
+<!-- ================= FOOTER ================= -->
 
-  <!-- CTA -->
-  <section class="cta">
+<footer>
 
-    <h2>Siap Mulai Belajar TKJ?</h2>
+    <div class="footer-brand">
+        TKJ
+    </div>
 
     <p>
-      Pelajari komputer, jaringan, Linux,
-      MikroTik dan teknologi web dari dasar.
+        © 2026 Teknik Komputer & Jaringan.
+        Website pembelajaran komputer dan jaringan.
     </p>
 
-    <a href="#materi" class="btn primary">
-      Mulai Sekarang →
-    </a>
-
-  </section>
+</footer>
 
 
+<!-- ================= JAVASCRIPT ================= -->
 
-  <!-- FOOTER -->
-  <footer id="kontak">
+<script>
 
-    <div class="footer-logo">
-      TKJ<span>.</span>
-    </div>
+function belajar(nama) {
 
-    <p>
-      Teknik Komputer dan Jaringan
-    </p>
+    alert(
+        "Materi: " + nama +
+        "\\n\\nMateri pembelajaran akan dibuka di halaman berikutnya."
+    );
 
-    <div class="footer-links">
-      <a href="#home">Home</a>
-      <a href="#materi">Materi</a>
-      <a href="#program">Program</a>
-      <a href="#tentang">Tentang</a>
-    </div>
+}
 
-    <p class="copyright">
-      © 2026 TKJ Learning. Dibuat untuk belajar teknologi.
-    </p>
 
-  </footer>
+function beli() {
 
+    alert(
+        "Paket Belajar TKJ\\n\\n" +
+        "Harga: Rp50.000\\n\\n" +
+        "Silakan tambahkan metode pembayaran Anda."
+    );
+
+}
+
+
+function searchMateri() {
+
+    let input =
+        document.getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+    let cards =
+        document.querySelectorAll(".course-card");
+
+    cards.forEach(function(card) {
+
+        let text =
+            card.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+
+            card.style.display = "block";
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
 
 </body>
 </html>
