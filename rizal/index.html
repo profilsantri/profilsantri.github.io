@@ -4,72 +4,334 @@ rizal
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>adidas | Sport Style</title>
+
+    <meta name="description"
+          content="NIKE Sporty - Move Fast, Train Hard, Never Stop.">
+
+    <title>NIKE | Sporty</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<header>
-    <div class="logo">📦 rizal-landing-page-github.zip</div>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Produk</a>
-        <a href="#">Tentang</a>
-        <a href="#">Kontak</a>
-    </nav>
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="nav-container">
+
+        <a href="#home" class="logo">
+            NIKE<span>.</span>
+        </a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#collection">Collection</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#collection" class="shop-btn">
+            SHOP NOW
+        </a>
+
+    </div>
 </header>
 
 
-<section class="hero">
+<!-- HERO -->
+<section class="hero" id="home">
 
-    <div class="text">
-        <h1>Impossible<br>Is Nothing</h1>
+    <div class="hero-background">
+        SPORT
+    </div>
+
+    <div class="hero-container">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                NIKE SPORT / 2026
+            </p>
+
+            <h1>
+                JUST<br>
+                <span>DO IT.</span>
+            </h1>
+
+            <p class="description">
+                Push your limits. Move faster. Train harder.
+                Temukan gaya sporty yang dirancang untuk menemani
+                setiap langkah dan setiap tantanganmu.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#collection" class="btn red">
+                    EXPLORE COLLECTION
+                </a>
+
+                <a href="#about" class="btn outline">
+                    DISCOVER MORE
+                </a>
+
+            </div>
+
+            <div class="numbers">
+
+                <div>
+                    <strong>01</strong>
+                    <span>RUNNING</span>
+                </div>
+
+                <div>
+                    <strong>02</strong>
+                    <span>TRAINING</span>
+                </div>
+
+                <div>
+                    <strong>03</strong>
+                    <span>LIFESTYLE</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SPORTY VISUAL -->
+        <div class="hero-visual">
+
+            <div class="red-circle"></div>
+
+            <div class="speed-line line1"></div>
+            <div class="speed-line line2"></div>
+            <div class="speed-line line3"></div>
+
+            <div class="sport-text">
+                RUN
+            </div>
+
+            <div class="shoe">
+                <div class="shoe-upper"></div>
+                <div class="shoe-sole"></div>
+                <div class="shoe-logo">✓</div>
+            </div>
+
+            <div class="visual-label">
+                <span>NEW</span>
+                <strong>MOVE FORWARD</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- COLLECTION -->
+<section class="collection" id="collection">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <p>FEATURED COLLECTION</p>
+
+            <h2>
+                MOVE WITH <span>POWER.</span>
+            </h2>
+
+            <div class="title-line"></div>
+
+        </div>
+
+
+        <div class="cards">
+
+            <article class="card">
+
+                <div class="card-image red-bg">
+                    RUN
+                </div>
+
+                <div class="card-content">
+
+                    <span>01 / RUNNING</span>
+
+                    <h3>Running Collection</h3>
+
+                    <p>
+                        Perlengkapan sporty untuk menemani
+                        setiap langkah dan latihanmu.
+                    </p>
+
+                    <a href="#contact">
+                        EXPLORE →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="card-image black-bg">
+                    AIR
+                </div>
+
+                <div class="card-content">
+
+                    <span>02 / SPORT</span>
+
+                    <h3>Air Collection</h3>
+
+                    <p>
+                        Kombinasi kenyamanan, performa,
+                        dan gaya modern.
+                    </p>
+
+                    <a href="#contact">
+                        EXPLORE →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="card-image gray-bg">
+                    GYM
+                </div>
+
+                <div class="card-content">
+
+                    <span>03 / TRAINING</span>
+
+                    <h3>Training Collection</h3>
+
+                    <p>
+                        Dirancang untuk mendukung aktivitas
+                        latihan dan performa maksimal.
+                    </p>
+
+                    <a href="#contact">
+                        EXPLORE →
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+    <div class="about-container">
+
+        <div class="about-big">
+            NEVER<br>
+            STOP<br>
+            <span>MOVING.</span>
+        </div>
+
+        <div class="about-content">
+
+            <p>ABOUT THE CONCEPT</p>
+
+            <h2>
+                BUILT FOR<br>
+                <span>ATHLETES.</span>
+            </h2>
+
+            <p class="about-text">
+                Konsep landing page ini menggabungkan karakter
+                sporty, typography besar, warna kontras, dan
+                layout modern agar cocok digunakan untuk
+                brand olahraga atau toko fashion sporty.
+            </p>
+
+            <div class="about-line"></div>
+
+            <p class="note">
+                Konsep demo/fan-made. Bukan website resmi Nike.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+<section class="cta" id="contact">
+
+    <div class="cta-container">
+
+        <div>
+
+            <p>READY?</p>
+
+            <h2>
+                LET'S<br>
+                <span>MOVE.</span>
+            </h2>
+
+        </div>
+
+        <div class="cta-right">
+
+            <p>
+                Siap membuat project sporty yang keren?
+                Hubungi kami dan mulai sekarang.
+            </p>
+
+            <a href="mailto:emailkamu@example.com"
+               class="btn black">
+                CONTACT US
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-logo">
+            NIKE<span>.</span>
+        </div>
+
         <p>
-            Temukan koleksi sepatu dan apparel olahraga
-            dengan desain modern, nyaman, dan penuh gaya.
+            SPORTY LANDING PAGE CONCEPT
         </p>
 
-        <button>Belanja Sekarang</button>
-    </div>
-
-    <div class="image">
-        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Sepatu Sport">
-    </div>
-
-</section>
-
-
-<section class="products">
-
-    <h2>Produk Unggulan</h2>
-
-    <div class="card-container">
-
-        <div class="card">
-            <h3>Running Shoes</h3>
-            <p>Ringan dan nyaman untuk aktivitas olahraga.</p>
-        </div>
-
-        <div class="card">
-            <h3>Streetwear</h3>
-            <p>Gaya casual modern untuk keseharian.</p>
-        </div>
-
-        <div class="card">
-            <h3>Sports Gear</h3>
-            <p>Perlengkapan olahraga berkualitas tinggi.</p>
-        </div>
+        <p>
+            © 2026
+        </p>
 
     </div>
 
-</section>
-
-
-<footer>
-    <p>© 2026 adidas Style Landing Page</p>
 </footer>
-
 
 </body>
 </html>
