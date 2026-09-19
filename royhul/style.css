@@ -71,18 +71,19 @@ a {
 .logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
 
-    font-size: 22px;
+    font-size: 21px;
     font-weight: 800;
 }
 
 .logo img {
-    width: 65px;
-    height: 65px;
+    width: 55px;
+    height: 55px;
 
     object-fit: contain;
     display: block;
+
 }
 
 
