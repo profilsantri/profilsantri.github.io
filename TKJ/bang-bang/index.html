@@ -3,747 +3,388 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Belajar Jaringan MikroTik dari dasar sampai mahir">
-  <title>Belajar Jaringan MikroTik</title>
+  <meta name="description" content="Projek SMK DAG - Website belajar MikroTik dari dasar sampai mahir.">
+  <title>Projek SMK DAG | Belajar MikroTik</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header class="header">
-  <div class="logo">🌐 BELAJAR MIKROTIK</div>
+  <!-- LOGIN -->
+  <section id="loginScreen" class="login-screen">
+    <div class="login-card">
+      <div class="login-logo">DAG</div>
+      <span class="eyebrow">PROJEK SMK DAG</span>
+      <h1>Portal Belajar MikroTik</h1>
+      <p>Masuk untuk membuka materi jaringan MikroTik dari dasar sampai mahir.</p>
 
-  <nav>
-    <a href="#home">Beranda</a>
-    <a href="#materi">Materi</a>
-    <a href="#praktik">Praktik</a>
-    <a href="#ujian">Ujian</a>
-  </nav>
-</header>
+      <form id="loginForm">
+        <label for="username">Username Admin</label>
+        <input id="username" type="text" placeholder="Masukkan username" autocomplete="username" required>
 
-<main>
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Masukkan password" autocomplete="current-password" required>
 
-<!-- BERANDA -->
-<section id="home" class="hero">
-  <div class="hero-content">
-    <span class="badge">PROJEK SMK • TKJ</span>
+        <button class="btn btn-primary full" type="submit">🔐 Login</button>
+        <p id="loginMessage" class="login-message"></p>
+      </form>
 
-    <h1>Belajar Jaringan MikroTik</h1>
-
-    <p>
-      Materi jaringan MikroTik dari dasar sampai mahir,
-      dilengkapi penjelasan, topologi, Winbox, Terminal,
-      latihan praktik dan soal.
-    </p>
-
-    <a href="#materi" class="btn">🚀 Masuk Materi</a>
-  </div>
-
-  <div class="router">
-    <div>MIKROTIK</div>
-    <span>NETWORK ROUTER</span>
-  </div>
-</section>
-
-
-<!-- MATERI -->
-<section id="materi" class="section">
-
-  <div class="title">
-    <span>MATERI PEMBELAJARAN</span>
-    <h2>10 Modul Belajar MikroTik</h2>
-    <p>Bab 1–20 diringkas menjadi 10 modul agar website ringan.</p>
-  </div>
-
-
-  <!-- MODUL 1 -->
-  <article class="lesson" id="modul1">
-    <div class="lesson-number">01</div>
-
-    <div>
-      <h3>Dasar Jaringan & Pengenalan MikroTik</h3>
-
-      <p>
-        Pelajari jaringan komputer, LAN, WAN, router, switch,
-        access point, IP Address, gateway, DNS, DHCP,
-        RouterOS, RouterBOARD dan interface MikroTik.
-      </p>
-
-      <div class="topology">
-<pre>
-             INTERNET
-                 |
-             MODEM / ISP
-                 |
-              ether1
-          +-------------+
-          |   MIKROTIK  |
-          +-------------+
-              ether2
-                 |
-              SWITCH
-            /    |    \
-          PC1   PC2   PC3
-</pre>
-      </div>
-
-      <h4>📝 Langkah</h4>
-      <ol>
-        <li>Kenali perangkat jaringan.</li>
-        <li>Hubungkan komputer ke MikroTik.</li>
-        <li>Buka Winbox.</li>
-        <li>Kenali ether1, ether2 dan port lainnya.</li>
-        <li>Tentukan WAN dan LAN.</li>
-      </ol>
-
-      <h4>💻 Terminal</h4>
-      <pre class="code">/interface print
-/system identity print
-/system identity set name=LAB-MIKROTIK</pre>
-
-      <div class="quiz">
-        <b>Soal:</b>
-        Apa fungsi router, switch, IP Address, gateway dan DHCP?
-      </div>
-
-      <div class="buttons">
-        <a href="#home" class="btn secondary">↩ Kembali</a>
-        <a href="#modul2" class="btn">Lanjut →</a>
-      </div>
+      <small>Demo login: <b>admin</b> / <b>SMKDAG123</b></small>
     </div>
-  </article>
+  </section>
 
+  <!-- WEBSITE -->
+  <div id="site" class="site hidden">
 
-  <!-- MODUL 2 -->
-  <article class="lesson" id="modul2">
-    <div class="lesson-number">02</div>
+    <header class="topbar">
+      <a class="brand" href="#beranda" onclick="showPage('beranda')">
+        <span class="brand-mark">D</span>
+        <span>
+          <b>PROJEK SMK DAG</b>
+          <small>MIKROTIK ACADEMY</small>
+        </span>
+      </a>
 
-    <div>
-      <h3>Winbox, Interface & IP Address</h3>
+      <nav>
+        <button onclick="showPage('beranda')">Beranda</button>
+        <button onclick="showPage('materi')">Materi</button>
+        <button onclick="showPage('praktik')">Praktik</button>
+        <button onclick="showPage('tentang')">Tentang</button>
+        <button class="logout" onclick="logout()">Keluar</button>
+      </nav>
+    </header>
 
-      <p>
-        Belajar masuk MikroTik menggunakan Winbox,
-        mengatur interface WAN/LAN dan memberikan IP Address.
-      </p>
+    <main>
 
-      <h4>🖱️ Winbox</h4>
-      <ol>
-        <li>Buka Winbox.</li>
-        <li>Pilih perangkat MikroTik.</li>
-        <li>Buka Interfaces.</li>
-        <li>Ubah ether1 menjadi WAN.</li>
-        <li>Ubah ether2 menjadi LAN.</li>
-        <li>Buka IP → Addresses.</li>
-        <li>Tambahkan 192.168.10.1/24 pada LAN.</li>
-      </ol>
+      <!-- BERANDA -->
+      <section id="beranda" class="page active">
+        <div class="hero">
+          <div class="hero-copy">
+            <span class="eyebrow">BELAJAR • PRAKTIK • MENGUASAI</span>
+            <h1>Belajar MikroTik<br><span>Dari Dasar Sampai Mahir.</span></h1>
+            <p>
+              Materi jaringan MikroTik untuk pelajar SMK: mulai dari WinBox,
+              IP Address, DHCP, NAT, Firewall, VLAN, Hotspot, VPN, sampai proyek jaringan.
+            </p>
+            <div class="hero-actions">
+              <button class="btn btn-primary" onclick="showPage('materi')">Mulai Belajar →</button>
+              <button class="btn btn-ghost" onclick="showPage('praktik')">Lihat Praktik</button>
+            </div>
+            <div class="stats">
+              <div><strong>20</strong><span>Level Materi</span></div>
+              <div><strong>4</strong><span>Proyek Praktik</span></div>
+              <div><strong>100%</strong><span>Berbasis Praktik</span></div>
+            </div>
+          </div>
 
-      <h4>💻 Terminal</h4>
-      <pre class="code">/interface ethernet set ether1 name=WAN
-/interface ethernet set ether2 name=LAN
+          <div class="hero-image">
+            <img src="profil.jpg" alt="Profil Projek SMK DAG">
+            <div class="image-badge">PROJEK SMK DAG</div>
+          </div>
+        </div>
 
-/ip address add address=192.168.10.1/24 interface=LAN
+        <div class="section-head">
+          <span class="eyebrow">ROADMAP</span>
+          <h2>Jalur Belajar MikroTik</h2>
+          <p>Ikuti urutan dari fondasi sampai proyek jaringan.</p>
+        </div>
 
-/ip address print</pre>
+        <div class="roadmap">
+          <span>01 Pengenalan</span><i>→</i><span>02 WinBox</span><i>→</i>
+          <span>03 IP Address</span><i>→</i><span>04 DHCP</span><i>→</i>
+          <span>05 NAT</span><i>→</i><span>06 Firewall</span><i>→</i>
+          <span>07 VLAN</span><i>→</i><span>08 VPN</span><i>→</i><span>09 Proyek</span>
+        </div>
+      </section>
 
-      <div class="topology">
-<pre>
-WAN
- |
+      <!-- MATERI -->
+      <section id="materi" class="page">
+        <div class="section-head left">
+          <span class="eyebrow">MATERI LENGKAP</span>
+          <h2>Dari Awal Setting Sampai Jaringan Profesional</h2>
+          <p>Gunakan tombol nomor untuk berpindah bab.</p>
+        </div>
+
+        <div class="lesson-layout">
+          <aside class="lesson-menu" id="lessonMenu"></aside>
+          <article class="lesson-content" id="lessonContent"></article>
+        </div>
+
+        <div class="pager">
+          <button class="btn btn-ghost" onclick="prevLesson()">← Kembali</button>
+          <span id="lessonCounter"></span>
+          <button class="btn btn-primary" onclick="nextLesson()">Lanjut →</button>
+        </div>
+      </section>
+
+      <!-- PRAKTIK -->
+      <section id="praktik" class="page">
+        <div class="section-head left">
+          <span class="eyebrow">LAB PRAKTIK</span>
+          <h2>4 Proyek Jaringan</h2>
+          <p>Latihan bertahap yang dapat dibuat di laboratorium sekolah.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <span>01</span><h3>MikroTik Dari Nol</h3>
+            <p>WAN DHCP → LAN → DHCP Server → DNS → NAT → Internet.</p>
+            <code>192.168.10.1/24</code>
+          </article>
+          <article class="project-card">
+            <span>02</span><h3>Hotspot</h3>
+            <p>Wi-Fi → Hotspot → halaman login → user → Internet.</p>
+            <code>HOTSPOT-SMK-DAG</code>
+          </article>
+          <article class="project-card">
+            <span>03</span><h3>VLAN Sekolah</h3>
+            <p>VLAN 10 Admin, 20 Guru, 30 Siswa, 40 Tamu.</p>
+            <code>VLAN 10 / 20 / 30 / 40</code>
+          </article>
+          <article class="project-card">
+            <span>04</span><h3>Dual WAN</h3>
+            <p>ISP 1 utama dan ISP 2 cadangan dengan failover.</p>
+            <code>ISP 1 + ISP 2</code>
+          </article>
+        </div>
+
+        <div class="topology">
+          <h3>Topologi Dasar</h3>
+          <pre>
+INTERNET
+   │
+ MODEM
+   │
 ether1
-[MikroTik]
- |
+   │
+MIKROTIK
+   │
 ether2
- |
-LAN
-192.168.10.0/24
-</pre>
-      </div>
-
-      <div class="quiz">
-        <b>Latihan:</b>
-        Buat IP LAN 192.168.20.1/24.
-      </div>
-
-      <div class="buttons">
-        <a href="#modul1" class="btn secondary">← Kembali</a>
-        <a href="#modul3" class="btn">Lanjut →</a>
-      </div>
-    </div>
-  </article>
-
-
-  <!-- MODUL 3 -->
-  <article class="lesson" id="modul3">
-    <div class="lesson-number">03</div>
-
-    <div>
-      <h3>WAN, Routing & DNS</h3>
-
-      <p>
-        Membuat MikroTik mendapatkan koneksi dari ISP,
-        memahami default route dan melakukan pengujian DNS.
-      </p>
-
-      <h4>🖱️ Winbox</h4>
-      <ol>
-        <li>IP → DHCP Client.</li>
-        <li>Klik +.</li>
-        <li>Pilih interface WAN.</li>
-        <li>Apply → OK.</li>
-        <li>Periksa IP yang diperoleh.</li>
-      </ol>
-
-      <h4>💻 Terminal</h4>
-      <pre class="code">/ip dhcp-client add interface=WAN disabled=no
-
-/ip dhcp-client print
-
-/ip route print
-
-/ip dns set servers=8.8.8.8,1.1.1.1
-
-/ping 8.8.8.8
-/ping google.com</pre>
-
-      <div class="quiz">
-        <b>Latihan:</b>
-        Bandingkan hasil ping 8.8.8.8 dengan google.com.
-      </div>
-
-      <div class="buttons">
-        <a href="#modul2" class="btn secondary">← Kembali</a>
-        <a href="#modul4" class="btn">Lanjut →</a>
-      </div>
-    </div>
-  </article>
-
-
-  <!-- MODUL 4 -->
-  <article class="lesson" id="modul4">
-    <div class="lesson-number">04</div>
-
-    <div>
-      <h3>NAT & Internet Client</h3>
-
-      <p>
-        Belajar membuat komputer LAN menggunakan koneksi
-        Internet melalui MikroTik.
-      </p>
-
-      <div class="topology">
-<pre>
-          INTERNET
-              |
-             WAN
-              |
-          [MIKROTIK]
-              |
-             LAN
-              |
-           SWITCH
-          /  |  \
-        PC1 PC2 PC3
-</pre>
-      </div>
-
-      <h4>🖱️ Winbox</h4>
-      <p>
-        IP → Firewall → NAT → + →
-        Chain: srcnat →
-        Out Interface: WAN →
-        Action: masquerade.
-      </p>
-
-      <h4>💻 Terminal</h4>
-      <pre class="code">/ip firewall nat add \
-chain=srcnat \
-out-interface=WAN \
-action=masquerade
-
-/ip firewall nat print</pre>
-
-      <h4>🧪 Tes Client</h4>
-      <pre class="code">ping 192.168.10.1
-ping 8.8.8.8
-ping google.com</pre>
-
-      <div class="quiz">
-        <b>Soal:</b>
-        Apa fungsi NAT masquerade?
-      </div>
-
-      <div class="buttons">
-        <a href="#modul3" class="btn secondary">← Kembali</a>
-        <a href="#modul5" class="btn">Lanjut →</a>
-      </div>
-    </div>
-  </article>
-
-
-  <!-- MODUL 5 -->
-  <article class="lesson" id="modul5">
-    <div class="lesson-number">05</div>
-
-    <div>
-      <h3>DHCP Server & Bridge</h3>
-
-      <p>
-        Membuat IP otomatis untuk client dan menggabungkan
-        beberapa port MikroTik menjadi satu jaringan LAN.
-      </p>
-
-      <h4>💻 DHCP Terminal</h4>
-      <pre class="code">/ip pool add name=pool-LAN \
-ranges=192.168.10.10-192.168.10.254
-
-/ip dhcp-server add name=dhcp-LAN \
-interface=LAN \
-address-pool=pool-LAN \
-disabled=no
-
-/ip dhcp-server network add \
-address=192.168.10.0/24 \
-gateway=192.168.10.1 \
-dns-server=192.168.10.1</pre>
-
-      <h4>🌉 Bridge</h4>
-      <pre class="code">/interface bridge add name=bridge-LAN
-
-/interface bridge port add \
-bridge=bridge-LAN interface=ether2
-
-/interface bridge port add \
-bridge=bridge-LAN interface=ether3
-
-/interface bridge port add \
-bridge=bridge-LAN interface=ether4</pre>
-
-      <h4>🧪 Tes Windows</h4>
-      <pre class="code">ipconfig
-ipconfig /release
-ipconfig /renew</pre>
-
-      <div class="quiz">
-        <b>Latihan:</b>
-        Buat DHCP dengan range 192.168.10.10–192.168.10.254.
-      </div>
-
-      <div class="buttons">
-        <a href="#modul4" class="btn secondary">← Kembali</a>
-        <a href="#modul6" class="btn">Lanjut →</a>
-      </div>
-    </div>
-  </article>
-
-
-  <!-- MODUL 6 -->
-  <article class="lesson" id="modul6">
-    <div class="lesson-number">06</div>
-
-    <div>
-      <h3>Firewall & VLAN</h3>
-
-      <p>
-        Pelajari keamanan dasar router dan pemisahan jaringan
-        menggunakan VLAN.
-      </p>
-
-      <h4>🔥 Firewall</h4>
-
-      <p>
-        Chain utama:
-      </p>
-
-      <ul>
-        <li><b>Input</b> — menuju router.</li>
-        <li><b>Forward</b> — melewati router.</li>
-        <li><b>Output</b> — berasal dari router.</li>
-      </ul>
-
-      <pre class="code">/ip firewall filter print</pre>
-
-      <h4>🏷️ VLAN</h4>
-
-      <div class="topology">
-<pre>
-             MIKROTIK
-                |
-              TRUNK
-                |
-             SWITCH
-       ┌────────┼────────┐
-       |        |        |
-    VLAN 10  VLAN 20  VLAN 30
-     ADMIN     GURU    SISWA
-</pre>
-      </div>
-
-      <pre class="code">/interface vlan add \
-name=vlan10 \
-vlan-id=10 \
-interface=bridge-LAN
-
-/interface vlan add \
-name=vlan20 \
-vlan-id=20 \
-interface=bridge-LAN
-
-/ip address add \
-address=192.168.10.1/24 \
-interface=vlan10
-
-/ip address add \
-address=192.168.20.1/24 \
-interface=vlan20</pre>
-
-      <div class="quiz">
-        <b>Soal:</b>
-        Apa perbedaan firewall input dan forward?
-        Apa fungsi VLAN?
-      </div>
-
-      <div class="buttons">
-        <a href="#modul5" class="btn secondary">← Kembali</a>
-        <a href="#modul7" class="btn">Lanjut →</a>
-      </div>
-    </div>
-  </article>
-
-
-  <!-- MODUL 7 -->
-  <article class="lesson" id="modul7">
-    <div class="lesson-number">07</div>
-
-    <div>
-      <h3>Routing, Hotspot & Bandwidth</h3>
-
-      <p>
-        Pelajari routing antarjaringan, Hotspot dan pembatasan
-        bandwidth menggunakan Simple Queue.
-      </p>
-
-      <h4>🛣️ Static Route</h4>
-
-      <pre class="code">/ip route add \
-dst-address=192.168.20.0/24 \
-gateway=192.168.10.2
-
-/ip route print</pre>
-
-      <h4>📶 Hotspot</h4>
-
-      <p>
-        Hotspot dapat digunakan untuk jaringan sekolah,
-        Wi-Fi publik, kafe dan lingkungan lainnya.
-      </p>
-
-      <pre class="code">/ip hotspot user add \
-name=siswa \
-password=12345
-
-/ip hotspot user print</pre>
-
-      <h4>🚦 Bandwidth</h4>
-
-      <pre class="code">/queue simple add \
-name=PC1 \
-target=192.168.10.10/32 \
-max-limit=2M/2M</pre>
-
-      <div class="quiz">
-        <b>Latihan:</b>
-        Buat user Hotspot dan batasi satu client menjadi 2 Mbps.
-      </div>
-
-      <div class="buttons">
-        <a href="#modul6" class="btn secondary">← Kembali</a>
-        <a href="#modul8" class="btn">Lanjut →</a>
-      </div>
-    </div>
-  </article>
-
-
-  <!-- MODUL 8 -->
-  <article class="lesson" id="modul8">
-    <div class="lesson-number">08</div>
-
-    <div>
-      <h3>VPN</h3>
-
-      <p>
-        Pelajari konsep VPN untuk menghubungkan jaringan
-        yang berbeda melalui Internet.
-      </p>
-
-      <div class="topology">
-<pre>
-JARINGAN A
-192.168.10.0/24
-       |
-    ROUTER A
-       |
-    INTERNET
-       |
-    VPN TUNNEL
-       |
-    ROUTER B
-       |
-JARINGAN B
-192.168.20.0/24
-</pre>
-      </div>
-
-      <h4>Materi</h4>
-      <ul>
-        <li>WireGuard</li>
-        <li>IPsec</li>
-        <li>L2TP/IPsec</li>
-        <li>Site-to-Site VPN</li>
-        <li>Remote Access VPN</li>
-      </ul>
-
-      <h4>🎯 Latihan</h4>
-      <p>
-        Buat rancangan jaringan Kantor A dan Kantor B,
-        kemudian tentukan subnet dan jalur VPN.
-      </p>
-
-      <div class="quiz">
-        <b>Soal:</b>
-        Apa fungsi VPN? Apa perbedaan Site-to-Site
-        dan Remote Access VPN?
-      </div>
-
-      <div class="buttons">
-        <a href="#modul7" class="btn secondary">← Kembali</a>
-        <a href="#modul9" class="btn">Lanjut →</a>
-      </div>
-    </div>
-  </article>
-
-
-  <!-- MODUL 9 -->
-  <article class="lesson" id="modul9">
-    <div class="lesson-number">09</div>
-
-    <div>
-      <h3>Load Balancing, Failover & Monitoring</h3>
-
-      <p>
-        Pelajari penggunaan dua koneksi Internet,
-        koneksi cadangan dan monitoring MikroTik.
-      </p>
-
-      <div class="topology">
-<pre>
-       ISP 1 ─────┐
-                  |
-              MIKROTIK ─── LAN
-                  |
-       ISP 2 ─────┘
-</pre>
-      </div>
-
-      <h4>⚖️ Load Balancing</h4>
-
-      <ul>
-        <li>PCC</li>
-        <li>ECMP</li>
-        <li>Connection Mark</li>
-        <li>Routing Mark</li>
-        <li>Mangle</li>
-      </ul>
-
-      <h4>🔄 Failover</h4>
-
-      <pre class="code">/ip route add \
-dst-address=0.0.0.0/0 \
-gateway=ISP1 \
-distance=1
-
-/ip route add \
-dst-address=0.0.0.0/0 \
-gateway=ISP2 \
-distance=2</pre>
-
-      <h4>📊 Monitoring</h4>
-
-      <pre class="code">/tool torch ether1
-
-/interface monitor-traffic ether1
-
-/system resource print
-
-/log print</pre>
-
-      <div class="quiz">
-        <b>Soal:</b>
-        Apa perbedaan load balancing dan failover?
-      </div>
-
-      <div class="buttons">
-        <a href="#modul8" class="btn secondary">← Kembali</a>
-        <a href="#modul10" class="btn">Lanjut →</a>
-      </div>
-    </div>
-  </article>
-
-
-  <!-- MODUL 10 -->
-  <article class="lesson" id="modul10">
-    <div class="lesson-number">10</div>
-
-    <div>
-      <h3>Backup, Troubleshooting & Proyek Akhir</h3>
-
-      <p>
-        Modul terakhir menggabungkan seluruh materi menjadi
-        proyek jaringan sekolah.
-      </p>
-
-      <h4>💾 Backup</h4>
-
-      <pre class="code">/system backup save \
-name=backup-sebelum-perubahan
-
-/export file=backup-config</pre>
-
-      <h4>🔧 Troubleshooting</h4>
-
-      <pre class="code">/interface print
-
-/ip address print
-
-/ip dhcp-server lease print
-
-/ip route print
-
-/ip firewall nat print
-
-/ping 192.168.10.1
-
-/ping 8.8.8.8
-
-/ping google.com</pre>
-
-      <h4>🏫 Proyek Akhir</h4>
-
-      <div class="topology">
-<pre>
-                       INTERNET
-                           |
-                         ISP
-                           |
-                      [MIKROTIK]
-                           |
-                         TRUNK
-                           |
-                        SWITCH
-             ┌─────────────┼─────────────┐
-             |             |             |
-          VLAN 10       VLAN 20       VLAN 30
-           ADMIN         GURU          SISWA
-             |             |             |
-            PC            PC            PC
-
-                    VLAN 40 = TAMU
-</pre>
-      </div>
-
-      <h4>📋 Target Proyek</h4>
-
-      <ul>
-        <li>WAN berjalan.</li>
-        <li>DHCP berjalan.</li>
-        <li>DNS berjalan.</li>
-        <li>NAT berjalan.</li>
-        <li>VLAN dibuat.</li>
-        <li>Routing berjalan.</li>
-        <li>Firewall dikonfigurasi.</li>
-        <li>Bandwidth diatur.</li>
-        <li>Monitoring dilakukan.</li>
-        <li>Backup dibuat.</li>
-        <li>Troubleshooting dilakukan.</li>
-      </ul>
-
-      <div class="quiz">
-        <b>UJIAN AKHIR:</b>
-        Buat jaringan sekolah dengan VLAN 10 ADMIN,
-        VLAN 20 GURU, VLAN 30 SISWA dan VLAN 40 TAMU.
-        Dokumentasikan topologi, IP, VLAN, DHCP,
-        firewall, bandwidth dan hasil pengujian.
-      </div>
-
-      <div class="buttons">
-        <a href="#modul9" class="btn secondary">← Kembali</a>
-        <a href="#home" class="btn">🏠 Selesai</a>
-      </div>
-    </div>
-  </article>
-
-</section>
-
-
-<!-- PRAKTIK -->
-<section id="praktik" class="section practice">
-  <div class="title">
-    <span>PRAKTIK</span>
-    <h2>Urutan Praktik dari Nol</h2>
+   │
+ SWITCH
+ ┌─┼────────┐
+PC  PC      HP
+          </pre>
+        </div>
+      </section>
+
+      <!-- TENTANG -->
+      <section id="tentang" class="page">
+        <div class="about-card">
+          <span class="eyebrow">PROJEK SMK DAG</span>
+          <h2>Media Belajar Jaringan MikroTik</h2>
+          <p>
+            Website ini dirancang sebagai media pembelajaran siswa SMK agar
+            dapat memahami konsep jaringan sekaligus berlatih konfigurasi MikroTik.
+          </p>
+          <div class="feature-list">
+            <div>✓ Materi dasar sampai lanjutan</div>
+            <div>✓ Topologi jaringan</div>
+            <div>✓ Contoh konfigurasi WinBox</div>
+            <div>✓ Contoh perintah Terminal</div>
+            <div>✓ Latihan troubleshooting</div>
+            <div>✓ Proyek jaringan sekolah</div>
+          </div>
+          <button class="btn btn-primary" onclick="showPage('materi')">Mulai Materi →</button>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <b>PROJEK SMK DAG</b> · Belajar MikroTik dari dasar sampai mahir
+      <span>© 2026</span>
+    </footer>
   </div>
 
-  <div class="steps">
-    <div>01<br><b>Hubungkan MikroTik</b></div>
-    <div>02<br><b>Login Winbox</b></div>
-    <div>03<br><b>Atur Interface</b></div>
-    <div>04<br><b>Atur IP Address</b></div>
-    <div>05<br><b>Atur WAN</b></div>
-    <div>06<br><b>DNS & Route</b></div>
-    <div>07<br><b>NAT</b></div>
-    <div>08<br><b>DHCP</b></div>
-    <div>09<br><b>VLAN & Firewall</b></div>
-    <div>10<br><b>Proyek Akhir</b></div>
-  </div>
-</section>
+<script>
+const lessons = [
+  ["01","Mengenal MikroTik",`
+    <h3>1. Mengenal MikroTik</h3>
+    <p>Pelajari RouterOS, RouterBOARD, router, switch, access point, LAN, WAN, Internet, IP Address, Gateway, DNS, DHCP, NAT dan Firewall.</p>
+    <div class="info-grid"><b>Peralatan</b><span>Router MikroTik, PC/laptop, kabel LAN, modem/ONT, WinBox.</span><b>Tujuan</b><span>Memahami fungsi setiap komponen sebelum konfigurasi.</span></div>`],
+  ["02","Interface & WinBox",`
+    <h3>2. Interface dan WinBox</h3>
+    <p>Kenali ether1, ether2, ether3, ether4, wlan dan bridge. Pelajari koneksi WinBox menggunakan MAC Address maupun IP Address.</p>
+    <pre>ether1 = WAN / Internet
+ether2 = LAN
+ether3 = LAN
+ether4 = LAN</pre>`],
+  ["03","IP Address",`
+    <h3>3. Setting IP Address</h3>
+    <p>Contoh jaringan LAN:</p>
+    <pre>Network : 192.168.10.0/24
+Router  : 192.168.10.1/24
+Menu    : IP → Addresses → +</pre>
+    <p>Berikan IP LAN pada interface atau bridge yang digunakan sebagai LAN.</p>`],
+  ["04","DHCP Client / WAN",`
+    <h3>4. Internet / WAN</h3>
+    <p>Jika modem memberikan IP secara DHCP, buat DHCP Client pada ether1.</p>
+    <pre>IP → DHCP Client
+Interface : ether1
+Add Default Route : yes
+Use Peer DNS      : sesuai kebutuhan</pre>`],
+  ["05","DNS",`
+    <h3>5. DNS</h3>
+    <p>DNS menerjemahkan nama domain menjadi alamat IP. Untuk latihan, Anda dapat memakai resolver publik yang terpercaya.</p>
+    <pre>IP → DNS
+Servers:
+1.1.1.1
+8.8.8.8</pre>
+    <p>Aktifkan Allow Remote Requests hanya bila router memang dipakai sebagai DNS resolver untuk LAN dan aksesnya dibatasi dengan firewall.</p>`],
+  ["06","NAT",`
+    <h3>6. NAT Masquerade</h3>
+    <p>NAT memungkinkan banyak perangkat LAN menggunakan koneksi Internet melalui IP WAN.</p>
+    <pre>IP → Firewall → NAT → +
+Chain           : srcnat
+Out. Interface  : ether1
+Action          : masquerade</pre>`],
+  ["07","DHCP Server",`
+    <h3>7. DHCP Server</h3>
+    <p>DHCP memberi IP otomatis kepada laptop, HP dan perangkat lain.</p>
+    <pre>Network    : 192.168.10.0/24
+Gateway    : 192.168.10.1
+Pool       : 192.168.10.10-192.168.10.254
+DNS        : 192.168.10.1</pre>`],
+  ["08","Routing",`
+    <h3>8. Routing</h3>
+    <p>Routing menentukan jalan menuju jaringan lain. Pahami gateway, routing table, default route dan static route.</p>
+    <pre>Default route:
+0.0.0.0/0 → gateway ISP</pre>`],
+  ["09","Firewall",`
+    <h3>9. Firewall</h3>
+    <p>Pelajari chain input, forward, output, connection tracking, address-list, filter, NAT, mangle dan raw.</p>
+    <div class="warning">⚠️ Uji aturan firewall di lab. Salah aturan dapat memutus akses ke router.</div>
+    <pre>INPUT   = menuju router
+FORWARD = melewati router
+OUTPUT  = berasal dari router</pre>`],
+  ["10","Bridge",`
+    <h3>10. Bridge</h3>
+    <p>Bridge menggabungkan beberapa interface menjadi satu jaringan Layer 2.</p>
+    <pre>bridge-LAN
+ ├── ether2
+ ├── ether3
+ ├── ether4
+ └── wlan (jika digunakan)</pre>`],
+  ["11","Wi-Fi",`
+    <h3>11. Wi-Fi</h3>
+    <p>Pelajari SSID, mode AP/Station, security profile, channel/frequency, country/regulatory setting dan monitoring client.</p>
+    <pre>SSID : BELAJAR-MIKROTIK
+Security : gunakan konfigurasi keamanan yang sesuai perangkat</pre>`],
+  ["12","Hotspot",`
+    <h3>12. Hotspot</h3>
+    <p>Hotspot menyediakan halaman autentikasi sebelum pengguna mengakses Internet.</p>
+    <pre>Wi-Fi → Hotspot MikroTik
+       ↓
+    Login
+       ↓
+   Internet</pre>`],
+  ["13","Bandwidth",`
+    <h3>13. Bandwidth Management</h3>
+    <p>Pelajari Simple Queue, Queue Tree, PCQ, Max Limit, Burst dan Priority. Mulai dari Simple Queue agar konsep pembatasan mudah dipahami.</p>`],
+  ["14","VLAN",`
+    <h3>14. VLAN</h3>
+    <p>Pisahkan jaringan sekolah menjadi beberapa segmen.</p>
+    <pre>VLAN 10 = ADMIN
+VLAN 20 = GURU
+VLAN 30 = SISWA
+VLAN 40 = TAMU</pre>
+    <p>Pelajari access port, trunk, tagged, untagged, Bridge VLAN Filtering dan inter-VLAN routing.</p>`],
+  ["15","VPN",`
+    <h3>15. VPN</h3>
+    <p>Pelajari remote access dan site-to-site VPN. WireGuard dan IPsec dapat dipelajari sesuai dukungan RouterOS/perangkat.</p>
+    <pre>Rumah → Internet → VPN → MikroTik Sekolah</pre>`],
+  ["16","Dual WAN",`
+    <h3>16. Dual WAN / Failover</h3>
+    <p>Gunakan dua koneksi Internet untuk redundansi. Pahami default route, distance, gateway checking dan policy/load balancing sesuai kebutuhan.</p>
+    <pre>ISP 1 ──┐
+        ├── MikroTik ── LAN
+ISP 2 ──┘</pre>`],
+  ["17","Monitoring",`
+    <h3>17. Monitoring Traffic</h3>
+    <p>Gunakan Torch, Ping, Traceroute, interface traffic, connection tracking dan Log untuk melihat kondisi jaringan.</p>`],
+  ["18","Backup & Update",`
+    <h3>18. Backup dan Update</h3>
+    <p>Biasakan backup sebelum perubahan besar.</p>
+    <pre>System → Backup
+Files → cek file backup
+/export → export konfigurasi teks</pre>
+    <p>Sebelum upgrade RouterOS, cek kompatibilitas perangkat dan dokumentasi resmi.</p>`],
+  ["19","Keamanan",`
+    <h3>19. Keamanan MikroTik</h3>
+    <p>Ganti password default, buat user sesuai kebutuhan, gunakan password kuat, nonaktifkan layanan yang tidak diperlukan, batasi akses WinBox/SSH dan jangan membuka management router ke Internet tanpa perlindungan.</p>
+    <pre>IP → Services
+Batasi service + source IP sesuai kebutuhan</pre>`],
+  ["20","Troubleshooting & Proyek",`
+    <h3>20. Troubleshooting dan Proyek Akhir</h3>
+    <p>Jika Internet tidak berjalan, periksa secara berurutan:</p>
+    <ol><li>Kabel dan interface</li><li>IP Address</li><li>DHCP Client</li><li>Gateway & routing</li><li>DNS</li><li>NAT</li><li>Firewall</li><li>Perangkat client</li></ol>
+    <p>Proyek akhir: buat jaringan WAN → MikroTik → switch → PC/HP, lalu kembangkan menjadi Hotspot, VLAN, bandwidth dan failover.</p>`]
+];
 
+let currentLesson = 0;
 
-<!-- UJIAN -->
-<section id="ujian" class="section exam">
-  <div class="title">
-    <span>UJIAN</span>
-    <h2>Checklist Kompetensi</h2>
-  </div>
+function buildMenu() {
+  const menu = document.getElementById("lessonMenu");
+  menu.innerHTML = lessons.map((l, i) =>
+    `<button class="${i === currentLesson ? 'selected' : ''}" onclick="openLesson(${i})">
+      <b>${l[0]}</b><span>${l[1]}</span>
+    </button>`).join("");
+}
 
-  <div class="checklist">
-    <label><input type="checkbox"> Memahami jaringan komputer</label>
-    <label><input type="checkbox"> Menggunakan Winbox</label>
-    <label><input type="checkbox"> Mengatur Interface</label>
-    <label><input type="checkbox"> Mengatur IP Address</label>
-    <label><input type="checkbox"> Mengatur WAN</label>
-    <label><input type="checkbox"> Mengatur DNS</label>
-    <label><input type="checkbox"> Membuat NAT</label>
-    <label><input type="checkbox"> Membuat DHCP</label>
-    <label><input type="checkbox"> Membuat Bridge</label>
-    <label><input type="checkbox"> Memahami VLAN</label>
-    <label><input type="checkbox"> Memahami Firewall</label>
-    <label><input type="checkbox"> Membuat Hotspot</label>
-    <label><input type="checkbox"> Mengatur Bandwidth</label>
-    <label><input type="checkbox"> Memahami VPN</label>
-    <label><input type="checkbox"> Memahami Failover</label>
-    <label><input type="checkbox"> Melakukan Monitoring</label>
-    <label><input type="checkbox"> Melakukan Backup</label>
-    <label><input type="checkbox"> Melakukan Troubleshooting</label>
-    <label><input type="checkbox"> Menyelesaikan Proyek Akhir</label>
-  </div>
-</section>
+function openLesson(i) {
+  currentLesson = Math.max(0, Math.min(lessons.length - 1, i));
+  document.getElementById("lessonContent").innerHTML = lessons[currentLesson][2];
+  document.getElementById("lessonCounter").textContent =
+    `Bab ${currentLesson + 1} dari ${lessons.length}`;
+  buildMenu();
+  window.scrollTo({top: 0, behavior: "smooth"});
+}
 
-</main>
+function nextLesson() {
+  if (currentLesson < lessons.length - 1) openLesson(currentLesson + 1);
+  else showPage("praktik");
+}
 
+function prevLesson() {
+  if (currentLesson > 0) openLesson(currentLesson - 1);
+  else showPage("beranda");
+}
 
-<footer>
-  <h3>🌐 BELAJAR JARINGAN MIKROTIK</h3>
-  <p>Dari Dasar Sampai Bisa • Projek SMK</p>
-  <p>© 2026 Belajar MikroTik</p>
-</footer>
+function showPage(id) {
+  document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+  window.scrollTo({top: 0, behavior: "smooth"});
+}
 
+function logout() {
+  sessionStorage.removeItem("dagLogin");
+  document.getElementById("site").classList.add("hidden");
+  document.getElementById("loginScreen").classList.remove("hidden");
+  document.getElementById("password").value = "";
+}
+
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const user = document.getElementById("username").value.trim();
+  const pass = document.getElementById("password").value;
+  const msg = document.getElementById("loginMessage");
+
+  if (user === "admin" && pass === "SMKDAG123") {
+    sessionStorage.setItem("dagLogin", "1");
+    document.getElementById("loginScreen").classList.add("hidden");
+    document.getElementById("site").classList.remove("hidden");
+    msg.textContent = "";
+    openLesson(0);
+  } else {
+    msg.textContent = "Username atau password salah.";
+  }
+});
+
+if (sessionStorage.getItem("dagLogin") === "1") {
+  document.getElementById("loginScreen").classList.add("hidden");
+  document.getElementById("site").classList.remove("hidden");
+}
+openLesson(0);
+</script>
 </body>
 </html>
