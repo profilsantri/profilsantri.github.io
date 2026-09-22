@@ -1,1 +1,736 @@
-tk
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #07111f;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+
+/* ================= LOGIN ================= */
+
+.login-page {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        radial-gradient(circle at top left, #123c68, transparent 40%),
+        radial-gradient(circle at bottom right, #084d57, transparent 40%),
+        #050b14;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 430px;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    background: rgba(15, 30, 50, 0.95);
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    box-shadow:
+        0 25px 80px rgba(0,0,0,0.5);
+}
+
+.logo {
+    width: 75px;
+    height: 75px;
+
+    margin: auto auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: linear-gradient(135deg, #00d4ff, #0066ff);
+
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.login-box h1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.login-box > p {
+    text-align: center;
+    color: #9fb1c8;
+    margin-bottom: 30px;
+}
+
+.login-box label {
+    display: block;
+    margin: 15px 0 7px;
+}
+
+.login-box input {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border-radius: 10px;
+
+    border: 1px solid #30445c;
+
+    background: #0a1728;
+
+    color: white;
+
+    outline: none;
+}
+
+.login-box input:focus {
+    border-color: #00d4ff;
+}
+
+.login-box button {
+    width: 100%;
+
+    margin-top: 22px;
+
+    padding: 15px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: linear-gradient(135deg, #00d4ff, #0066ff);
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#loginMessage {
+    color: #ff6b6b;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.demo-login {
+    margin-top: 25px;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    background: rgba(0, 212, 255, 0.08);
+
+    color: #aebed0;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+.demo-login span {
+    color: #00d4ff;
+}
+
+
+/* ================= GLOBAL ================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* ================= NAVBAR ================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: rgba(5, 15, 27, 0.92);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.navbar {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 15px 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-logo {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: linear-gradient(135deg, #00d4ff, #0066ff);
+
+    font-weight: bold;
+}
+
+.brand small {
+    display: block;
+
+    color: #8ea3bb;
+
+    font-size: 11px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu a {
+    color: #c7d5e5;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+.menu a:hover {
+    color: #00d4ff;
+}
+
+.logout {
+    padding: 9px 15px;
+
+    border: 1px solid #ff5252;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #ff7373;
+
+    cursor: pointer;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    max-width: 1200px;
+
+    min-height: 650px;
+
+    margin: auto;
+
+    padding: 100px 20px;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    border-radius: 30px;
+
+    background: rgba(0,212,255,0.1);
+
+    border: 1px solid rgba(0,212,255,0.3);
+
+    color: #00d4ff;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.hero h1 {
+    margin-top: 20px;
+
+    font-size: clamp(42px, 6vw, 72px);
+
+    line-height: 1.05;
+}
+
+.hero h1 span {
+    color: #00d4ff;
+}
+
+.hero p {
+    max-width: 650px;
+
+    margin: 25px 0;
+
+    color: #9fb1c8;
+
+    font-size: 17px;
+}
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+
+    padding: 13px 22px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: #00aee8;
+    color: white;
+}
+
+.btn-secondary {
+    border: 1px solid #304b68;
+    color: white;
+}
+
+.router-card {
+    min-height: 380px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(0,212,255,0.15),
+            rgba(0,80,160,0.05)
+        );
+
+    border: 1px solid rgba(0,212,255,0.2);
+
+    box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+}
+
+.router-icon {
+    font-size: 100px;
+
+    margin-bottom: 20px;
+}
+
+.router-card h2 {
+    font-size: 40px;
+}
+
+.router-card p {
+    color: #9fb1c8;
+}
+
+.status {
+    margin-top: 30px;
+
+    color: #42e6a4;
+
+    font-size: 13px;
+}
+
+
+/* ================= STATS ================= */
+
+.stats {
+    max-width: 1100px;
+
+    margin: 0 auto 80px;
+
+    padding: 25px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+    border-radius: 20px;
+
+    background: #0b1b2d;
+
+    border: 1px solid #1a3047;
+}
+
+.stats div {
+    text-align: center;
+}
+
+.stats strong {
+    display: block;
+
+    color: #00d4ff;
+
+    font-size: 30px;
+}
+
+.stats span {
+    color: #91a6bc;
+
+    font-size: 13px;
+}
+
+
+/* ================= SECTION ================= */
+
+.section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 90px 20px;
+}
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.section-title span {
+    color: #00d4ff;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.section-title h2 {
+    margin: 10px 0;
+
+    font-size: 40px;
+}
+
+.section-title p {
+    color: #91a6bc;
+}
+
+
+/* ================= MATERI ================= */
+
+.materi-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.materi-card {
+    position: relative;
+
+    padding: 28px;
+
+    min-height: 220px;
+
+    border-radius: 18px;
+
+    background: #0b1b2d;
+
+    border: 1px solid #1b324b;
+
+    transition: 0.3s;
+}
+
+.materi-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #00d4ff;
+}
+
+.number {
+    color: #00d4ff;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin-bottom: 25px;
+}
+
+.materi-card h3 {
+    margin-bottom: 12px;
+
+    font-size: 21px;
+}
+
+.materi-card p {
+    color: #91a6bc;
+
+    font-size: 14px;
+}
+
+
+/* ================= PRACTICE ================= */
+
+.practice {
+    padding: 100px 20px;
+
+    background: #040b13;
+}
+
+.code-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 25px;
+
+    overflow-x: auto;
+
+    border-radius: 18px;
+
+    background: #02060b;
+
+    border: 1px solid #1c344c;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.35);
+}
+
+.code-container pre {
+    color: #bdeeff;
+
+    font-family:
+        Consolas,
+        "Courier New",
+        monospace;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* ================= TOPOLOGY ================= */
+
+.topology {
+    padding: 100px 20px;
+
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+.topology-box {
+    padding: 30px;
+
+    overflow-x: auto;
+
+    border-radius: 20px;
+
+    background: #081524;
+
+    border: 1px solid #1b344c;
+}
+
+.topology-box pre {
+    color: #00d4ff;
+
+    text-align: center;
+
+    font-family: monospace;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 100px 20px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+.about > div:first-child > span {
+    color: #00d4ff;
+
+    font-size: 13px;
+}
+
+.about h2 {
+    font-size: 40px;
+
+    margin: 15px 0;
+}
+
+.about p {
+    color: #91a6bc;
+}
+
+.about-card {
+    padding: 35px;
+
+    border-radius: 20px;
+
+    background: #0b1b2d;
+
+    border: 1px solid #1b344c;
+}
+
+.about-card h3 {
+    margin-top: 10px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 50px 20px;
+
+    text-align: center;
+
+    background: #030810;
+
+    border-top: 1px solid #17283a;
+}
+
+footer h3 {
+    color: #00d4ff;
+}
+
+footer p {
+    color: #73879d;
+
+    margin-top: 8px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .materi-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .menu a {
+        display: none;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .login-box {
+        padding: 25px;
+    }
+
+    .hero {
+        padding-top: 60px;
+    }
+
+    .materi-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .about h2 {
+        font-size: 30px;
+    }
+}
