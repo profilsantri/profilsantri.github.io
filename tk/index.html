@@ -1,1 +1,805 @@
-tk
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ML - XAMPP to GitHub | Belajar MikroTik</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= LOGIN ================= -->
+
+<div id="loginPage" class="login-page">
+
+    <div class="login-box">
+
+        <div class="logo">ML</div>
+
+        <h1>Belajar MikroTik</h1>
+        <p>ML - XAMPP to GitHub</p>
+
+        <form id="loginForm">
+
+            <label>Username</label>
+            <input
+                type="text"
+                id="username"
+                placeholder="Masukkan username"
+                required
+            >
+
+            <label>Password</label>
+            <input
+                type="password"
+                id="password"
+                placeholder="Masukkan password"
+                required
+            >
+
+            <button type="submit">
+                🔐 Masuk ke Website
+            </button>
+
+            <p id="loginMessage"></p>
+
+        </form>
+
+        <div class="demo-login">
+            <b>Login Demo</b><br>
+            Username: <span>admin</span><br>
+            Password: <span>12345</span>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= WEBSITE ================= -->
+
+<div id="website" class="website hidden">
+
+    <!-- NAVBAR -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="brand">
+                <div class="brand-logo">ML</div>
+
+                <div>
+                    <strong>ML - XAMPP</strong>
+                    <small>Belajar MikroTik</small>
+                </div>
+            </div>
+
+            <div class="menu">
+                <a href="#home">Home</a>
+                <a href="#materi">Materi</a>
+                <a href="#praktik">Praktik</a>
+                <a href="#tentang">Tentang</a>
+
+                <button onclick="logout()" class="logout">
+                    Keluar
+                </button>
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-text">
+
+            <span class="badge">
+                🚀 WEBSITE PEMBELAJARAN TKJ
+            </span>
+
+            <h1>
+                Belajar
+                <span>MikroTik</span>
+                dari Dasar sampai Mahir
+            </h1>
+
+            <p>
+                Pelajari konfigurasi MikroTik secara bertahap,
+                mulai dari pengenalan, IP Address, DHCP, DNS,
+                NAT, Firewall, VLAN, Hotspot, VPN hingga
+                monitoring jaringan.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#materi" class="btn-primary">
+                    📚 Mulai Belajar
+                </a>
+
+                <a href="#praktik" class="btn-secondary">
+                    💻 Lihat Praktik
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="router-card">
+
+            <div class="router-icon">
+                📡
+            </div>
+
+            <h2>MikroTik</h2>
+
+            <p>
+                RouterOS • Networking • TKJ
+            </p>
+
+            <div class="status">
+                ● SYSTEM ONLINE
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- STATISTIK -->
+
+    <section class="stats">
+
+        <div>
+            <strong>100+</strong>
+            <span>Materi & Code</span>
+        </div>
+
+        <div>
+            <strong>20</strong>
+            <span>Bab Pembelajaran</span>
+        </div>
+
+        <div>
+            <strong>50+</strong>
+            <span>Latihan Praktik</span>
+        </div>
+
+        <div>
+            <strong>24/7</strong>
+            <span>Akses Website</span>
+        </div>
+
+    </section>
+
+
+    <!-- MATERI -->
+
+    <section id="materi" class="section">
+
+        <div class="section-title">
+
+            <span>MATERI PEMBELAJARAN</span>
+
+            <h2>
+                MikroTik dari Awal sampai Akhir
+            </h2>
+
+            <p>
+                Materi disusun untuk siswa SMK/TKJ dan pemula.
+            </p>
+
+        </div>
+
+
+        <div class="materi-grid">
+
+            <article class="materi-card">
+                <div class="number">01</div>
+                <h3>Pengenalan MikroTik</h3>
+                <p>
+                    Mengenal MikroTik, RouterOS, RouterBOARD,
+                    router, switch dan access point.
+                </p>
+            </article>
+
+            <article class="materi-card">
+                <div class="number">02</div>
+                <h3>Winbox</h3>
+                <p>
+                    Cara menghubungkan komputer dengan MikroTik
+                    menggunakan Winbox.
+                </p>
+            </article>
+
+            <article class="materi-card">
+                <div class="number">03</div>
+                <h3>IP Address</h3>
+                <p>
+                    Belajar IP address, subnet mask, gateway
+                    dan konfigurasi jaringan LAN.
+                </p>
+            </article>
+
+            <article class="materi-card">
+                <div class="number">04</div>
+                <h3>DHCP Server</h3>
+                <p>
+                    Membuat DHCP Server agar client memperoleh
+                    IP address secara otomatis.
+                </p>
+            </article>
+
+            <article class="materi-card">
+                <div class="number">05</div>
+                <h3>DNS</h3>
+                <p>
+                    Konfigurasi DNS dan memahami fungsi DNS
+                    dalam jaringan internet.
+                </p>
+            </article>
+
+            <article class="materi-card">
+                <div class="number">06</div>
+                <h3>NAT</h3>
+                <p>
+                    Belajar NAT dan konfigurasi masquerade
+                    untuk akses internet.
+                </p>
+            </article>
+
+            <article class="materi-card">
+                <div class="number">07</div>
+                <h3>Firewall</h3>
+                <p>
+                    Mengenal input, forward, output,
+                    filter rule dan address list.
+                </p>
+            </article>
+
+            <article class="materi-card">
+                <div class="number">08</div>
+                <h3>VLAN</h3>
+                <p>
+                    Membuat segmentasi jaringan menggunakan
+                    VLAN untuk Admin, Guru, Siswa dan Tamu.
+                </p>
+            </article>
+
+            <article class="materi-card">
+                <div class="number">09</div>
+                <h3>Routing</h3>
+                <p>
+                    Belajar static routing, dynamic routing
+                    dan konsep OSPF.
+                </p>
+            </article>
+
+            <article class="materi-card">
+                <div class="number">10</div>
+                <h3>Hotspot</h3>
+                <p>
+                    Membuat jaringan hotspot dengan username
+                    dan password.
+                </p>
+            </article>
+
+            <article class="materi-card">
+                <div class="number">11</div>
+                <h3>Bandwidth</h3>
+                <p>
+                    Mengenal Simple Queue, Queue Tree dan PCQ
+                    untuk pembagian bandwidth.
+                </p>
+            </article>
+
+            <article class="materi-card">
+                <div class="number">12</div>
+                <h3>VPN</h3>
+                <p>
+                    Pengenalan VPN dan konsep WireGuard,
+                    L2TP dan IPsec.
+                </p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRAKTIK -->
+
+    <section id="praktik" class="practice">
+
+        <div class="section-title">
+
+            <span>PRAKTIK KONFIGURASI</span>
+
+            <h2>Contoh 100 Code MikroTik</h2>
+
+            <p>
+                Contoh perintah Terminal RouterOS untuk latihan.
+            </p>
+
+        </div>
+
+
+        <div class="code-container">
+
+<pre><code>
+# 001 - Melihat interface
+/interface print
+
+# 002 - Melihat IP Address
+/ip address print
+
+# 003 - Melihat route
+/ip route print
+
+# 004 - Melihat DNS
+/ip dns print
+
+# 005 - Melihat DHCP Server
+/ip dhcp-server print
+
+# 006 - Melihat firewall
+/ip firewall filter print
+
+# 007 - Melihat NAT
+/ip firewall nat print
+
+# 008 - Mengubah identity
+/system identity set name=MikroTik-TKJ
+
+# 009 - Melihat identity
+/system identity print
+
+# 010 - Memberikan IP LAN
+/ip address add address=192.168.10.1/24 interface=ether2
+
+# 011 - Membuat DHCP Client WAN
+/ip dhcp-client add interface=ether1 disabled=no
+
+# 012 - Mengatur DNS
+/ip dns set servers=8.8.8.8,1.1.1.1 allow-remote-requests=yes
+
+# 013 - Membuat NAT Masquerade
+/ip firewall nat add chain=srcnat out-interface=ether1 action=masquerade
+
+# 014 - Melihat ARP
+/ip arp print
+
+# 015 - Melihat resource
+/system resource print
+
+# 016 - Melihat clock
+/system clock print
+
+# 017 - Melihat routerboard
+/system routerboard print
+
+# 018 - Melihat users
+/user print
+
+# 019 - Melihat service
+/ip service print
+
+# 020 - Melihat log
+/log print
+
+# 021 - Membuat bridge
+/interface bridge add name=bridge-LAN
+
+# 022 - Menambahkan ether2 ke bridge
+/interface bridge port add bridge=bridge-LAN interface=ether2
+
+# 023 - Menambahkan ether3 ke bridge
+/interface bridge port add bridge=bridge-LAN interface=ether3
+
+# 024 - Menambahkan ether4 ke bridge
+/interface bridge port add bridge=bridge-LAN interface=ether4
+
+# 025 - Melihat bridge
+/interface bridge print
+
+# 026 - Melihat bridge port
+/interface bridge port print
+
+# 027 - Membuat DHCP Pool
+/ip pool add name=pool-LAN ranges=192.168.10.10-192.168.10.254
+
+# 028 - Membuat DHCP Server
+/ip dhcp-server add name=dhcp-LAN interface=bridge-LAN address-pool=pool-LAN disabled=no
+
+# 029 - Membuat network DHCP
+/ip dhcp-server network add address=192.168.10.0/24 gateway=192.168.10.1 dns-server=8.8.8.8
+
+# 030 - Melihat DHCP Lease
+/ip dhcp-server lease print
+
+# 031 - Ping Google
+/ping 8.8.8.8
+
+# 032 - Ping domain
+/ping google.com
+
+# 033 - Melihat interface
+/interface print
+
+# 034 - Melihat traffic interface
+/interface monitor-traffic ether1
+
+# 035 - Melihat connection
+/ip firewall connection print
+
+# 036 - Melihat address list
+/ip firewall address-list print
+
+# 037 - Membuat address list
+/ip firewall address-list add list=LAN address=192.168.10.0/24
+
+# 038 - Melihat NAT
+/ip firewall nat print
+
+# 039 - Melihat filter
+/ip firewall filter print
+
+# 040 - Membuat rule input established
+/ip firewall filter add chain=input connection-state=established,related action=accept
+
+# 041 - Membuat rule forward established
+/ip firewall filter add chain=forward connection-state=established,related action=accept
+
+# 042 - Membuat rule drop invalid
+/ip firewall filter add chain=input connection-state=invalid action=drop
+
+# 043 - Melihat routing
+/ip route print
+
+# 044 - Menambahkan static route
+/ip route add dst-address=10.10.10.0/24 gateway=192.168.10.2
+
+# 045 - Melihat neighbor
+/ip neighbor print
+
+# 046 - Melihat MAC address
+/interface ethernet print
+
+# 047 - Melihat wireless
+/interface wireless print
+
+# 048 - Mengaktifkan interface
+/interface enable ether2
+
+# 049 - Menonaktifkan interface
+/interface disable ether3
+
+# 050 - Rename interface
+/interface set ether2 name=LAN
+
+# 051 - Melihat hotspot
+/ip hotspot print
+
+# 052 - Membuat hotspot profile
+/ip hotspot profile print
+
+# 053 - Melihat hotspot users
+/ip hotspot user print
+
+# 054 - Menambahkan hotspot user
+/ip hotspot user add name=siswa password=12345
+
+# 055 - Melihat simple queue
+/queue simple print
+
+# 056 - Membuat simple queue
+/queue simple add name=Siswa target=192.168.10.0/24 max-limit=5M/5M
+
+# 057 - Melihat queue tree
+/queue tree print
+
+# 058 - Melihat interface list
+/interface list print
+
+# 059 - Melihat interface list member
+/interface list member print
+
+# 060 - Membuat interface list LAN
+/interface list add name=LAN
+
+# 061 - Membuat interface list WAN
+/interface list add name=WAN
+
+# 062 - Menambahkan interface LAN
+/interface list member add list=LAN interface=bridge-LAN
+
+# 063 - Menambahkan interface WAN
+/interface list member add list=WAN interface=ether1
+
+# 064 - Melihat system package
+/system package print
+
+# 065 - Melihat scheduler
+/system scheduler print
+
+# 066 - Membuat scheduler
+/system scheduler add name=backup interval=1d on-event="/system backup save name=backup"
+
+# 067 - Backup konfigurasi
+/system backup save name=backup
+
+# 068 - Export konfigurasi
+/export file=backup-config
+
+# 069 - Melihat file
+/file print
+
+# 070 - Melihat certificate
+/certificate print
+
+# 071 - Melihat IP cloud
+/ip cloud print
+
+# 072 - Mengaktifkan DDNS
+/ip cloud set ddns-enabled=yes
+
+# 073 - Melihat clock
+/system clock print
+
+# 074 - Melihat license
+/system license print
+
+# 075 - Melihat routerboard settings
+/system routerboard print
+
+# 076 - Melihat disk
+/disk print
+
+# 077 - Torch interface
+/tool torch ether1
+
+# 078 - Bandwidth test
+/tool bandwidth-test 192.168.10.1
+
+# 079 - Traceroute
+/tool traceroute google.com
+
+# 080 - DNS lookup
+/tool dns-update
+
+# 081 - Melihat IP route detail
+/ip route print detail
+
+# 082 - Melihat firewall connection
+/ip firewall connection print
+
+# 083 - Melihat DHCP client
+/ip dhcp-client print
+
+# 084 - Melihat DHCP server network
+/ip dhcp-server network print
+
+# 085 - Melihat pool
+/ip pool print
+
+# 086 - Melihat VLAN
+/interface vlan print
+
+# 087 - Membuat VLAN
+/interface vlan add name=VLAN10 interface=bridge-LAN vlan-id=10
+
+# 088 - Melihat OSPF
+/routing ospf instance print
+
+# 089 - Melihat WireGuard
+/interface wireguard print
+
+# 090 - Melihat VPN
+/interface l2tp-client print
+
+# 091 - Melihat IPsec
+/ip ipsec peer print
+
+# 092 - Melihat NAT detail
+/ip firewall nat print detail
+
+# 093 - Melihat filter detail
+/ip firewall filter print detail
+
+# 094 - Melihat DNS cache
+/ip dns cache print
+
+# 095 - Membersihkan DNS cache
+/ip dns cache flush
+
+# 096 - Melihat system log
+/log print
+
+# 097 - Reboot router
+/system reboot
+
+# 098 - Shutdown router
+/system shutdown
+
+# 099 - Reset konfigurasi
+/system reset-configuration
+
+# 100 - Melihat seluruh konfigurasi
+/export
+</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- TOPOLOGI -->
+
+    <section class="topology">
+
+        <div class="section-title">
+
+            <span>TOPOLOGI JARINGAN</span>
+
+            <h2>Contoh Jaringan MikroTik</h2>
+
+        </div>
+
+        <div class="topology-box">
+
+<pre>
+                    INTERNET
+                       │
+                       │
+                  ┌────▼────┐
+                  │  MODEM  │
+                  │  / ONT  │
+                  └────┬────┘
+                       │
+                       │ ether1
+                ┌──────▼──────┐
+                │   MIKROTIK  │
+                │   ROUTER    │
+                └──────┬──────┘
+                       │
+                    ether2
+                       │
+                 ┌─────▼─────┐
+                 │   SWITCH  │
+                 └─────┬─────┘
+                       │
+             ┌─────────┼─────────┐
+             │         │         │
+           PC TKJ    LAPTOP    ACCESS POINT
+</pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- TENTANG -->
+
+    <section id="tentang" class="about">
+
+        <div>
+
+            <span>ML - XAMPP TO GITHUB</span>
+
+            <h2>
+                Belajar Jaringan untuk Masa Depan
+            </h2>
+
+            <p>
+                Website ini dibuat sebagai media pembelajaran
+                jaringan komputer, khususnya MikroTik.
+                Materi dapat digunakan untuk latihan siswa
+                SMK/TKJ dari tingkat dasar sampai lanjutan.
+            </p>
+
+        </div>
+
+        <div class="about-card">
+
+            <h3>📚 Materi</h3>
+            <p>100 contoh code MikroTik</p>
+
+            <h3>💻 Praktik</h3>
+            <p>Winbox dan Terminal RouterOS</p>
+
+            <h3>🌐 Project</h3>
+            <p>Jaringan LAN sampai Internet</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>ML - XAMPP</h3>
+
+        <p>
+            Belajar MikroTik • Jaringan Komputer • TKJ
+        </p>
+
+        <p>
+            © 2026 ML - XAMPP to GitHub
+        </p>
+
+    </footer>
+
+</div>
+
+
+<script>
+
+const loginForm = document.getElementById("loginForm");
+
+loginForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const username =
+        document.getElementById("username").value;
+
+    const password =
+        document.getElementById("password").value;
+
+    const message =
+        document.getElementById("loginMessage");
+
+
+    /*
+       LOGIN DEMO
+
+       Username : admin
+       Password : 12345
+    */
+
+    if (username === "admin" && password === "12345") {
+
+        document.getElementById("loginPage")
+            .classList.add("hidden");
+
+        document.getElementById("website")
+            .classList.remove("hidden");
+
+        message.textContent = "";
+
+    } else {
+
+        message.textContent =
+            "❌ Username atau password salah!";
+
+    }
+
+});
+
+
+function logout() {
+
+    document.getElementById("website")
+        .classList.add("hidden");
+
+    document.getElementById("loginPage")
+        .classList.remove("hidden");
+
+    document.getElementById("username").value = "";
+
+    document.getElementById("password").value = "";
+
+}
+
+</script>
+
+</body>
+</html>
