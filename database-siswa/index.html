@@ -4,400 +4,523 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Database Murid Aktif | Database Siswa Aktif</title>
+    <title>Database Siswa Aktif | Sistem Informasi Sekolah</title>
+
+    <meta
+        name="description"
+        content="Sistem Informasi Database Siswa Aktif untuk pengelolaan data siswa sekolah."
+    >
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
-        <div class="container nav">
-            <div class="logo">
-                <span>📚</span>
-                <div>
-                    <h2>Database Murid Aktif</h2>
-                    <small>Sistem Data Siswa</small>
-                </div>
+<!-- ================= HEADER ================= -->
+<header class="header">
+    <div class="container nav">
+
+        <a href="#beranda" class="logo">
+            <span class="logo-icon">🎓</span>
+            <div>
+                <strong>DATABASE SISWA</strong>
+                <small>Sistem Informasi Sekolah</small>
             </div>
+        </a>
 
-            <nav>
-                <a href="#beranda">Beranda</a>
-                <a href="#data">Data Siswa</a>
-                <a href="#fitur">Fitur</a>
-                <a href="#kontak">Kontak</a>
-            </nav>
-        </div>
-    </header>
+        <nav class="menu">
+            <a href="#beranda">Beranda</a>
+            <a href="#data">Data Siswa</a>
+            <a href="#tentang">Tentang</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
 
+        <a href="#data" class="nav-button">Data Siswa</a>
 
-    <!-- HERO -->
-    <section class="hero" id="beranda">
-        <div class="container hero-content">
+    </div>
+</header>
 
-            <div class="hero-text">
-                <span class="badge">🎓 SISTEM INFORMASI SISWA</span>
 
-                <h1>
-                    Database Siswa
-                    <strong>Aktif</strong>
-                </h1>
+<!-- ================= HERO ================= -->
+<section class="hero" id="beranda">
 
-                <p>
-                    Sistem informasi sederhana untuk mengelola data murid
-                    secara terstruktur, rapi, dan mudah digunakan.
-                </p>
+    <div class="container hero-content">
 
-                <div class="hero-buttons">
-                    <a href="#data" class="btn primary">
-                        📋 Lihat Data Siswa
-                    </a>
+        <div class="hero-text">
 
-                    <a href="#fitur" class="btn secondary">
-                        ⚙️ Fitur
-                    </a>
-                </div>
-            </div>
+            <span class="badge">SISTEM INFORMASI SEKOLAH</span>
 
-            <div class="hero-card">
-                <div class="database-icon">🗄️</div>
+            <h1>
+                Database
+                <span>Siswa Aktif</span>
+            </h1>
 
-                <h3>Database Murid Aktif</h3>
+            <p>
+                Sistem informasi sederhana untuk menampilkan data siswa
+                secara rapi, terstruktur, dan mudah digunakan.
+            </p>
 
-                <p>
-                    Data siswa tersimpan secara terstruktur
-                    dan mudah dikembangkan menjadi sistem PHP + MySQL.
-                </p>
-
-                <div class="mini-stat">
-                    <div>
-                        <strong>120</strong>
-                        <span>Siswa</span>
-                    </div>
-
-                    <div>
-                        <strong>8</strong>
-                        <span>Kelas</span>
-                    </div>
-
-                    <div>
-                        <strong>100%</strong>
-                        <span>Aktif</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- DATA SISWA -->
-    <section class="data-section" id="data">
-        <div class="container">
-
-            <div class="section-title">
-                <span>📋 DATA SISWA</span>
-
-                <h2>Database Siswa Aktif</h2>
-
-                <p>
-                    Contoh tabel data siswa yang dapat dikembangkan
-                    menggunakan PHP dan MySQL.
-                </p>
-            </div>
-
-
-            <!-- SEARCH -->
-            <div class="search-box">
-                <input
-                    type="text"
-                    placeholder="🔎 Cari nama siswa..."
-                >
-
-                <button>🔍 Cari</button>
-            </div>
-
-
-            <!-- TABLE -->
-            <div class="table-container">
-
-                <table>
-
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>NIS</th>
-                            <th>Nama Siswa</th>
-                            <th>Jenis Kelamin</th>
-                            <th>Tempat Lahir</th>
-                            <th>Tanggal Lahir</th>
-                            <th>Alamat</th>
-                            <th>Kelas</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-
-                        <tr>
-                            <td>1</td>
-                            <td>2026001</td>
-                            <td>Ahmad Fauzan</td>
-                            <td>Laki-laki</td>
-                            <td>Pamekasan</td>
-                            <td>12-03-2010</td>
-                            <td>Banyupelle</td>
-                            <td>X TKJ 1</td>
-                            <td>
-                                <span class="status aktif">
-                                    Aktif
-                                </span>
-                            </td>
-                        </tr>
-
-
-                        <tr>
-                            <td>2</td>
-                            <td>2026002</td>
-                            <td>Siti Aisyah</td>
-                            <td>Perempuan</td>
-                            <td>Pamekasan</td>
-                            <td>25-07-2010</td>
-                            <td>Pamekasan</td>
-                            <td>X TKJ 1</td>
-                            <td>
-                                <span class="status aktif">
-                                    Aktif
-                                </span>
-                            </td>
-                        </tr>
-
-
-                        <tr>
-                            <td>3</td>
-                            <td>2026003</td>
-                            <td>Rizky Maulana</td>
-                            <td>Laki-laki</td>
-                            <td>Sampang</td>
-                            <td>18-01-2010</td>
-                            <td>Sampang</td>
-                            <td>X TKJ 2</td>
-                            <td>
-                                <span class="status aktif">
-                                    Aktif
-                                </span>
-                            </td>
-                        </tr>
-
-
-                        <tr>
-                            <td>4</td>
-                            <td>2026004</td>
-                            <td>Nurul Hasanah</td>
-                            <td>Perempuan</td>
-                            <td>Bangkalan</td>
-                            <td>09-11-2010</td>
-                            <td>Bangkalan</td>
-                            <td>X TKJ 2</td>
-                            <td>
-                                <span class="status aktif">
-                                    Aktif
-                                </span>
-                            </td>
-                        </tr>
-
-
-                        <tr>
-                            <td>5</td>
-                            <td>2026005</td>
-                            <td>Fajar Ramadhan</td>
-                            <td>Laki-laki</td>
-                            <td>Sumenep</td>
-                            <td>20-05-2010</td>
-                            <td>Sumenep</td>
-                            <td>XI TKJ 1</td>
-                            <td>
-                                <span class="status aktif">
-                                    Aktif
-                                </span>
-                            </td>
-                        </tr>
-
-                    </tbody>
-
-                </table>
-
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- FITUR -->
-    <section class="features" id="fitur">
-
-        <div class="container">
-
-            <div class="section-title">
-                <span>⚙️ FITUR SISTEM</span>
-
-                <h2>Fitur Database Siswa</h2>
-
-                <p>
-                    Website ini dapat dikembangkan menjadi sistem
-                    database sekolah menggunakan PHP, MySQL dan XAMPP.
-                </p>
-            </div>
-
-
-            <div class="feature-grid">
-
-                <div class="feature-card">
-                    <div class="feature-icon">👨‍🎓</div>
-                    <h3>Data Siswa</h3>
-                    <p>
-                        Menyimpan nama, NIS, kelas dan status siswa.
-                    </p>
-                </div>
-
-
-                <div class="feature-card">
-                    <div class="feature-icon">📍</div>
-                    <h3>Alamat</h3>
-                    <p>
-                        Menyimpan informasi alamat tempat tinggal siswa.
-                    </p>
-                </div>
-
-
-                <div class="feature-card">
-                    <div class="feature-icon">🎂</div>
-                    <h3>Data Kelahiran</h3>
-                    <p>
-                        Menyimpan tempat dan tanggal lahir siswa.
-                    </p>
-                </div>
-
-
-                <div class="feature-card">
-                    <div class="feature-icon">🔎</div>
-                    <h3>Pencarian</h3>
-                    <p>
-                        Memudahkan pencarian data siswa berdasarkan nama.
-                    </p>
-                </div>
-
-
-                <div class="feature-card">
-                    <div class="feature-icon">💾</div>
-                    <h3>Database MySQL</h3>
-                    <p>
-                        Data dapat dikembangkan menggunakan database MySQL.
-                    </p>
-                </div>
-
-
-                <div class="feature-card">
-                    <div class="feature-icon">🖥️</div>
-                    <h3>PHP + XAMPP</h3>
-                    <p>
-                        Cocok untuk latihan membuat sistem database sekolah.
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- DATA YANG DISIMPAN -->
-    <section class="information">
-
-        <div class="container">
-
-            <div class="info-box">
-
-                <div>
-                    <span class="badge">DATABASE SISWA</span>
-
-                    <h2>Data yang Dapat Disimpan</h2>
-
-                    <p>
-                        Struktur data dapat dibuat lebih lengkap sehingga
-                        cocok untuk proyek sekolah atau latihan pemrograman.
-                    </p>
-                </div>
-
-
-                <div class="data-list">
-
-                    <div>✅ NIS</div>
-                    <div>✅ Nama Siswa</div>
-                    <div>✅ Jenis Kelamin</div>
-                    <div>✅ Tempat Lahir</div>
-                    <div>✅ Tanggal Lahir</div>
-                    <div>✅ Alamat</div>
-                    <div>✅ Kelas</div>
-                    <div>✅ Status Siswa</div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- KONTAK -->
-    <section class="contact" id="kontak">
-
-        <div class="container">
-
-            <div class="contact-box">
-
-                <h2>Database Murid Aktif</h2>
-
-                <p>
-                    Proyek pembelajaran database siswa
-                    menggunakan HTML, CSS, PHP, MySQL dan XAMPP.
-                </p>
-
-                <a href="mailto:admin@sekolah.com" class="btn primary">
-                    📧 Hubungi Admin
+            <div class="hero-buttons">
+                <a href="#data" class="btn primary">
+                    Lihat Data Siswa →
                 </a>
 
+                <a href="#tentang" class="btn secondary">
+                    Tentang Sistem
+                </a>
             </div>
 
         </div>
 
-    </section>
+        <div class="hero-card">
 
-
-    <!-- FOOTER -->
-    <footer>
-
-        <div class="container footer-content">
-
-            <div>
-                <h3>📚 Database Murid Aktif</h3>
-                <p>
-                    Sistem informasi database siswa.
-                </p>
+            <div class="student-icon">
+                👨‍🎓
             </div>
 
+            <h3>Data Siswa Aktif</h3>
+
+            <p>
+                Informasi siswa tersusun dalam sistem yang
+                sederhana dan mudah dibaca.
+            </p>
+
+            <div class="secure">
+                🔒 Sistem Informasi Sekolah
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= STATISTIK ================= -->
+<section class="statistics">
+
+    <div class="container stats-grid">
+
+        <div class="stat-card">
+            <div class="stat-icon">👨‍🎓</div>
             <div>
+                <strong>10</strong>
+                <span>Total Siswa</span>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">✓</div>
+            <div>
+                <strong>10</strong>
+                <span>Siswa Aktif</span>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">🏫</div>
+            <div>
+                <strong>3</strong>
+                <span>Kelas</span>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">📅</div>
+            <div>
+                <strong>2026</strong>
+                <span>Tahun Ajaran</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DATA SISWA ================= -->
+<section class="data-section" id="data">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-label">DATA SISWA</span>
+
+                <h2>Daftar Siswa Aktif</h2>
+
                 <p>
-                    © 2026 Database Siswa Aktif
+                    Data siswa aktif yang terdaftar dalam sistem informasi sekolah.
                 </p>
             </div>
 
         </div>
 
-    </footer>
+
+        <!-- SEARCH -->
+        <div class="tools">
+
+            <div class="search-box">
+                🔍
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Cari NIS atau nama siswa..."
+                >
+            </div>
+
+            <select id="classFilter">
+                <option value="">Semua Kelas</option>
+                <option value="X TKJ">X TKJ</option>
+                <option value="XI TKJ">XI TKJ</option>
+                <option value="XII TKJ">XII TKJ</option>
+            </select>
+
+            <select id="statusFilter">
+                <option value="">Semua Status</option>
+                <option value="Aktif">Aktif</option>
+                <option value="Tidak Aktif">Tidak Aktif</option>
+            </select>
+
+        </div>
+
+
+        <!-- TABLE -->
+        <div class="table-wrapper">
+
+            <table id="studentTable">
+
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>NIS</th>
+                        <th>Nama Siswa</th>
+                        <th>Jenis Kelamin</th>
+                        <th>Tempat Lahir</th>
+                        <th>Tanggal Lahir</th>
+                        <th>Alamat</th>
+                        <th>Kelas</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>10001</td>
+                        <td class="student-name">Ahmad Fauzan</td>
+                        <td>Laki-laki</td>
+                        <td>Pamekasan</td>
+                        <td>12 Januari 2010</td>
+                        <td>Banyupelle</td>
+                        <td>X TKJ</td>
+                        <td><span class="status active">Aktif</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>10002</td>
+                        <td class="student-name">Siti Aminah</td>
+                        <td>Perempuan</td>
+                        <td>Pamekasan</td>
+                        <td>20 Maret 2010</td>
+                        <td>Pamekasan</td>
+                        <td>X TKJ</td>
+                        <td><span class="status active">Aktif</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>10003</td>
+                        <td class="student-name">Rizky Ramadhan</td>
+                        <td>Laki-laki</td>
+                        <td>Sampang</td>
+                        <td>5 Mei 2009</td>
+                        <td>Sampang</td>
+                        <td>XI TKJ</td>
+                        <td><span class="status active">Aktif</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>10004</td>
+                        <td class="student-name">Nur Aisyah</td>
+                        <td>Perempuan</td>
+                        <td>Bangkalan</td>
+                        <td>15 Juli 2009</td>
+                        <td>Bangkalan</td>
+                        <td>XI TKJ</td>
+                        <td><span class="status active">Aktif</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>10005</td>
+                        <td class="student-name">Fajar Maulana</td>
+                        <td>Laki-laki</td>
+                        <td>Pamekasan</td>
+                        <td>10 September 2008</td>
+                        <td>Banyupelle</td>
+                        <td>XII TKJ</td>
+                        <td><span class="status active">Aktif</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>6</td>
+                        <td>10006</td>
+                        <td class="student-name">Dewi Lestari</td>
+                        <td>Perempuan</td>
+                        <td>Sumenep</td>
+                        <td>22 Oktober 2008</td>
+                        <td>Sumenep</td>
+                        <td>XII TKJ</td>
+                        <td><span class="status active">Aktif</span></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <div class="table-info">
+            <span>Menampilkan data siswa aktif</span>
+            <strong>6 Data Siswa</strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TENTANG ================= -->
+<section class="about" id="tentang">
+
+    <div class="container">
+
+        <div class="section-heading center">
+
+            <span class="section-label">TENTANG SISTEM</span>
+
+            <h2>Database Siswa Sekolah</h2>
+
+            <p>
+                Sistem ini dirancang sebagai tampilan awal
+                untuk pengelolaan informasi siswa.
+            </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+
+                <h3>Data Siswa</h3>
+
+                <p>
+                    Menampilkan identitas siswa secara terstruktur
+                    mulai dari NIS, nama, kelas, dan status.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <div class="feature-icon">🔢</div>
+
+                <h3>NIS</h3>
+
+                <p>
+                    NIS digunakan sebagai nomor identitas
+                    siswa dalam sistem.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <div class="feature-icon">📅</div>
+
+                <h3>Data Kelahiran</h3>
+
+                <p>
+                    Menyimpan informasi tempat dan tanggal
+                    lahir siswa.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <div class="feature-icon">🏠</div>
+
+                <h3>Alamat</h3>
+
+                <p>
+                    Menampilkan informasi alamat siswa
+                    secara rapi.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INFORMASI ================= -->
+<section class="information">
+
+    <div class="container">
+
+        <div class="info-box">
+
+            <div class="info-icon">
+                💡
+            </div>
+
+            <div>
+
+                <h2>Mulai dari sederhana</h2>
+
+                <p>
+                    Website ini dapat dikembangkan menjadi
+                    sistem database sekolah menggunakan
+                    PHP dan MySQL.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= KONTAK ================= -->
+<section class="contact" id="kontak">
+
+    <div class="container">
+
+        <div class="section-heading center">
+
+            <span class="section-label">KONTAK</span>
+
+            <h2>Informasi Sistem</h2>
+
+            <p>
+                Hubungi administrator untuk informasi
+                mengenai sistem database siswa.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+                <span>🏫</span>
+                <h3>Sekolah</h3>
+                <p>Sistem Informasi Sekolah</p>
+            </div>
+
+            <div class="contact-card">
+                <span>📧</span>
+                <h3>Email</h3>
+                <p>admin@sekolah.sch.id</p>
+            </div>
+
+            <div class="contact-card">
+                <span>💻</span>
+                <h3>Teknologi</h3>
+                <p>HTML • CSS • JavaScript</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+    <div class="container footer-content">
+
+        <div>
+            <strong>🎓 DATABASE SISWA AKTIF</strong>
+
+            <p>
+                Sistem Informasi Data Siswa
+            </p>
+        </div>
+
+        <div class="footer-right">
+            © 2026 Database Siswa Aktif
+        </div>
+
+    </div>
+
+    <div class="footer-quote">
+        "Belajar hari ini, menjadi lebih hebat esok hari."
+    </div>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+
+const searchInput = document.getElementById("searchInput");
+const classFilter = document.getElementById("classFilter");
+const statusFilter = document.getElementById("statusFilter");
+
+const rows = document.querySelectorAll("#studentTable tbody tr");
+
+
+function filterStudents() {
+
+    const search = searchInput.value.toLowerCase();
+    const selectedClass = classFilter.value.toLowerCase();
+    const selectedStatus = statusFilter.value.toLowerCase();
+
+    rows.forEach(row => {
+
+        const text = row.textContent.toLowerCase();
+
+        const studentClass = row.children[7].textContent.toLowerCase();
+        const studentStatus = row.children[8].textContent.toLowerCase();
+
+        const matchSearch = text.includes(search);
+
+        const matchClass =
+            selectedClass === "" ||
+            studentClass === selectedClass;
+
+        const matchStatus =
+            selectedStatus === "" ||
+            studentStatus === selectedStatus;
+
+        if (matchSearch && matchClass && matchStatus) {
+            row.style.display = "";
+        } else {
+            row.style.display = "none";
+        }
+
+    });
+
+}
+
+
+searchInput.addEventListener("input", filterStudents);
+classFilter.addEventListener("change", filterStudents);
+statusFilter.addEventListener("change", filterStudents);
+
+</script>
 
 </body>
 </html>
