@@ -1,1 +1,313 @@
-database-siswa
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Database Siswa Aktif</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">
+      <span>🎓</span>
+      DATABASE SISWA
+    </div>
+
+    <nav>
+      <a href="#beranda">Beranda</a>
+      <a href="#data">Data Siswa</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="beranda">
+    <div class="hero-content">
+      <p class="label">SISTEM INFORMASI SEKOLAH</p>
+
+      <h1>
+        Database
+        <span>Siswa Aktif</span>
+      </h1>
+
+      <p>
+        Website sederhana untuk belajar membuat dan mengelola
+        data siswa menggunakan HTML dan CSS.
+      </p>
+
+      <a href="#data" class="btn">
+        Lihat Data Siswa →
+      </a>
+    </div>
+
+    <div class="hero-card">
+      <div class="card-icon">👨‍🎓</div>
+      <h3>Data Siswa</h3>
+      <p>Informasi siswa tersusun dengan rapi dan mudah dibaca.</p>
+    </div>
+  </section>
+
+  <!-- STATISTIK -->
+  <section class="statistics">
+    <div class="stat-box">
+      <strong>10</strong>
+      <span>Total Siswa</span>
+    </div>
+
+    <div class="stat-box">
+      <strong>10</strong>
+      <span>Siswa Aktif</span>
+    </div>
+
+    <div class="stat-box">
+      <strong>3</strong>
+      <span>Kelas</span>
+    </div>
+
+    <div class="stat-box">
+      <strong>2026</strong>
+      <span>Tahun Ajaran</span>
+    </div>
+  </section>
+
+  <!-- DATA SISWA -->
+  <section class="data-section" id="data">
+
+    <div class="section-title">
+      <p>DATA SISWA</p>
+      <h2>Daftar Siswa Aktif</h2>
+      <span>
+        Contoh database siswa untuk latihan pemrograman.
+      </span>
+    </div>
+
+    <div class="table-container">
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>NIS</th>
+            <th>Nama Siswa</th>
+            <th>Jenis Kelamin</th>
+            <th>Tempat Lahir</th>
+            <th>Tanggal Lahir</th>
+            <th>Alamat</th>
+            <th>Kelas</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>1</td>
+            <td>10001</td>
+            <td><strong>Ahmad Fauzan</strong></td>
+            <td>Laki-laki</td>
+            <td>Pamekasan</td>
+            <td>12 Januari 2010</td>
+            <td>Banyupelle</td>
+            <td>X TKJ</td>
+            <td><span class="aktif">Aktif</span></td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td>10002</td>
+            <td><strong>Siti Aminah</strong></td>
+            <td>Perempuan</td>
+            <td>Pamekasan</td>
+            <td>20 Maret 2010</td>
+            <td>Pamekasan</td>
+            <td>X TKJ</td>
+            <td><span class="aktif">Aktif</span></td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+            <td>10003</td>
+            <td><strong>Rizky Ramadhan</strong></td>
+            <td>Laki-laki</td>
+            <td>Sampang</td>
+            <td>5 Mei 2009</td>
+            <td>Sampang</td>
+            <td>XI TKJ</td>
+            <td><span class="aktif">Aktif</span></td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+            <td>10004</td>
+            <td><strong>Nur Aisyah</strong></td>
+            <td>Perempuan</td>
+            <td>Bangkalan</td>
+            <td>15 Juli 2009</td>
+            <td>Bangkalan</td>
+            <td>XI TKJ</td>
+            <td><span class="aktif">Aktif</span></td>
+          </tr>
+
+          <tr>
+            <td>5</td>
+            <td>10005</td>
+            <td><strong>Fajar Maulana</strong></td>
+            <td>Laki-laki</td>
+            <td>Pamekasan</td>
+            <td>10 September 2008</td>
+            <td>Banyupelle</td>
+            <td>XII TKJ</td>
+            <td><span class="aktif">Aktif</span></td>
+          </tr>
+
+          <tr>
+            <td>6</td>
+            <td>10006</td>
+            <td><strong>Dewi Lestari</strong></td>
+            <td>Perempuan</td>
+            <td>Sumenep</td>
+            <td>22 Oktober 2008</td>
+            <td>Sumenep</td>
+            <td>XII TKJ</td>
+            <td><span class="aktif">Aktif</span></td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+  </section>
+
+  <!-- FITUR -->
+  <section class="features" id="tentang">
+
+    <div class="section-title">
+      <p>FITUR PEMBELAJARAN</p>
+      <h2>Yang Akan Kamu Pelajari</h2>
+    </div>
+
+    <div class="feature-grid">
+
+      <div class="feature-card">
+        <div>📋</div>
+        <h3>Data Siswa</h3>
+        <p>
+          Belajar membuat tabel untuk menyimpan informasi siswa.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div>🔢</div>
+        <h3>NIS</h3>
+        <p>
+          Belajar menggunakan nomor induk siswa sebagai identitas.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div>📅</div>
+        <h3>Tanggal Lahir</h3>
+        <p>
+          Belajar menyimpan informasi tempat dan tanggal lahir.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div>🏠</div>
+        <h3>Alamat</h3>
+        <p>
+          Belajar menampilkan informasi alamat siswa dengan rapi.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MOTIVASI -->
+  <section class="motivation">
+
+    <div class="motivation-content">
+      <div class="quote">“</div>
+
+      <h2>
+        Jangan takut belajar dari nol.
+      </h2>
+
+      <p>
+        Setiap programmer pernah menjadi pemula.
+        Mulai dari satu kode, pahami sedikit demi sedikit,
+        dan terus berlatih sampai kamu bisa membuat program sendiri.
+      </p>
+
+      <strong>
+        💪 Semangat belajar! Kamu pasti bisa.
+      </strong>
+    </div>
+
+  </section>
+
+  <!-- KONTAK -->
+  <section class="contact" id="kontak">
+
+    <div class="section-title">
+      <p>BELAJAR PROGRAMMING</p>
+      <h2>Database Siswa</h2>
+      <span>
+        Website latihan HTML & CSS untuk siswa TKJ.
+      </span>
+    </div>
+
+    <div class="contact-box">
+
+      <div>
+        <span>📚</span>
+        <h3>Materi</h3>
+        <p>HTML • CSS • PHP • MySQL</p>
+      </div>
+
+      <div>
+        <span>💻</span>
+        <h3>Project</h3>
+        <p>Database Sekolah</p>
+      </div>
+
+      <div>
+        <span>🚀</span>
+        <h3>Target</h3>
+        <p>Bisa membuat website sendiri</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-logo">
+      🎓 Database Siswa Aktif
+    </div>
+
+    <p>
+      © 2026 Database Siswa Aktif.
+      Dibuat untuk belajar dan berlatih programming.
+    </p>
+
+    <p class="footer-motivation">
+      "Belajar hari ini, menjadi lebih hebat esok hari."
+    </p>
+
+  </footer>
+
+</body>
+</html>
+```
