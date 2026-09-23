@@ -449,8 +449,7 @@ nav a:hover::after {
 }
 
 .network-box.active span {
-    color: white;
-
+   
   background: var(--primary);
 color: var(--primary);
 border-color: var(--border);
@@ -461,7 +460,7 @@ border-color: var(--border);
     font-weight: 600;
 }
 
-
+}
 /* STATUS */
 
 .status {
@@ -622,7 +621,7 @@ border-color: var(--border);
 }
 
 
-}
+
 
 /* ==============================
    ABOUT VISUAL
