@@ -435,9 +435,9 @@ nav a:hover::after {
 
     place-items: center;
 
-    border-radius: 14px;
+    border-radius: 10px;
 
-    background: white;
+    background:rgba(99, 91, 255, 0.1);
 
     box-shadow:
         0 8px 20px
@@ -451,8 +451,9 @@ nav a:hover::after {
 .network-box.active span {
     color: white;
 
-    background: var(--primary);
-}
+  background: var(--primary);
+color: var(--primary);
+border-color: var(--border);
 
 .network-box small {
     font-size: 10px;
