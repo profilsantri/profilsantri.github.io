@@ -622,17 +622,14 @@ nav a:hover::after {
 
 
 /* ABOUT VISUAL */
-
-/* LOGO PROFIL TENTANG */
-
-.about-profile {
-
   .about-visual {
     position: relative;
     min-height: 400px;
     display: grid;
     place-items: center;
 }
+
+/* LOGO PROFIL TENTANG */
 
 .about-profile {
     position: relative;
