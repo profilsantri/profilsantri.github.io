@@ -621,6 +621,7 @@ nav a:hover::after {
 }
 
 
+}
 
 /* ==============================
    ABOUT VISUAL
@@ -643,68 +644,28 @@ nav a:hover::after {
     position: relative;
     z-index: 3;
 
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
 
     object-fit: contain;
-    padding: 20px;
+    padding: 75px;
 
-    background: white;
-    border-radius: 50%;
+    background: #ffffff;
+    border-radius:75%;
 
     box-shadow:
-        0 30px 30px rgba(15, 15, 15, 0.18);
-}
-/* ABOUT LOGO */
-
-.about-logo {
-    position: relative;
-
-    z-index: 3;
-
-    width: 130px;
-    height: 130px;
-
-    display: grid;
-
-    place-items: center;
-
-    border: 1px solid
-        rgba(255,255,255,.4);
-
-    border-radius: 35px;
-
-    color: white;
-
-    background:
-        rgba(255,255,255,.12);
-
-    backdrop-filter: blur(10px);
-
-    font-size: 65px;
-
-    font-weight: 800;
+        5 30px 30px rgba(15, 15, 15, 0.15);
 }
 
 
-/* RESPONSIVE HP */
-
-@media (max-width:550px){
-
-    .about-profile {
-        width: 120px;
-        height: 120px;
-    }
-
-} /* ← TAMBAHKAN INI */
-
-
-/* CIRCLES */
+/* ==============================
+   CIRCLES
+================================= */
 
 .about-circle {
     position: absolute;
 
-    border: 1px solid rgba(255,255,255,.15);
+    border: 1px solid rgba(99, 91, 255, 0.15);
 
     border-radius: 50%;
 }
@@ -720,7 +681,9 @@ nav a:hover::after {
 }
 
 
-/* ABOUT TEXT */
+/* ==============================
+   ABOUT TEXT
+================================= */
 
 .about-text h2 {
     max-width: 600px;
@@ -743,7 +706,6 @@ nav a:hover::after {
 
     color: var(--text);
 }
-
 
 /* ==============================
    CTA
