@@ -655,24 +655,6 @@ nav a:hover::after {
     box-shadow:
         0 30px 30px rgba(15, 15, 15, 0.18);
 }
-
-
-
-/* RESPONSIVE HP */
-
-@media (max-width:550px){
-
-    .about-profile {
-
-        width: 120px;
-
-        height: 120px;
-
-    }
-
-}
-
-
 /* ABOUT LOGO */
 
 .about-logo {
@@ -703,6 +685,24 @@ nav a:hover::after {
 
     font-weight: 800;
 }
+
+
+/* RESPONSIVE HP */
+
+@media (max-width:550px){
+
+    .about-profile {
+
+        width: 120px;
+
+        height: 120px;
+
+    }
+
+
+
+
+
 
 
 /* CIRCLES */
