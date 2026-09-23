@@ -3,20 +3,23 @@
    RESET & VARIABLES
 ================================= */
 
-:root {
-    --primary: #d4af37;
-    --primary-dark: #b8941f;
+
+    :root {
+    --primary: #8b5cf6;
+    --primary-dark: #6d28d9;
+
     --dark: #111111;
     --text: #555555;
-    --light: #faf8f0;
+    --light: #f5f3ff;
     --white: #ffffff;
-    --border: #e5e0cc;
+    --border: #ddd6fe;
+
     --success: #22c55e;
 }
 
 *{
-margin: 0;
-padding: 0;
+margin: 5;
+padding: 5;
 box-sizing: border-box;
 }
 
@@ -45,20 +48,18 @@ a {
 /* ==============================
    NAVBAR
 ================================= */
-
-.navbar {
+    .navbar {
     position: sticky;
     top: 0;
     z-index: 1000;
 
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(139, 92, 246, 0.95);
     backdrop-filter: blur(15px);
 
-    border-bottom: 1px solid rgba(229, 231, 235, 0.7);
+    border-bottom: 1px solid #22c55e;
 }
-
 .nav-content {
-    min-height: 76px;
+    min-height: 80px;
 
     display: flex;
     align-items: center;
@@ -71,9 +72,9 @@ a {
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 
-    font-size: 21px;
+    font-size: 24px;
     font-weight: 800;
 }
 
@@ -100,7 +101,7 @@ nav a {
 
     font-size: 14px;
     font-weight: 600;
-    color: #596174;
+   color: #8b5cf6;
 
     transition: 0.3s;
 }
@@ -119,9 +120,13 @@ nav a::after {
 
     transition: 0.3s;
 }
+    nav a:hover {
+    color: #8b5cf6;
+}
 
-nav a:hover {
-    color: var(--primary);
+nav a:hover::after {
+    width: 100%;
+}
 }
 
 nav a:hover::after {
