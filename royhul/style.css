@@ -692,17 +692,11 @@ nav a:hover::after {
 @media (max-width:550px){
 
     .about-profile {
-
         width: 120px;
-
         height: 120px;
-
     }
 
-
-
-
-
+} /* ← TAMBAHKAN INI */
 
 
 /* CIRCLES */
@@ -710,9 +704,7 @@ nav a:hover::after {
 .about-circle {
     position: absolute;
 
-    border:
-        1px solid
-        rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.15);
 
     border-radius: 50%;
 }
