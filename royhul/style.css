@@ -4,13 +4,13 @@
 ================================= */
 
 :root {
-    --primary: #635bff;
-    --primary-dark: #4d46d9;
-    --dark: #111827;
-    --text: #4b5563;
-    --light: #f8f9ff;
+    --primary: #d4af37;
+    --primary-dark: #b8941f;
+    --dark: #111111;
+    --text: #555555;
+    --light: #faf8f0;
     --white: #ffffff;
-    --border: #e5e7eb;
+    --border: #e5e0cc;
     --success: #22c55e;
 }
 
