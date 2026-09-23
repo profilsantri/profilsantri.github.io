@@ -627,27 +627,33 @@ nav a:hover::after {
 
 .about-profile {
 
+  .about-visual {
     position: relative;
+    min-height: 400px;
+    display: grid;
+    place-items: center;
+}
 
+.about-profile {
+    position: relative;
     z-index: 3;
 
     width: 150px;
     height: 150px;
 
     object-fit: contain;
-
-    padding: 50%px;
+    padding: 20px;
 
     background: white;
-
-    border-radius: 50%px;
+    border-radius: 50%;
 
     box-shadow:
-    0 30px 30px rgba(15 ,15,15,15.18);
+        0 30px 30px rgba(15, 15, 15, 0.18);
+
 
 }
 
-}
+
 
 
 /* RESPONSIVE HP */
