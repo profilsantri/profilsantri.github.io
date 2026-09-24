@@ -48,18 +48,21 @@ a {
 /* ==============================
    NAVBAR
 ================================= */
-    .navbar {
+.navbar {
     position: sticky;
     top: 0;
     z-index: 1000;
 
-    background: rgba(139, 92, 246, 0.95);
+    background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
 
-    border-bottom: 1px solid #22c55e;
+    border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+
 }
-.nav-content {
-    min-height: 80px;
+
+   .nav-content {
+    min-height: 76px;
 
     display: flex;
     align-items: center;
@@ -96,38 +99,33 @@ nav {
     gap: 32px;
 }
 
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
 nav a {
     position: relative;
 
     font-size: 14px;
     font-weight: 600;
-   color: #8b5cf6;
+    color: #596174;
+
+    padding: 8px 5px;
 
     transition: 0.3s;
 }
 
-nav a::after {
-    content: "";
-
-    position: absolute;
-    left: 0;
-    bottom: -7px;
-
-    width: 0;
-    height: 2px;
-
-    background: var(--primary);
-
-    transition: 0.3s;
-}
-    nav a:hover {
+nav a:hover {
     color: #8b5cf6;
 }
+
 
 nav a:hover::after {
     width: 100%;
 }
-}
+
 
 nav a:hover::after {
     width: 100%;
