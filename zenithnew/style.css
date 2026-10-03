@@ -46,7 +46,7 @@ html {
 }
 
 body {
-    background: var(--bg);
+   background: linear-gradient(180deg, #070907 0%, #0c100c 50%, #050705 100%);
     color: var(--white);
     font-family: var(--font-main);
     line-height: 1.6;
