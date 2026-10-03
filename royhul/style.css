@@ -3,16 +3,14 @@
    RESET & VARIABLES
 ================================= */
 
-
-    :root {
+:root {
     --primary: #2F5D3A;
---primary-dark: #1F4229;
+    --primary-dark: #1F4229;
 
     --dark: #111111;
     --text: #555555;
-    --light: #f5f3ff;
-    ---light: #F1F5E9;
---border: #C8D5C0;
+    --light: #F1F5E9;
+    --border: #C8D5C0;
     --success: #22c55e;
 }
 
