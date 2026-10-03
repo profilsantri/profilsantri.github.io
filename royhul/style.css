@@ -5,15 +5,14 @@
 
 
     :root {
-    --primary: #8b5cf6;
-    --primary-dark: #6d28d9;
+    --primary: #2F5D3A;
+--primary-dark: #1F4229;
 
     --dark: #111111;
     --text: #555555;
     --light: #f5f3ff;
-    --white: #ffffff;
-    --border: #ddd6fe;
-
+    ---light: #F1F5E9;
+--border: #C8D5C0;
     --success: #22c55e;
 }
 
@@ -29,8 +28,8 @@ html {
 
 body {
     font-family: "Inter", Arial, sans-serif;
-    color: var(--dark);
-    background: var(--white);
+    color: #1F2A21;
+    background: #E8F0E3;
     line-height: 1.6;
 }
 
