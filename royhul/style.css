@@ -373,10 +373,9 @@ nav a:hover::after {
             #4e46dc
         );
 
-    box-shadow:
-        0 20px 40px
-        rgba(99, 91, 255, 0.3);
-
+   box-shadow:
+    0 20px 40px
+    rgba(47, 93, 58, 0.3);
     font-size: 40px;
 }
 
