@@ -1,196 +1,228 @@
-```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Brand TK - Website edukasi dan informasi saham.">
-    <title>Brand TK | Saham</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frojek — belajar saham dari dasar, mengenal grafik, memahami risiko, dan membangun kebiasaan investasi yang bijak.">
+  <meta name="theme-color" content="#071a2b">
+  <title>Frojek — Belajar Saham dari Dasar</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#beranda" aria-label="Frojek beranda">
+        <span class="brand-mark">F</span>
+        <span>frojek<span class="brand-dot">.</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Navigasi utama">
+        <a href="#beranda">Beranda</a>
+        <a href="#belajar">Materi</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#tentang">Tentang</a>
+      </nav>
+      <a class="nav-cta" href="#belajar">Mulai Belajar <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Buka menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
 
-    <!-- NAVBAR -->
-    <header class="navbar">
-        <a href="#beranda" class="logo">↗ Brand <span>TK</span></a>
-
-        <nav aria-label="Navigasi utama">
-            <a href="#beranda">Beranda</a>
-            <a href="#tentang">Tentang</a>
-            <a href="#keunggulan">Keunggulan</a>
-            <a href="#kontak">Kontak</a>
-        </nav>
-
-        <a href="#kontak" class="nav-button">Hubungi Kami ↗</a>
-    </header>
-
-    <main>
-        <!-- BERANDA -->
-        <section class="hero" id="beranda">
-            <div class="hero-content">
-                <p class="eyebrow">
-                    INVESTASI CERDAS, MASA DEPAN LEBIH BAIK
-                </p>
-
-                <h1>MENJUAL<br><span>SAHAM</span></h1>
-
-                <p class="description">
-                    Selamat datang di Brand TK! Temukan informasi,
-                    wawasan, dan edukasi seputar dunia saham.
-                    Pelajari peluang dan risiko investasi untuk
-                    mengambil keputusan finansial dengan lebih bijak.
-                </p>
-
-                <div class="hero-buttons">
-                    <a href="#tentang" class="button primary">
-                        ↗ Mulai Belajar
-                    </a>
-
-                    <a href="#keunggulan" class="button secondary">
-                        Jelajahi Website
-                    </a>
-                </div>
-
-                <div class="stats">
-                    <div>
-                        <strong>01</strong>
-                        <small>Belajar Saham</small>
-                    </div>
-                    <div>
-                        <strong>02</strong>
-                        <small>Analisis Pasar</small>
-                    </div>
-                    <div>
-                        <strong>03</strong>
-                        <small>Kelola Risiko</small>
-                    </div>
-                </div>
+  <main>
+    <section class="hero" id="beranda">
+      <div class="hero-glow"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> RUANG BELAJAR INVESTASI</p>
+          <h1>Belajar saham.<br><span>Bangun masa depan.</span></h1>
+          <p class="hero-description">
+            Mulai mengenal dunia saham dengan bahasa sederhana. Pelajari dasar investasi,
+            cara membaca grafik, dan pentingnya memahami risiko sebelum mengambil keputusan.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#belajar">Mulai Belajar <span aria-hidden="true">↗</span></a>
+            <a class="button button-ghost" href="#tentang"><span class="play-icon" aria-hidden="true">▶</span> Kenali Frojek</a>
+          </div>
+          <div class="hero-proof">
+            <div class="proof-icon">✓</div>
+            <p><strong>Materi ramah pemula</strong><br><span>Belajar pelan-pelan, satu langkah setiap hari.</span></p>
+          </div>
+        </div>
+        <div class="hero-art">
+          <div class="hero-image-frame">
+            <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1100&q=85" alt="Layar grafik pasar keuangan" fetchpriority="high">
+            <div class="image-shade"></div>
+            <div class="floating-tag tag-top"><span class="tag-pulse"></span> Belajar • Pahami • Evaluasi</div>
+            <div class="market-card">
+              <span class="market-label">KUNCI UTAMA</span>
+              <strong>Pengetahuan</strong>
+              <span class="market-caption">adalah modal pertama</span>
+              <div class="mini-chart" aria-hidden="true">
+                <i style="height:25%"></i><i style="height:42%"></i><i style="height:35%"></i><i style="height:60%"></i><i style="height:48%"></i><i style="height:76%"></i><i style="height:66%"></i><i style="height:94%"></i>
+              </div>
             </div>
+          </div>
+          <div class="hero-orbit orbit-one"></div>
+          <div class="hero-orbit orbit-two"></div>
+        </div>
+      </div>
+      <div class="container hero-bottom">
+        <span>DIRANCANG UNTUK PEMULA</span>
+        <div class="hero-bottom-line"></div>
+        <span>PAHAMI DULU, BARU MEMUTUSKAN</span>
+      </div>
+    </section>
 
-            <!-- ILUSTRASI GRAFIK -->
-            <div class="hero-visual">
-                <div class="chart-card">
-                    <p class="chart-label">BRAND TK • PASAR SAHAM</p>
-                    <h2>Analisis Pasar</h2>
-                    <p class="chart-subtitle">
-                        Ilustrasi pergerakan saham
-                    </p>
+    <section class="section intro-section" id="tentang">
+      <div class="container intro-grid">
+        <div>
+          <p class="eyebrow dark-eyebrow">KENALAN DENGAN FROJEK</p>
+          <h2>Investasi bukan soal cepat kaya.<br><span>Tapi soal belajar dengan bijak.</span></h2>
+        </div>
+        <div class="intro-text">
+          <p>Frojek adalah ruang belajar untuk membantu pemula memahami istilah saham, mengenal cara kerja pasar, dan membangun kebiasaan mengambil keputusan berdasarkan pengetahuan—bukan sekadar ikut-ikutan.</p>
+          <a class="text-link" href="#belajar">Lihat materi belajar <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
 
-                    <div class="chart" aria-label="Ilustrasi grafik batang">
-                        <span style="--bar-height:25%"></span>
-                        <span style="--bar-height:38%"></span>
-                        <span style="--bar-height:32%"></span>
-                        <span style="--bar-height:53%"></span>
-                        <span style="--bar-height:46%"></span>
-                        <span style="--bar-height:68%"></span>
-                        <span style="--bar-height:59%"></span>
-                        <span style="--bar-height:82%"></span>
-                        <span style="--bar-height:73%"></span>
-                        <span style="--bar-height:96%"></span>
-                    </div>
+    <section class="section learning-section" id="belajar">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow dark-eyebrow">MULAI DARI DASAR</p>
+            <h2>Langkah kecil,<br><span>pengetahuan bertambah.</span></h2>
+          </div>
+          <p>Ikuti topik penting ini sesuai kecepatanmu. Tidak perlu terburu-buru—utamakan pemahaman.</p>
+        </div>
+        <div class="learning-grid">
+          <article class="learning-card">
+            <div class="learning-number">01</div>
+            <div class="learning-icon">◈</div>
+            <h3>Mengenal Saham</h3>
+            <p>Pahami apa itu saham, perusahaan terbuka, dan bagaimana pasar saham bekerja.</p>
+            <a href="#galeri" aria-label="Lihat galeri untuk materi mengenal saham">Pelajari topik <span>↗</span></a>
+          </article>
+          <article class="learning-card featured-card">
+            <div class="learning-number">02</div>
+            <div class="learning-icon">⌁</div>
+            <h3>Membaca Grafik</h3>
+            <p>Kenali grafik harga dan istilah dasar tanpa menganggap grafik sebagai kepastian.</p>
+            <a href="#galeri" aria-label="Lihat galeri untuk materi membaca grafik">Pelajari topik <span>↗</span></a>
+          </article>
+          <article class="learning-card">
+            <div class="learning-number">03</div>
+            <div class="learning-icon">◎</div>
+            <h3>Mengelola Risiko</h3>
+            <p>Kenali kemungkinan rugi, diversifikasi, dan pentingnya tidak memakai uang kebutuhan.</p>
+            <a href="#galeri" aria-label="Lihat galeri untuk materi mengelola risiko">Pelajari topik <span>↗</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
 
-                    <div class="chart-info">
-                        <span>Wawasan finansial</span>
-                        <strong>Belajar hari ini ↗</strong>
-                    </div>
+    <section class="gallery-section section" id="galeri">
+      <div class="container">
+        <div class="section-heading gallery-heading">
+          <div>
+            <p class="eyebrow">GALERI INSPIRASI</p>
+            <h2>Jelajahi dunia<br><span>belajar finansial.</span></h2>
+          </div>
+          <p>10 gambar bertema keuangan, belajar, teknologi, dan perencanaan. Gambar dimuat dari Unsplash sehingga perlu koneksi internet.</p>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-item gallery-large">
+            <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1000&q=80" alt="Grafik pasar keuangan di layar" loading="lazy">
+            <figcaption><span>01</span> Mengenal pasar</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=80" alt="Analisis data pada layar komputer" loading="lazy">
+            <figcaption><span>02</span> Analisis data</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=700&q=80" alt="Catatan keuangan dan kalkulator" loading="lazy">
+            <figcaption><span>03</span> Rencana keuangan</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80" alt="Dashboard analitik di layar" loading="lazy">
+            <figcaption><span>04</span> Membaca data</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=700&q=80" alt="Uang dan perencanaan finansial" loading="lazy">
+            <figcaption><span>05</span> Dasar finansial</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=700&q=80" alt="Diskusi tim saat belajar bersama" loading="lazy">
+            <figcaption><span>06</span> Belajar bersama</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=80" alt="Belajar menggunakan laptop" loading="lazy">
+            <figcaption><span>07</span> Belajar digital</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=700&q=80" alt="Profesional sedang bekerja" loading="lazy">
+            <figcaption><span>08</span> Bangun kebiasaan</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&w=700&q=80" alt="Visualisasi jaringan dan teknologi" loading="lazy">
+            <figcaption><span>09</span> Teknologi pasar</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=700&q=80" alt="Perencanaan dan diskusi di meja kerja" loading="lazy">
+            <figcaption><span>10</span> Evaluasi rencana</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
 
-                    <div class="chart-bottom">
-                        <span>Kenali peluang</span>
-                        <span>Pelajari risiko</span>
-                    </div>
-                </div>
+    <section class="risk-section section">
+      <div class="container risk-grid">
+        <div class="risk-symbol" aria-hidden="true">!</div>
+        <div>
+          <p class="eyebrow">BELAJAR DENGAN BIJAK</p>
+          <h2>Kenali risikonya<br><span>sebelum mengambil keputusan.</span></h2>
+          <p>Harga saham bisa naik maupun turun. Materi Frojek bersifat edukasi, bukan ajakan membeli atau menjual saham dan bukan jaminan keuntungan.</p>
+        </div>
+        <a class="button button-primary" href="#belajar">Pelajari Dasarnya ↗</a>
+      </div>
+    </section>
 
-                <div class="floating-card">
-                    <span>↗</span>
-                    Pengetahuan adalah modal
-                </div>
-            </div>
-        </section>
+    <section class="closing-section section">
+      <div class="container closing-box">
+        <p class="eyebrow">MULAI PERJALANANMU</p>
+        <h2>Belajar hari ini.<br><span>Lebih siap esok hari.</span></h2>
+        <p>Bangun pemahaman finansial selangkah demi selangkah bersama Frojek.</p>
+        <a class="button button-primary" href="#beranda">Kembali ke atas ↑</a>
+      </div>
+    </section>
+  </main>
 
-        <!-- TENTANG -->
-        <section class="about section" id="tentang">
-            <div class="section-heading">
-                <p class="eyebrow">MENGENAL BRAND TK</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand" href="#beranda"><span class="brand-mark">F</span><span>frojek<span class="brand-dot">.</span></span></a>
+      <p>© 2026 Frojek. Ruang belajar saham untuk pemula.</p>
+      <a href="#beranda">Kembali ke atas ↑</a>
+    </div>
+    <div class="container disclaimer">Konten hanya untuk tujuan edukasi. Lakukan riset sendiri dan pahami risiko sebelum berinvestasi.</div>
+  </footer>
 
-                <h2>
-                    Memahami Saham,
-                    <span>Memahami Peluang</span>
-                </h2>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
 
-                <p>
-                    Platform informasi dan edukasi untuk mengenal
-                    pasar saham, analisis keuangan, dan manajemen risiko.
-                </p>
-            </div>
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('is-open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Tutup menu' : 'Buka menu');
+      menuToggle.textContent = isOpen ? '✕' : '☰';
+    });
 
-            <!-- KEUNGGULAN -->
-            <div class="features" id="keunggulan">
-                <article class="feature">
-                    <div class="icon" aria-hidden="true">◇</div>
-                    <h3>Aman dan Bijak</h3>
-                    <p>
-                        Pelajari keamanan akun serta pentingnya
-                        menjaga data pribadi.
-                    </p>
-                </article>
-
-                <article class="feature">
-                    <div class="icon" aria-hidden="true">↗</div>
-                    <h3>Analisis Pasar</h3>
-                    <p>
-                        Kenali grafik, tren harga, dan informasi
-                        pasar saham.
-                    </p>
-                </article>
-
-                <article class="feature">
-                    <div class="icon" aria-hidden="true">◷</div>
-                    <h3>Belajar Fleksibel</h3>
-                    <p>
-                        Pelajari dasar saham kapan saja melalui website.
-                    </p>
-                </article>
-
-                <article class="feature">
-                    <div class="icon" aria-hidden="true">◎</div>
-                    <h3>Kelola Risiko</h3>
-                    <p>
-                        Pahami risiko sebelum memutuskan membeli
-                        atau menjual saham.
-                    </p>
-                </article>
-            </div>
-
-            <!-- KONTAK -->
-            <div class="cta" id="kontak">
-                <div>
-                    <h2>Mulai Belajar Saham Sekarang!</h2>
-                    <p>
-                        Bangun pengetahuan finansialmu bersama Brand TK.
-                    </p>
-                </div>
-
-                <a
-                    href="mailto:emailkamu@example.com"
-                    class="button primary"
-                >
-                    Hubungi Kami ↗
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <a href="#beranda" class="logo">↗ Brand <span>TK</span></a>
-
-        <p>© 2026 Brand TK. Hak cipta dilindungi.</p>
-
-        <small>
-            Website edukasi saham, bukan rekomendasi investasi.
-        </small>
-    </footer>
-
+    navLinks.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Buka menu');
+        menuToggle.textContent = '☰';
+      });
+    });
+  </script>
 </body>
 </html>
-```
