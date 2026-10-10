@@ -1,1 +1,224 @@
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="MUFIQ - Toko baju online dengan gaya streetwear modern dan premium.">
+
+    <title>MUFIQ | Premium Streetwear</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="#home" class="logo">MUFIQ<span>.</span></a>
+
+        <nav class="nav-menu">
+            <a href="#home">Home</a>
+            <a href="#collection">Collection</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#collection" class="nav-button">Shop Now ↗</a>
+    </header>
+
+    <!-- HERO -->
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">NEW COLLECTION — 2026</p>
+
+                <h1>WEAR YOUR<br>
+                    <span>OWN STORY.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Tampil percaya diri dengan gaya yang mencerminkan
+                    dirimu. Temukan koleksi fashion pilihan dari MUFIQ.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#collection" class="btn-primary">
+                        Explore Collection ↗
+                    </a>
+                    <a href="#about" class="btn-secondary">
+                        Our Story
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div>
+                        <h3>Premium</h3>
+                        <p>Selected Quality</p>
+                    </div>
+                    <div>
+                        <h3>Modern</h3>
+                        <p>Everyday Style</p>
+                    </div>
+                    <div>
+                        <h3>MUFIQ</h3>
+                        <p>Your Identity</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1000&q=85"
+                    alt="Koleksi fashion streetwear MUFIQ"
+                >
+                <div class="image-label">
+                    <span>MUFIQ ESSENTIALS</span>
+                    <p>Designed for everyday.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- COLLECTION -->
+        <section class="collection section-padding" id="collection">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">OUR PRODUCTS</p>
+                    <h2>Latest Collection<span>.</span></h2>
+                </div>
+                <p class="section-description">
+                    Pilihan gaya simpel untuk menemani aktivitasmu.
+                </p>
+            </div>
+
+            <div class="product-grid">
+                <article class="product-card">
+                    <div class="product-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=85"
+                            alt="Kaos basic MUFIQ"
+                            loading="lazy"
+                        >
+                        <span class="product-tag">BEST SELLER</span>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>Essential T-Shirt</h3>
+                            <p>Basic Collection</p>
+                        </div>
+                        <strong>Rp89.000</strong>
+                    </div>
+                    <a class="product-button" href="#contact">
+                        Pesan Sekarang ↗
+                    </a>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=700&q=85"
+                            alt="Kemeja casual MUFIQ"
+                            loading="lazy"
+                        >
+                        <span class="product-tag">NEW ARRIVAL</span>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>Casual Shirt</h3>
+                            <p>Daily Collection</p>
+                        </div>
+                        <strong>Rp149.000</strong>
+                    </div>
+                    <a class="product-button" href="#contact">
+                        Pesan Sekarang ↗
+                    </a>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=700&q=85"
+                            alt="Jaket streetwear MUFIQ"
+                            loading="lazy"
+                        >
+                        <span class="product-tag">POPULAR</span>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>Urban Jacket</h3>
+                            <p>Streetwear Collection</p>
+                        </div>
+                        <strong>Rp229.000</strong>
+                    </div>
+                    <a class="product-button" href="#contact">
+                        Pesan Sekarang ↗
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about section-padding" id="about">
+            <div class="about-content">
+                <p class="eyebrow">ABOUT MUFIQ</p>
+                <h2>Simple looks.<br><span>Strong identity.</span></h2>
+                <p>
+                    MUFIQ hadir untuk kamu yang ingin tampil modern,
+                    nyaman, dan percaya diri. Kami percaya bahwa
+                    gaya terbaik adalah gaya yang mencerminkan
+                    karakter diri sendiri.
+                </p>
+                <a href="#collection" class="btn-primary">
+                    Discover Our Style ↗
+                </a>
+            </div>
+
+            <div class="about-image">
+                <img
+                    src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=85"
+                    alt="Inspirasi gaya fashion MUFIQ"
+                    loading="lazy"
+                >
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="contact section-padding" id="contact">
+            <p class="eyebrow">LET'S CONNECT</p>
+            <h2>Ready to upgrade<br>your <span>style?</span></h2>
+            <p>
+                Tertarik dengan koleksi MUFIQ? Hubungi kami untuk
+                informasi produk dan pemesanan.
+            </p>
+
+            <!-- GANTI NOMOR DI BAWAH DENGAN NOMOR WHATSAPP KAMU -->
+            <a
+                href="https://wa.me/6281234567890"
+                class="btn-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Order via WhatsApp ↗
+            </a>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <a href="#home" class="logo">MUFIQ<span>.</span></a>
+        <p>© 2026 MUFIQ. All rights reserved.</p>
+
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#collection">Shop</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </footer>
+
+</body>
+</html>
+
