@@ -10,135 +10,186 @@
 </head>
 <body>
 
-<header class="navbar">
-    <a href="#beranda" class="logo">↗ Brand <span>TK</span></a>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="#beranda" class="logo">↗ Brand <span>TK</span></a>
 
-    <nav>
-        <a href="#beranda">Beranda</a>
-        <a href="#tentang">Tentang</a>
-        <a href="#keunggulan">Keunggulan</a>
-        <a href="#kontak">Kontak</a>
-    </nav>
+        <nav aria-label="Navigasi utama">
+            <a href="#beranda">Beranda</a>
+            <a href="#tentang">Tentang</a>
+            <a href="#keunggulan">Keunggulan</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
 
-    <a href="#kontak" class="nav-button">Hubungi Kami ↗</a>
-</header>
+        <a href="#kontak" class="nav-button">Hubungi Kami ↗</a>
+    </header>
 
-<main>
-    <section class="hero" id="beranda">
-        <div class="hero-content">
-            <p class="eyebrow">INVESTASI CERDAS, MASA DEPAN LEBIH BAIK</p>
+    <main>
+        <!-- BERANDA -->
+        <section class="hero" id="beranda">
+            <div class="hero-content">
+                <p class="eyebrow">
+                    INVESTASI CERDAS, MASA DEPAN LEBIH BAIK
+                </p>
 
-            <h1>MENJUAL<br><span>SAHAM</span></h1>
+                <h1>MENJUAL<br><span>SAHAM</span></h1>
 
-            <p class="description">
-                Selamat datang di Brand TK! Temukan informasi,
-                wawasan, dan edukasi seputar dunia saham.
-                Pelajari peluang dan risiko investasi untuk
-                mengambil keputusan finansial dengan lebih bijak.
-            </p>
+                <p class="description">
+                    Selamat datang di Brand TK! Temukan informasi,
+                    wawasan, dan edukasi seputar dunia saham.
+                    Pelajari peluang dan risiko investasi untuk
+                    mengambil keputusan finansial dengan lebih bijak.
+                </p>
 
-            <div class="hero-buttons">
-                <a href="#tentang" class="button primary">↗ Mulai Belajar</a>
-                <a href="#keunggulan" class="button secondary">Jelajahi Website</a>
-            </div>
+                <div class="hero-buttons">
+                    <a href="#tentang" class="button primary">
+                        ↗ Mulai Belajar
+                    </a>
 
-            <div class="stats">
-                <div><strong>01</strong><small>Belajar Saham</small></div>
-                <div><strong>02</strong><small>Analisis Pasar</small></div>
-                <div><strong>03</strong><small>Kelola Risiko</small></div>
-            </div>
-        </div>
-
-        <div class="hero-visual">
-            <div class="chart-card">
-                <p class="chart-label">BRAND TK • PASAR SAHAM</p>
-                <h2>Analisis Pasar</h2>
-                <p class="chart-subtitle">Ilustrasi pergerakan saham</p>
-
-                <div class="chart">
-                    <span style="height:25%"></span>
-                    <span style="height:38%"></span>
-                    <span style="height:32%"></span>
-                    <span style="height:53%"></span>
-                    <span style="height:46%"></span>
-                    <span style="height:68%"></span>
-                    <span style="height:59%"></span>
-                    <span style="height:82%"></span>
-                    <span style="height:73%"></span>
-                    <span style="height:96%"></span>
+                    <a href="#keunggulan" class="button secondary">
+                        Jelajahi Website
+                    </a>
                 </div>
 
-                <div class="chart-info">
-                    <span>Wawasan finansial</span>
-                    <strong>Belajar hari ini ↗</strong>
-                </div>
-
-                <div class="chart-bottom">
-                    <span>Kenali peluang</span>
-                    <span>Pelajari risiko</span>
+                <div class="stats">
+                    <div>
+                        <strong>01</strong>
+                        <small>Belajar Saham</small>
+                    </div>
+                    <div>
+                        <strong>02</strong>
+                        <small>Analisis Pasar</small>
+                    </div>
+                    <div>
+                        <strong>03</strong>
+                        <small>Kelola Risiko</small>
+                    </div>
                 </div>
             </div>
 
-            <div class="floating-card">
-                <span>↗</span>
-                Pengetahuan adalah modal
+            <!-- ILUSTRASI GRAFIK -->
+            <div class="hero-visual">
+                <div class="chart-card">
+                    <p class="chart-label">BRAND TK • PASAR SAHAM</p>
+                    <h2>Analisis Pasar</h2>
+                    <p class="chart-subtitle">
+                        Ilustrasi pergerakan saham
+                    </p>
+
+                    <div class="chart" aria-label="Ilustrasi grafik batang">
+                        <span style="--bar-height:25%"></span>
+                        <span style="--bar-height:38%"></span>
+                        <span style="--bar-height:32%"></span>
+                        <span style="--bar-height:53%"></span>
+                        <span style="--bar-height:46%"></span>
+                        <span style="--bar-height:68%"></span>
+                        <span style="--bar-height:59%"></span>
+                        <span style="--bar-height:82%"></span>
+                        <span style="--bar-height:73%"></span>
+                        <span style="--bar-height:96%"></span>
+                    </div>
+
+                    <div class="chart-info">
+                        <span>Wawasan finansial</span>
+                        <strong>Belajar hari ini ↗</strong>
+                    </div>
+
+                    <div class="chart-bottom">
+                        <span>Kenali peluang</span>
+                        <span>Pelajari risiko</span>
+                    </div>
+                </div>
+
+                <div class="floating-card">
+                    <span>↗</span>
+                    Pengetahuan adalah modal
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="about section" id="tentang">
-        <div class="section-heading">
-            <p class="eyebrow">MENGENAL BRAND TK</p>
-            <h2>Memahami Saham, <span>Memahami Peluang</span></h2>
-            <p>
-                Platform informasi dan edukasi untuk mengenal
-                pasar saham, analisis keuangan, dan manajemen risiko.
-            </p>
-        </div>
+        <!-- TENTANG -->
+        <section class="about section" id="tentang">
+            <div class="section-heading">
+                <p class="eyebrow">MENGENAL BRAND TK</p>
 
-        <div class="features" id="keunggulan">
-            <article class="feature">
-                <div class="icon">◇</div>
-                <h3>Aman dan Bijak</h3>
-                <p>Pelajari keamanan akun serta pentingnya menjaga data pribadi.</p>
-            </article>
+                <h2>
+                    Memahami Saham,
+                    <span>Memahami Peluang</span>
+                </h2>
 
-            <article class="feature">
-                <div class="icon">↗</div>
-                <h3>Analisis Pasar</h3>
-                <p>Kenali grafik, tren harga, dan informasi pasar saham.</p>
-            </article>
-
-            <article class="feature">
-                <div class="icon">◷</div>
-                <h3>Belajar Fleksibel</h3>
-                <p>Pelajari dasar saham kapan saja melalui website.</p>
-            </article>
-
-            <article class="feature">
-                <div class="icon">◎</div>
-                <h3>Kelola Risiko</h3>
-                <p>Pahami risiko sebelum memutuskan membeli atau menjual saham.</p>
-            </article>
-        </div>
-
-        <div class="cta" id="kontak">
-            <div>
-                <h2>Mulai Belajar Saham Sekarang!</h2>
-                <p>Bangun pengetahuan finansialmu bersama Brand TK.</p>
+                <p>
+                    Platform informasi dan edukasi untuk mengenal
+                    pasar saham, analisis keuangan, dan manajemen risiko.
+                </p>
             </div>
-            <a href="mailto:emailkamu@example.com" class="button primary">
-                Hubungi Kami ↗
-            </a>
-        </div>
-    </section>
-</main>
 
-<footer class="footer">
-    <a href="#beranda" class="logo">↗ Brand <span>TK</span></a>
-    <p>© 2026 Brand TK. Hak cipta dilindungi.</p>
-    <small>Website edukasi saham, bukan rekomendasi investasi.</small>
-</footer>
+            <!-- KEUNGGULAN -->
+            <div class="features" id="keunggulan">
+                <article class="feature">
+                    <div class="icon" aria-hidden="true">◇</div>
+                    <h3>Aman dan Bijak</h3>
+                    <p>
+                        Pelajari keamanan akun serta pentingnya
+                        menjaga data pribadi.
+                    </p>
+                </article>
+
+                <article class="feature">
+                    <div class="icon" aria-hidden="true">↗</div>
+                    <h3>Analisis Pasar</h3>
+                    <p>
+                        Kenali grafik, tren harga, dan informasi
+                        pasar saham.
+                    </p>
+                </article>
+
+                <article class="feature">
+                    <div class="icon" aria-hidden="true">◷</div>
+                    <h3>Belajar Fleksibel</h3>
+                    <p>
+                        Pelajari dasar saham kapan saja melalui website.
+                    </p>
+                </article>
+
+                <article class="feature">
+                    <div class="icon" aria-hidden="true">◎</div>
+                    <h3>Kelola Risiko</h3>
+                    <p>
+                        Pahami risiko sebelum memutuskan membeli
+                        atau menjual saham.
+                    </p>
+                </article>
+            </div>
+
+            <!-- KONTAK -->
+            <div class="cta" id="kontak">
+                <div>
+                    <h2>Mulai Belajar Saham Sekarang!</h2>
+                    <p>
+                        Bangun pengetahuan finansialmu bersama Brand TK.
+                    </p>
+                </div>
+
+                <a
+                    href="mailto:emailkamu@example.com"
+                    class="button primary"
+                >
+                    Hubungi Kami ↗
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <a href="#beranda" class="logo">↗ Brand <span>TK</span></a>
+
+        <p>© 2026 Brand TK. Hak cipta dilindungi.</p>
+
+        <small>
+            Website edukasi saham, bukan rekomendasi investasi.
+        </small>
+    </footer>
 
 </body>
 </html>
