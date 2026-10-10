@@ -1,1 +1,389 @@
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090b09">
+  <meta name="description" content="Temukan smartphone terbaru dengan desain premium di PHONEZONE.">
+  <title>PHONEZONE® — Next Level Smartphone</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <a class="brand" href="#home">PHONE<span>ZONE</span><sup>®</sup></a>
+
+  <nav class="navigation" id="navigation">
+    <a href="#home">Home</a>
+    <a href="#produk">Smartphones</a>
+    <a href="#keunggulan">Keunggulan</a>
+    <a href="#kontak">Contact</a>
+  </nav>
+
+  <button class="cart-trigger" onclick="bukaKeranjang()">
+    <span>Bag</span>
+    <span class="cart-count" id="jumlah">0</span>
+  </button>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-glow"></div>
+
+    <div class="hero-copy">
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        YOUR NEXT TECH DESTINATION
+      </div>
+
+      <h1>THE FUTURE<br>IS IN YOUR <span>HANDS.</span></h1>
+
+      <p class="hero-description">
+        Temukan smartphone pilihanmu. Performa luar biasa,
+        teknologi terbaru, dan gaya yang sesuai denganmu.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button-primary" href="#produk">Explore Collection <span>↗</span></a>
+        <a class="button-text" href="#keunggulan">Discover more ↓</a>
+      </div>
+
+      <div class="hero-stats">
+        <div><strong>01</strong><span>Premium design</span></div>
+        <div><strong>02</strong><span>Smart choices</span></div>
+        <div><strong>03</strong><span>Easy ordering</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="visual-orbit orbit-one"></div>
+      <div class="visual-orbit orbit-two"></div>
+      <div class="hero-image-frame">
+        <img
+          src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=1000&q=85"
+          alt="Smartphone premium"
+        >
+      </div>
+      <div class="floating-label label-top">
+        <span class="mini-dot"></span>
+        TECHNOLOGY / 2026
+      </div>
+      <div class="floating-label label-bottom">
+        <small>YOUR NEXT UPGRADE</small>
+        <strong>Starts here.</strong>
+      </div>
+      <span class="visual-index">PZ—001 / COLLECTION</span>
+    </div>
+  </section>
+
+  <section class="ticker" aria-label="Layanan toko">
+    <div class="ticker-track">
+      <span>TECH FOR EVERYONE</span><i>✳</i>
+      <span>PREMIUM SMARTPHONES</span><i>✳</i>
+      <span>FIND YOUR NEXT DEVICE</span><i>✳</i>
+      <span>TECH FOR EVERYONE</span><i>✳</i>
+      <span>PREMIUM SMARTPHONES</span><i>✳</i>
+    </div>
+  </section>
+
+  <section class="catalog section" id="produk">
+    <div class="section-top">
+      <div>
+        <p class="section-tag">01 / THE COLLECTION</p>
+        <h2>Find your <span>device.</span></h2>
+        <p class="section-description">
+          Dari flagship premium sampai smartphone ramah anggaran.
+        </p>
+      </div>
+      <div class="catalog-counter"><span id="hasil">12</span> PRODUCTS</div>
+    </div>
+
+    <div class="toolbar">
+      <label class="search-box">
+        <span>⌕</span>
+        <input id="pencarian" type="search"
+          placeholder="Search your smartphone..."
+          oninput="tampilkanProduk()">
+        <kbd>SEARCH</kbd>
+      </label>
+
+      <select id="merek" aria-label="Filter merek" onchange="tampilkanProduk()">
+        <option value="">All brands</option>
+        <option>Apple</option>
+        <option>Samsung</option>
+        <option>Xiaomi</option>
+        <option>POCO</option>
+        <option>OPPO</option>
+        <option>vivo</option>
+        <option>Infinix</option>
+        <option>TECNO</option>
+      </select>
+
+      <select id="kategori" aria-label="Filter harga" onchange="tampilkanProduk()">
+        <option value="">All prices</option>
+        <option value="murah">Under Rp2 juta</option>
+        <option value="menengah">Rp2–5 juta</option>
+        <option value="premium">Rp5–10 juta</option>
+        <option value="flagship">Above Rp10 juta</option>
+      </select>
+
+      <select id="urutan" aria-label="Urutkan produk" onchange="tampilkanProduk()">
+        <option value="mahal">Price: High to Low</option>
+        <option value="murah">Price: Low to High</option>
+        <option value="nama">Name: A to Z</option>
+      </select>
+    </div>
+
+    <div class="product-grid" id="daftarProduk"></div>
+
+    <p class="price-note">
+      *Harga merupakan data contoh. Hubungi toko untuk konfirmasi harga,
+      varian, stok, dan garansi.
+    </p>
+  </section>
+
+  <section class="feature-section" id="keunggulan">
+    <div class="feature-heading">
+      <p class="section-tag">02 / THE EXPERIENCE</p>
+      <h2>More than just<br>a <span>smartphone.</span></h2>
+    </div>
+
+    <div class="feature-grid">
+      <article class="feature-card">
+        <span class="feature-number">01</span>
+        <div class="feature-icon">◈</div>
+        <h3>Curated Choices</h3>
+        <p>Pilihan perangkat untuk kebutuhan sekolah, kerja, fotografi, dan gaming.</p>
+      </article>
+
+      <article class="feature-card">
+        <span class="feature-number">02</span>
+        <div class="feature-icon">↗</div>
+        <h3>Easy Ordering</h3>
+        <p>Pilih produk, masukkan keranjang, lalu lanjutkan pesanan melalui WhatsApp.</p>
+      </article>
+
+      <article class="feature-card">
+        <span class="feature-number">03</span>
+        <div class="feature-icon">◎</div>
+        <h3>Personal Choice</h3>
+        <p>Bandingkan berbagai pilihan dan tanyakan spesifikasi sebelum membeli.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="contact-section" id="kontak">
+    <div class="contact-decoration">PZ.</div>
+    <p class="section-tag">03 / LET'S CONNECT</p>
+    <h2>Ready for your<br>next <span>upgrade?</span></h2>
+    <p class="contact-description">
+      Sudah menemukan smartphone pilihanmu? Hubungi kami
+      untuk mengecek harga dan ketersediaan produk.
+    </p>
+    <button class="button-primary" onclick="hubungiToko()">
+      Talk to our store <span>↗</span>
+    </button>
+  </section>
+</main>
+
+<footer class="footer">
+  <a class="brand" href="#home">PHONE<span>ZONE</span><sup>®</sup></a>
+  <p>BUILT FOR YOUR NEXT MOVE.</p>
+  <span>© <span id="tahun"></span> PHONEZONE</span>
+</footer>
+
+<div class="overlay" id="overlay" onclick="tutupKeranjang()"></div>
+
+<aside class="cart-panel" id="panelKeranjang" aria-label="Keranjang belanja">
+  <div class="cart-header">
+    <div>
+      <p class="section-tag">YOUR SELECTION</p>
+      <h2>Your bag<span>.</span></h2>
+    </div>
+    <button class="close-cart" onclick="tutupKeranjang()" aria-label="Tutup keranjang">✕</button>
+  </div>
+
+  <div class="cart-content" id="isiKeranjang"></div>
+
+  <div class="cart-bottom">
+    <div class="cart-total"><span>Subtotal</span><strong id="total">Rp0</strong></div>
+    <p>Harga akhir dan stok dikonfirmasi oleh toko.</p>
+    <button class="checkout-button" onclick="checkout()">Checkout via WhatsApp ↗</button>
+  </div>
+</aside>
+
+<script>
+const nomorWhatsApp = "6281234567890"; // GANTI dengan nomor toko kamu
+
+const produk = [
+  {id:1,nama:"iPhone 17 Pro Max",merek:"Apple",harga:25000000,ram:"12 GB",rom:"256 GB",gambar:"https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=700&q=80"},
+  {id:2,nama:"Samsung Galaxy S26 Ultra",merek:"Samsung",harga:22000000,ram:"12 GB",rom:"256 GB",gambar:"https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=700&q=80"},
+  {id:3,nama:"POCO F8 Ultra",merek:"POCO",harga:12000000,ram:"12 GB",rom:"256 GB",gambar:"https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=700&q=80"},
+  {id:4,nama:"iPhone 16",merek:"Apple",harga:14000000,ram:"8 GB",rom:"128 GB",gambar:"https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=700&q=80"},
+  {id:5,nama:"Samsung Galaxy S25 FE",merek:"Samsung",harga:9000000,ram:"8 GB",rom:"256 GB",gambar:"https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=700&q=80"},
+  {id:6,nama:"Xiaomi 15T",merek:"Xiaomi",harga:6500000,ram:"12 GB",rom:"256 GB",gambar:"https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=700&q=80"},
+  {id:7,nama:"vivo V50",merek:"vivo",harga:5500000,ram:"8 GB",rom:"256 GB",gambar:"https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=700&q=80"},
+  {id:8,nama:"OPPO Reno 13",merek:"OPPO",harga:4500000,ram:"8 GB",rom:"256 GB",gambar:"https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=700&q=80"},
+  {id:9,nama:"POCO X7 Pro",merek:"POCO",harga:4300000,ram:"8 GB",rom:"256 GB",gambar:"https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=700&q=80"},
+  {id:10,nama:"Infinix Note 50",merek:"Infinix",harga:2800000,ram:"8 GB",rom:"256 GB",gambar:"https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=700&q=80"},
+  {id:11,nama:"TECNO Spark",merek:"TECNO",harga:1700000,ram:"4 GB",rom:"128 GB",gambar:"https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=700&q=80"},
+  {id:12,nama:"Redmi A Series",merek:"Xiaomi",harga:1200000,ram:"4 GB",rom:"128 GB",gambar:"https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=700&q=80"}
+];
+
+let keranjang = [];
+
+function rupiah(n) {
+  return new Intl.NumberFormat("id-ID", {
+    style:"currency", currency:"IDR", maximumFractionDigits:0
+  }).format(n);
+}
+
+function aman(teks) {
+  return String(teks).replace(/[&<>"']/g, c => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+  })[c]);
+}
+
+function tampilkanProduk() {
+  const kata = document.getElementById("pencarian").value.toLowerCase();
+  const merek = document.getElementById("merek").value;
+  const kategori = document.getElementById("kategori").value;
+  const urutan = document.getElementById("urutan").value;
+
+  let hasil = produk.filter(p => {
+    const cocok = (p.nama + " " + p.merek).toLowerCase().includes(kata);
+    const cocokMerek = !merek || p.merek === merek;
+    let harga = true;
+
+    if (kategori === "murah") harga = p.harga < 2000000;
+    if (kategori === "menengah") harga = p.harga >= 2000000 && p.harga <= 5000000;
+    if (kategori === "premium") harga = p.harga > 5000000 && p.harga <= 10000000;
+    if (kategori === "flagship") harga = p.harga > 10000000;
+
+    return cocok && cocokMerek && harga;
+  });
+
+  if (urutan === "mahal") hasil.sort((a,b) => b.harga-a.harga);
+  if (urutan === "murah") hasil.sort((a,b) => a.harga-b.harga);
+  if (urutan === "nama") hasil.sort((a,b) => a.nama.localeCompare(b.nama));
+
+  document.getElementById("hasil").textContent = hasil.length;
+
+  document.getElementById("daftarProduk").innerHTML = hasil.length
+    ? hasil.map((p,i) => `
+      <article class="product-card">
+        <div class="product-picture">
+          <span class="product-index">PZ / ${String(i+1).padStart(2,"0")}</span>
+          <img src="${aman(p.gambar)}" alt="${aman(p.nama)}" loading="lazy">
+          <button class="quick-add" onclick="tambah(${p.id})" aria-label="Tambah ${aman(p.nama)}">+</button>
+        </div>
+        <div class="product-details">
+          <div class="product-brand">${aman(p.merek)}</div>
+          <h3>${aman(p.nama)}</h3>
+          <p class="specification">${aman(p.ram)} RAM <span>•</span> ${aman(p.rom)}</p>
+          <div class="product-footer">
+            <strong>${rupiah(p.harga)}</strong>
+            <button class="buy-link" onclick="pesanProduk(${p.id})" aria-label="Pesan ${aman(p.nama)}">↗</button>
+          </div>
+        </div>
+      </article>
+    `).join("")
+    : '<p class="empty">Tidak ada produk yang cocok. Coba kata kunci lain.</p>';
+}
+
+function tambah(id) {
+  const p = produk.find(x => x.id === id);
+  const item = keranjang.find(x => x.id === id);
+  if (item) item.jumlah++;
+  else keranjang.push({...p,jumlah:1});
+  perbaruiKeranjang();
+}
+
+function hapus(id) {
+  keranjang = keranjang.filter(p => p.id !== id);
+  perbaruiKeranjang();
+}
+
+function perbaruiKeranjang() {
+  document.getElementById("jumlah").textContent =
+    keranjang.reduce((s,p) => s+p.jumlah,0);
+
+  document.getElementById("isiKeranjang").innerHTML = keranjang.length
+    ? keranjang.map(p => `
+      <div class="cart-item">
+        <img src="${aman(p.gambar)}" alt="">
+        <div class="cart-item-info">
+          <strong>${aman(p.nama)}</strong>
+          <span>${p.jumlah} × ${rupiah(p.harga)}</span>
+          <button onclick="hapus(${p.id})">Remove</button>
+        </div>
+        <strong>${rupiah(p.harga*p.jumlah)}</strong>
+      </div>
+    `).join("")
+    : '<div class="cart-empty"><span>＋</span><p>Your bag is empty.</p><small>Explore the collection and find your device.</small></div>';
+
+  document.getElementById("total").textContent =
+    rupiah(keranjang.reduce((s,p) => s+p.harga*p.jumlah,0));
+}
+
+function bukaKeranjang() {
+  document.getElementById("panelKeranjang").classList.add("active");
+  document.getElementById("overlay").classList.add("active");
+  document.body.classList.add("cart-open");
+}
+
+function tutupKeranjang() {
+  document.getElementById("panelKeranjang").classList.remove("active");
+  document.getElementById("overlay").classList.remove("active");
+  document.body.classList.remove("cart-open");
+}
+
+function kirimWA(pesan) {
+  if (nomorWhatsApp === "6281234567890") {
+    alert("Ganti nomorWhatsApp di index.html dengan nomor WhatsApp toko kamu terlebih dahulu.");
+    return;
+  }
+  window.open("https://wa.me/" + nomorWhatsApp + "?text=" +
+    encodeURIComponent(pesan), "_blank");
+}
+
+function pesanProduk(id) {
+  const p = produk.find(x => x.id === id);
+  kirimWA("Halo PHONEZONE, saya tertarik dengan " + p.nama +
+    ". Harga yang tertera: " + rupiah(p.harga) +
+    ". Apakah harga dan stok masih tersedia?");
+}
+
+function checkout() {
+  if (!keranjang.length) {
+    alert("Keranjang kamu masih kosong.");
+    return;
+  }
+
+  let pesan = "Halo PHONEZONE, saya ingin menanyakan pesanan berikut:\n\n";
+  keranjang.forEach(p => {
+    pesan += p.nama + " x" + p.jumlah + " — " +
+      rupiah(p.harga*p.jumlah) + "\n";
+  });
+  pesan += "\nTotal perkiraan: " +
+    rupiah(keranjang.reduce((s,p) => s+p.harga*p.jumlah,0));
+  pesan += "\nMohon konfirmasi harga, stok, dan garansi.";
+
+  kirimWA(pesan);
+}
+
+function hubungiToko() {
+  kirimWA("Halo PHONEZONE, saya ingin bertanya tentang produk HP.");
+}
+
+document.getElementById("tahun").textContent = new Date().getFullYear();
+tampilkanProduk();
+perbaruiKeranjang();
+</script>
+</body>
+</html>
+
