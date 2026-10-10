@@ -1,496 +1,104 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>TKJ Network Academy | Belajar Jaringan & Linux</title>
-
-    <meta name="description"
-        content="Website pembelajaran Teknik Komputer dan Jaringan. Belajar Mikrotik, Linux Debian, jaringan komputer, server dan teknologi jaringan.">
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BBL — pusat informasi edukasi saham, wawasan pasar, dan pembelajaran investasi yang lebih bijak.">
+  <title>BBL — Belajar & Mengenal Saham</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navigasi utama">
+      <a class="brand" href="#beranda" aria-label="BBL beranda"><span class="brand-mark">B</span><span>BBL<span class="brand-dot">.</span></span></a>
+      <button class="menu-toggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+      <div class="nav-links">
+        <a href="#beranda">Beranda</a><a href="#tentang">Tentang</a><a href="#edukasi">Edukasi</a><a href="#galeri">Galeri</a><a href="#kontak">Kontak</a>
+      </div>
+      <a class="button button-small button-dark nav-cta" href="#edukasi">Mulai Belajar <span>↗</span></a>
+    </nav>
+  </header>
 
-    <!-- NAVBAR -->
-    <header class="navbar">
-        <div class="container nav-content">
-
-            <div class="logo">
-                <span class="logo-icon">⌁</span>
-                <div>
-                    <strong>TKJ</strong>
-                    <small>NETWORK ACADEMY</small>
-                </div>
-            </div>
-
-            <nav>
-                <a href="#home">Home</a>
-                <a href="#program">Program</a>
-                <a href="#materi">Materi</a>
-                <a href="#tentang">Tentang</a>
-                <a href="#kontak">Kontak</a>
-            </nav>
-
-            <a href="#program" class="nav-button">Mulai Belajar</a>
-
+  <main>
+    <section class="hero section" id="beranda">
+      <div class="hero-glow glow-one"></div><div class="hero-glow glow-two"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="live-dot"></span> RUANG BELAJAR INVESTASI</div>
+          <h1>Kenali saham.<br><span>Bangun masa depan.</span></h1>
+          <p class="hero-lead">Selamat datang di BBL, ruang untuk memahami dunia saham dengan lebih jernih. Pelajari dasar investasi, kenali risiko, dan latih keputusan finansial secara bertahap.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#edukasi">Jelajahi Edukasi <span>↗</span></a><a class="text-link" href="#tentang"><span class="play-icon">▶</span> Kenali BBL</a></div>
+          <div class="hero-note"><div class="avatar-stack"><span>BB</span><span>LE</span><span>+</span></div><p><strong>Belajar dari dasar</strong><br><small>Pelan-pelan, dengan informasi yang bertanggung jawab.</small></p></div>
         </div>
-    </header>
-
-
-    <!-- HERO -->
-    <section id="home" class="hero">
-
-        <div class="container hero-content">
-
-            <div class="hero-text">
-
-                <div class="badge">
-                    ● PROGRAM KEAHLIAN TKJ
-                </div>
-
-                <h1>
-                    Bangun Skill
-                    <span>Jaringan</span>
-                    Masa Depan.
-                </h1>
-
-                <p>
-                    Belajar Teknik Komputer dan Jaringan dari dasar
-                    hingga mampu mengelola jaringan, Mikrotik,
-                    server Linux Debian, dan berbagai teknologi jaringan.
-                </p>
-
-                <div class="hero-buttons">
-                    <a href="#program" class="button primary">
-                        Jelajahi Program →
-                    </a>
-
-                    <a href="#materi" class="button secondary">
-                        Lihat Materi
-                    </a>
-                </div>
-
-                <div class="hero-stats">
-
-                    <div>
-                        <strong>4+</strong>
-                        <span>Program</span>
-                    </div>
-
-                    <div>
-                        <strong>20+</strong>
-                        <span>Materi</span>
-                    </div>
-
-                    <div>
-                        <strong>100%</strong>
-                        <span>Praktik</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="network-card">
-
-                <div class="card-top">
-                    <span>TKJ NETWORK</span>
-                    <span class="status">● ONLINE</span>
-                </div>
-
-                <div class="network-visual">
-
-                    <div class="circle circle-one"></div>
-                    <div class="circle circle-two"></div>
-
-                    <div class="server server-one">
-                        SERVER
-                    </div>
-
-                    <div class="router">
-                        MIKROTIK
-                    </div>
-
-                    <div class="server server-two">
-                        DEBIAN
-                    </div>
-
-                    <div class="connection line-one"></div>
-                    <div class="connection line-two"></div>
-                    <div class="connection line-three"></div>
-
-                </div>
-
-                <div class="terminal">
-                    <span>$</span> ping network.local<br>
-                    <span class="green">Reply from 192.168.1.1</span><br>
-                    <span>$</span> systemctl status networking<br>
-                    <span class="green">Network is running...</span>
-                </div>
-
-            </div>
-
+        <div class="hero-visual">
+          <img class="hero-image" src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=85" alt="Layar grafik pasar saham" fetchpriority="high">
+          <div class="image-shade"></div>
+          <div class="floating-card market-card"><span class="card-label">FOKUS KAMI</span><strong>Pengetahuan<br>sebelum keputusan</strong><span class="card-icon">↗</span></div>
+          <div class="floating-card chart-card"><span class="mini-label">BELAJAR KONSISTEN</span><div class="chart-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="chart-caption">Pahami proses, bukan janji hasil.</span></div>
+          <div class="hero-orbit">BBL<span>•</span>LEARN</div>
         </div>
-
+      </div>
+      <div class="container trust-strip"><span>FOKUS PADA LITERASI</span><div class="trust-line"></div><strong>Belajar</strong><strong>Analisis</strong><strong>Kelola Risiko</strong><strong>Berpikir Jangka Panjang</strong></div>
     </section>
 
-
-    <!-- PROGRAM -->
-    <section id="program" class="section">
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                <span>PROGRAM KEAHLIAN</span>
-
-                <h2>
-                    Kuasai Dunia
-                    <strong>Jaringan Komputer</strong>
-                </h2>
-
-                <p>
-                    Pelajari teknologi jaringan melalui materi
-                    dan praktik yang mudah dipahami.
-                </p>
-
-            </div>
-
-
-            <div class="program-grid">
-
-                <article class="program-card">
-
-                    <div class="icon">🌐</div>
-
-                    <span class="number">01</span>
-
-                    <h3>Jaringan Komputer</h3>
-
-                    <p>
-                        Pelajari konsep jaringan, IP Address,
-                        subnetting, LAN, WAN, topologi dan
-                        perangkat jaringan.
-                    </p>
-
-                    <a href="#materi">Pelajari →</a>
-
-                </article>
-
-
-                <article class="program-card featured">
-
-                    <div class="icon">📡</div>
-
-                    <span class="number">02</span>
-
-                    <h3>Mikrotik</h3>
-
-                    <p>
-                        Belajar konfigurasi Mikrotik mulai dari
-                        dasar, DHCP, NAT, routing, firewall,
-                        hotspot hingga bandwidth management.
-                    </p>
-
-                    <a href="#materi">Pelajari →</a>
-
-                </article>
-
-
-                <article class="program-card">
-
-                    <div class="icon">🐧</div>
-
-                    <span class="number">03</span>
-
-                    <h3>Linux Debian</h3>
-
-                    <p>
-                        Belajar Linux Debian, terminal,
-                        user management, networking,
-                        SSH dan konfigurasi server.
-                    </p>
-
-                    <a href="#materi">Pelajari →</a>
-
-                </article>
-
-
-                <article class="program-card">
-
-                    <div class="icon">🖥️</div>
-
-                    <span class="number">04</span>
-
-                    <h3>Server & Virtualisasi</h3>
-
-                    <p>
-                        Pelajari server Linux, VirtualBox,
-                        konfigurasi layanan jaringan dan
-                        simulasi jaringan komputer.
-                    </p>
-
-                    <a href="#materi">Pelajari →</a>
-
-                </article>
-
-            </div>
-
-        </div>
-
+    <section class="section about-section" id="tentang">
+      <div class="container about-grid">
+        <div class="section-kicker"><span>01 / TENTANG BBL</span><div class="kicker-line"></div></div>
+        <div class="about-content"><h2>Investasi yang baik<br>dimulai dari <span>pemahaman.</span></h2><p>BBL adalah landing page edukasi yang membantu pengunjung mengenal istilah saham, memahami cara kerja pasar, dan mempelajari hal-hal yang perlu dipertimbangkan sebelum mengambil keputusan finansial.</p><a class="underlined-link" href="#edukasi">Lihat topik pembelajaran <span>→</span></a></div>
+        <div class="about-photo-wrap"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80" alt="Catatan keuangan dan kalkulator" loading="lazy"><div class="photo-caption"><span class="caption-number">01</span><span>Pengetahuan adalah langkah pertama.</span></div></div>
+      </div>
     </section>
 
-
-    <!-- MATERI -->
-    <section id="materi" class="section dark-section">
-
-        <div class="container">
-
-            <div class="section-heading light">
-
-                <span>MATERI PEMBELAJARAN</span>
-
-                <h2>
-                    Dari <strong>Nol</strong> Sampai Bisa
-                </h2>
-
-                <p>
-                    Materi disusun bertahap agar mudah dipelajari
-                    oleh siswa TKJ maupun pemula.
-                </p>
-
-            </div>
-
-
-            <div class="learning-grid">
-
-                <div class="learning-item">
-                    <span>01</span>
-                    <div>
-                        <h3>Dasar Jaringan</h3>
-                        <p>Konsep jaringan dan perangkat jaringan.</p>
-                    </div>
-                </div>
-
-                <div class="learning-item">
-                    <span>02</span>
-                    <div>
-                        <h3>IP Address</h3>
-                        <p>IPv4, subnetting dan konfigurasi IP.</p>
-                    </div>
-                </div>
-
-                <div class="learning-item">
-                    <span>03</span>
-                    <div>
-                        <h3>Mikrotik</h3>
-                        <p>RouterOS dan konfigurasi jaringan.</p>
-                    </div>
-                </div>
-
-                <div class="learning-item">
-                    <span>04</span>
-                    <div>
-                        <h3>Routing</h3>
-                        <p>Static routing dan konsep routing.</p>
-                    </div>
-                </div>
-
-                <div class="learning-item">
-                    <span>05</span>
-                    <div>
-                        <h3>Firewall</h3>
-                        <p>Keamanan dan filtering jaringan.</p>
-                    </div>
-                </div>
-
-                <div class="learning-item">
-                    <span>06</span>
-                    <div>
-                        <h3>Linux Debian</h3>
-                        <p>Terminal dan administrasi Linux.</p>
-                    </div>
-                </div>
-
-                <div class="learning-item">
-                    <span>07</span>
-                    <div>
-                        <h3>Server</h3>
-                        <p>Konfigurasi layanan server.</p>
-                    </div>
-                </div>
-
-                <div class="learning-item">
-                    <span>08</span>
-                    <div>
-                        <h3>VirtualBox</h3>
-                        <p>Simulasi jaringan menggunakan VM.</p>
-                    </div>
-                </div>
-
-            </div>
-
+    <section class="section education-section" id="edukasi">
+      <div class="container">
+        <div class="section-heading"><div><div class="section-kicker"><span>02 / MULAI DARI DASAR</span></div><h2>Bekal sebelum<br><span>mengenal pasar.</span></h2></div><p>Pelajari konsep penting secara bertahap. Tidak ada hasil yang dijamin; setiap keputusan investasi memiliki risiko.</p></div>
+        <div class="feature-grid">
+          <article class="feature-card"><div class="feature-number">01</div><div class="feature-icon">◈</div><h3>Dasar Saham</h3><p>Kenali apa itu saham, emiten, bursa, dan bagaimana transaksi berlangsung.</p><a href="#kontak" aria-label="Tanya tentang dasar saham">↗</a></article>
+          <article class="feature-card feature-dark"><div class="feature-number">02</div><div class="feature-icon">⌁</div><h3>Membaca Informasi</h3><p>Belajar mengenali laporan, berita, serta data sebelum menarik kesimpulan.</p><a href="#kontak" aria-label="Tanya tentang membaca informasi">↗</a></article>
+          <article class="feature-card"><div class="feature-number">03</div><div class="feature-icon">◎</div><h3>Kelola Risiko</h3><p>Pahami diversifikasi, tujuan keuangan, dan pentingnya mengenali toleransi risiko.</p><a href="#kontak" aria-label="Tanya tentang kelola risiko">↗</a></article>
         </div>
-
+      </div>
     </section>
 
-
-    <!-- TENTANG -->
-    <section id="tentang" class="section">
-
-        <div class="container about">
-
-            <div class="about-box">
-
-                <span class="about-label">TENTANG TKJ</span>
-
-                <h2>
-                    Teknologi.
-                    <br>
-                    Jaringan.
-                    <br>
-                    <strong>Masa Depan.</strong>
-                </h2>
-
-            </div>
-
-
-            <div class="about-text">
-
-                <p>
-                    <strong>TKJ Network Academy</strong> adalah
-                    konsep website pembelajaran untuk membantu
-                    siswa memahami Teknik Komputer dan Jaringan
-                    secara bertahap.
-                </p>
-
-                <p>
-                    Fokus pembelajaran meliputi jaringan komputer,
-                    Mikrotik, Linux Debian, server, virtualisasi
-                    dan praktik konfigurasi jaringan.
-                </p>
-
-                <div class="check-list">
-
-                    <div>✓ Materi mudah dipahami</div>
-                    <div>✓ Pembelajaran bertahap</div>
-                    <div>✓ Fokus praktik jaringan</div>
-                    <div>✓ Cocok untuk pemula</div>
-
-                </div>
-
-            </div>
-
+    <section class="section gallery-section" id="galeri">
+      <div class="container">
+        <div class="section-heading gallery-heading"><div><div class="section-kicker"><span>03 / GALERI VISUAL</span></div><h2>Wawasan dalam<br><span>sepuluh inspirasi.</span></h2></div><p>Sepuluh gambar bertema keuangan, analisis, kerja, dan pembelajaran untuk memperkuat tampilan landing page BBL.</p></div>
+        <div class="gallery-grid">
+          <figure class="gallery-item gallery-large"><img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1000&q=80" alt="01 Grafik pasar saham" loading="lazy"><figcaption><span>01</span> Grafik Pasar</figcaption></figure>
+          <figure class="gallery-item"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="02 Analisis data bisnis" loading="lazy"><figcaption><span>02</span> Analisis Data</figcaption></figure>
+          <figure class="gallery-item"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80" alt="03 Perencanaan keuangan" loading="lazy"><figcaption><span>03</span> Perencanaan</figcaption></figure>
+          <figure class="gallery-item"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="04 Visualisasi data" loading="lazy"><figcaption><span>04</span> Visualisasi</figcaption></figure>
+          <figure class="gallery-item"><img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=80" alt="05 Kolaborasi tim" loading="lazy"><figcaption><span>05</span> Kolaborasi</figcaption></figure>
+          <figure class="gallery-item"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="06 Belajar melalui laptop" loading="lazy"><figcaption><span>06</span> Pembelajaran</figcaption></figure>
+          <figure class="gallery-item"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="07 Gedung perusahaan" loading="lazy"><figcaption><span>07</span> Dunia Bisnis</figcaption></figure>
+          <figure class="gallery-item"><img src="https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?auto=format&fit=crop&w=800&q=80" alt="08 Meja kerja profesional" loading="lazy"><figcaption><span>08</span> Fokus</figcaption></figure>
+          <figure class="gallery-item"><img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=800&q=80" alt="09 Uang dan perencanaan" loading="lazy"><figcaption><span>09</span> Keuangan</figcaption></figure>
+          <figure class="gallery-item"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80" alt="10 Ruang kerja modern" loading="lazy"><figcaption><span>10</span> Ruang Bertumbuh</figcaption></figure>
         </div>
-
+        <p class="gallery-note">Gambar dimuat dari Unsplash melalui internet. Jika ingin menyimpan gambar secara lokal, unduh gambar yang berlisensi sesuai lalu masukkan ke folder proyek.</p>
+      </div>
     </section>
 
+    <section class="quote-section"><div class="container quote-inner"><span class="quote-mark">“</span><blockquote>Jangan mulai dari mengejar keuntungan. Mulailah dari memahami apa yang kamu lakukan.</blockquote><span class="quote-credit">PRINSIP BELAJAR BBL</span></div></section>
 
-    <!-- CTA -->
-    <section class="cta">
+    <section class="section contact-section" id="kontak"><div class="container contact-panel"><div><div class="section-kicker"><span>04 / TERHUBUNG</span></div><h2>Mulai perjalanan<br><span>belajarmu bersama BBL.</span></h2><p>Gunakan ruang ini untuk bertanya tentang materi edukasi dan pengembangan website.</p></div><a class="button button-primary" href="mailto:halo@example.com?subject=Pertanyaan%20BBL">Hubungi BBL <span>↗</span></a></div></section>
+  </main>
 
-        <div class="container">
-
-            <div class="cta-content">
-
-                <span>SIAP BELAJAR?</span>
-
-                <h2>
-                    Mulai Bangun Skill
-                    Jaringanmu Sekarang.
-                </h2>
-
-                <p>
-                    Pelajari jaringan komputer, Mikrotik,
-                    Linux Debian dan server secara bertahap.
-                </p>
-
-                <a href="#program" class="button primary">
-                    Mulai Belajar →
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- KONTAK -->
-    <footer id="kontak">
-
-        <div class="container footer-content">
-
-            <div class="footer-brand">
-
-                <div class="logo">
-                    <span class="logo-icon">⌁</span>
-
-                    <div>
-                        <strong>TKJ</strong>
-                        <small>NETWORK ACADEMY</small>
-                    </div>
-                </div>
-
-                <p>
-                    Belajar jaringan komputer,
-                    Mikrotik dan Linux Debian
-                    dari dasar sampai bisa.
-                </p>
-
-            </div>
-
-
-            <div class="footer-links">
-
-                <h3>Program</h3>
-
-                <a href="#program">Jaringan Komputer</a>
-                <a href="#program">Mikrotik</a>
-                <a href="#program">Linux Debian</a>
-                <a href="#program">Server</a>
-
-            </div>
-
-
-            <div class="footer-links">
-
-                <h3>Website</h3>
-
-                <a href="#home">Home</a>
-                <a href="#program">Program</a>
-                <a href="#materi">Materi</a>
-                <a href="#tentang">Tentang</a>
-
-            </div>
-
-
-            <div class="footer-links">
-
-                <h3>Kontak</h3>
-
-                <a href="#">Instagram</a>
-                <a href="#">WhatsApp</a>
-                <a href="#">Email</a>
-                <a href="#">GitHub</a>
-
-            </div>
-
-        </div>
-
-
-        <div class="copyright">
-
-            © 2026 TKJ Network Academy.
-            All Rights Reserved.
-
-        </div>
-
-    </footer>
-
+  <footer class="footer"><div class="container footer-inner"><a class="brand footer-brand" href="#beranda"><span class="brand-mark">B</span><span>BBL<span class="brand-dot">.</span></span></a><p>Belajar saham dengan lebih bijak.</p><span>© <span id="year">2026</span> BBL. Dibuat untuk edukasi.</span></div><div class="container disclaimer">Disclaimer: Konten website ini hanya untuk tujuan edukasi dan informasi, bukan ajakan membeli atau menjual saham, bukan rekomendasi investasi, dan bukan jaminan keuntungan. Lakukan riset mandiri dan pertimbangkan berkonsultasi dengan profesional berizin.</div></footer>
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const links = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+    links.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      links.classList.remove('is-open'); toggle.setAttribute('aria-expanded', 'false');
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
